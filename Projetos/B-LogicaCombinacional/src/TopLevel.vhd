@@ -26,7 +26,7 @@ entity TopLevel is
 end entity;
 
 ----------------------------
--- Implementacao do bloco --
+-- Implementacao do bloco 
 ----------------------------
 architecture rtl of TopLevel is
 
@@ -38,6 +38,7 @@ architecture rtl of TopLevel is
 -- implementacao
 ---------------
 begin
-          
+   
+	LEDR(0) <= SW(0) and SW(1);
 
 end rtl;
