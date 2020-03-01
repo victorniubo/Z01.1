@@ -41,6 +41,11 @@ before_script:
   - export VUNIT_SIMULATOR=modelsim
   - export VUNIT_MODELSIM_PATH=$HOME/modelsim_ase/bin/
 
+notifications:
+  slack:
+    rooms:
+	  - z01-2020:mPAbp0nmPSUrDviNZFkBgzcF#equipe
+
 ##############################################
 # INSERIR AQUI !!!
 ###############################################
