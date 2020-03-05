@@ -14,12 +14,11 @@ theme:
     code: Roboto Mono
   custom_dir: 'custom_theme'
 
-docs_dir: docs-src
-site_dir: docs
-
-repo_name: 'Insper/Z01.1'
+docs_dir: 'docs-src'
+site_url: 'https://insper.github.io/Z01.1/'
+repo_name: 'GitHub'
 repo_url: 'https://github.com/insper/Z01.1'
-edit_url: 'https://github.com/Insper/Z01.1/edit/master/docs-src/'
+edit_url: 'edit/master/docs-src/'
 
 # Copyright
 copyright: 'Copyright &copy; Rafael Corsi @ insper'
@@ -56,9 +55,8 @@ nav:
 #    - 'Resumo Assembly': 'Util-Resumo-Assembly.md'
 #  - 'E - Lógica Sequencial': 'E-Sequencial-Projeto.md'
 #  - 'D - ULA': 'D-ULA-Projeto.md'
-#  - 'C - Lógica Combinacional': 'C-Logica-Combinacional-Projeto.md'
-#  - 'B-Circuitos-Integrados-Projeto.md'
   - 'A-Ambiente-Desenvolvimento-Projeto.md'
+  - 'LogiComb-Projeto.md'
 
 - Labs:
 #  - 'Resumo': 'Util-Resumo-Labs.md'
@@ -76,40 +74,49 @@ nav:
 #  - 'Lab 12 : F Assembly - 2': 'F-Assembly-Lab-2.md'
 #  - 'Lab 11 : F Assembly - 1': 'F-Assembly-Lab-1.md'
 #  - 'Lab 10 : E Sequencial - 1': 'E-Sequencial-Lab-1.md'
-#  - 'Lab 9 : D ULA - 1': 'D-ULA-Lab-1.md'
-#  - 'Lab 8 : D ULA - 2': 'D-ULA-Lab-2.md'
-#  - 'Lab 6 : C Logica Comb. - 3': 'C-Logica-Combinacional-Lab-3.md'
-#  - 'Lab 5 : C Logica Comb. - 1': 'C-Logica-Combinacional-Lab-1.md'
-#  - 'Lab 3 : B CI': 'B-Circuitos-Integrados-Lab-1.md'
-  - 'A-Transistores-Lab-1.md'
-  - 'A-Ambiente-Lab-2.md'
   - 'A-Ambiente-Lab-1.md'
+  - 'A-Ambiente-Lab-2.md'
+  - 'A-Transistores-Lab-1.md'
+  - 'LogiComb-Lab-1.md'
+  - 'LogiComb-Lab-2.md'
+  - 'ula-Lab-1.md'
+  - 'ula-Lab-2.md'
+  - 'ula-Lab-3.md'
 
 - 'Teoria':
   - 'Teoria-Algebra-Booleana.md'
   - 'Teoria-RTL.md'
+  - 'Teoria-Dados.md'
+  - 'Teoria-Aritmetica-Binaria.md'
+  - 'Teoria-Aritmetica-Binaria-HW.md'
   - 'Teoria-Componentes.md'
   - 'Teoria-VHDL-basico.md'
   - 'Teoria-VHDL-Combinacional.md'
+  - 'Teoria-VHDL-port-map.md'
   - 'Teoria-VHDL-exemplos.md'
   - 'Vídeo Aulas (Luciano)': 'Util-Video-Aulas.md'
 
 - 'Estudo':
   - 'Exercicio-Algebra-Booleana-1.md'
   - 'Exercicio-Algebra-Booleana-2.md'
+  - 'Exercicio-Dados-1.md'
+  - 'Exercicio-Dados-2.md'
 
 - 'Aulas':
     'Aulas': 'Util-Aulas.md'
 
 - Útil:
-  - 'Vixi! Sou Scrum Master': 'Util-Vixi!-Sou-Scrum-Master.md'
+  - 'Util-Comecando-novo-projeto.md'
+  - 'Util-vixi-sou-scrum.md'
   - 'Dicas git': 'Util-Dicas-GIT.md'
+  - 'Util-Dicas-Travis.md'
   - 'ZO1.1':
     - 'Z01.1 Cheat Sheet': 'Util-Z01.1-Cheat-Sheet.md'
     - 'Instruction Set': 'Util-InstructionSet.md'
     - 'Resumo Assembly': 'Util-Resumo-Assembly.md'
     - 'Resumo VM': 'Util-Resumo-VM.md'
   - 'Infraestrutura': 'Util-Infraestrutura.md'
+  - 'Util-VM-Linux.md'
 
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
@@ -149,7 +156,6 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-
 
 plugins:
     - search

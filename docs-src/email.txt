@@ -1,0 +1,20 @@
+Pessoal boa tarde,
+
+o semestre está para começar e a primeira semana de vocês será especial, temos uma atividade chamada de "Mutirão de C" que integra três disciplinas: Computação Embarcada, Sistemas HW/SW e Desafios de programação.
+
+O primeiro dia de aula já utilizará os softwares da disciplina de Computação Embarcada. É muito importante vocês já terem tudo configurado para esse primeiro dia.
+
+Para isso, vocês precisam seguir o roteiro no site da disciplina de Computação Embarcada:
+
+- https://insper.github.io/ComputacaoEmbarcada/Sobre-Ferramental/#softwares
+
+Se precisarem de ajuda, podem procurar o Marco Mello que fica no laboratório de Arquitetura de Computadores, quarto andar do prédio 2.
+
+Alerta 1:
+
+       Para usuário Linux e Mac: O programa só funciona em Windows, duas são as alternativas, dual boot ou virtualização, onde o segundo é mais indicado. Vamos deixar disponível no laboratório de arquitetura uma imagem já pronta de Windows com o Atmel instalado para quem for virtualizar.
+
+Alerta 2:
+
+       Só funciona com Vmware ou Parallels 
+       
