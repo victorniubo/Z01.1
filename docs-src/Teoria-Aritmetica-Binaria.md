@@ -165,10 +165,10 @@ Para obter um número positivo <-> negativo nessa notação é necessário segui
 ```
      0 0 0 0 0 0 1 1      : 3
     -----------------------
-     0 0 0 0 1 1 0 0      : not bit a bit da palavra original
+     1 1 1 1 1 1 0 0      : not bit a bit da palavra original
      0 0 0 0     + 1      : Soma um a palavra invertida
     -----------------------
-     0 0 0 0 1 1 0 1  <-- -3 em complemento de 2       
+     1 1 1 1 1 1 0 1  <-- -3 em complemento de 2       
 ```
 
 - Exemplo: `-5` = `1011`
@@ -176,10 +176,10 @@ Para obter um número positivo <-> negativo nessa notação é necessário segui
 ```
     0 0 0 0 0 1 0 1      : 5
     -----------------------
-    0 0 0 0 1 0 1 0      : not bit a bit da palavra original
+    1 1 1 1 1 0 1 0      : not bit a bit da palavra original
     0 0 0 0 0 0 0 1 +    : Soma um a palavra invertida
     -----------------------
-    0 0 0 0 1 0 1 1  <-- -5 em complemento de 2
+    1 1 1 1 1 0 1 1  <-- -5 em complemento de 2
 ```
 
 - Exemplo (com 4 bits para simplificar): `-9` (não funciona!!)
