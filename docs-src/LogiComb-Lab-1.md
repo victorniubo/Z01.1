@@ -109,7 +109,7 @@ Onde o valor do `LEDR0` será o próprio valor de entrada chave `SW0`.
 
 ### Programando a FPGA
 
-![](figs/LogiComb/de0-cv.jpge)
+![](figs/LogiComb/de0-cv.jpeg)
 
 - Conectar via USB (não precisa da fonte)
 - Deve ligar, caso contrário apertar o botão vermelho
