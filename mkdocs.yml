@@ -102,9 +102,14 @@ nav:
   - 'Exercicio-Algebra-Booleana-2.md'
   - 'Exercicio-Dados-1.md'
   - 'Exercicio-Dados-2.md'
+  - 'Handout-Aritmetica-Booleana': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf'
+  - 'Simulado AV1': 'https://github.com/Insper/2020-1-Elementos-Simulado-AV1'
 
-- 'Aulas':
-    'Aulas': 'Util-Aulas.md'
+- 'Simulados': 
+    - 'AV1': 'https://github.com/Insper/2020-1-Elementos-Simulado-AV1'
+
+#- 'Aulas':
+#    'Aulas': 'Util-Aulas.md'
 
 - Útil:
   - 'Util-Comecando-novo-projeto.md'
