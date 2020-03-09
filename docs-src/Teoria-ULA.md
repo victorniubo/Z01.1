@@ -13,6 +13,15 @@ Unidade Lógica Aritmética (ULA) é a parte da Unidade de Processamento (CPU) r
 !!! warning
     Estudar pelo livro, o restante dessa teoria é apenas um resumo e algumas notas.
 
+<iframe width="955" height="716" src="https://www.youtube.com/embed/zRX3sOtjS10?start=403" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+!!! tip
+    No coursera temos os autores do livro dando uma aula sobre esse tópico.
+    
+    - https://www.coursera.org/lecture/build-a-computer/unit-2-4-arithmetic-logic-unit-6ZS46
+
+
 ## Arquitetura
 
 A ULA utilizada no curso tem a seguinte arquitetura interna:
