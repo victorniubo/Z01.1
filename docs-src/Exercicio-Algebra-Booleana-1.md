@@ -1,6 +1,9 @@
 # Álgebra Booleana - 1
 
-> [![](figs/pdf.png)](https://github.com/Insper/Z01.1/raw/master/Exercicios/Exercicio-Algebra-Booleana-1.pdf): Versão para impressão.
+[![](figs/pdf.png){width=25} Versão para impressão.](https://github.com/Insper/Z01.1/raw/master/Exercicios/Exercicio-Algebra-Booleana-1.pdf)
+
+!!! tip ""
+    [:pencil: Resolução](https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Algebra-Booleana-1-resolucao.pdf)
 
 ### Indique o nome dos elementos lógicos a seguir:
 

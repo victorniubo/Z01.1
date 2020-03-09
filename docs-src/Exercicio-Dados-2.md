@@ -1,5 +1,7 @@
 # Dados Digitais - 2
 
+[![](figs/pdf.png){width=25} Versão para impressão.](https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Algebra-Booleana-2.pdf)
+
 ## Memória 1
 
 ![](figs/Exercicios/Dados-2-memoria.png)

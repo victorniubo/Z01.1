@@ -103,7 +103,6 @@ nav:
   - 'Exercicio-Dados-1.md'
   - 'Exercicio-Dados-2.md'
   - 'Handout Aritmetica Booleana': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf'
-
 - 'Simulados': 
     - 'AV1': 'https://github.com/Insper/2020-1-Elementos-Simulado-AV1'
 
@@ -165,4 +164,3 @@ markdown_extensions:
 plugins:
     - search
 #    - pdf-export
-
