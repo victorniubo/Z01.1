@@ -54,9 +54,9 @@ nav:
 #    - 'Dicas': 'F-Assembly-Dicas.md'
 #    - 'Resumo Assembly': 'Util-Resumo-Assembly.md'
 #  - 'E - Lógica Sequencial': 'E-Sequencial-Projeto.md'
-#  - 'D - ULA': 'D-ULA-Projeto.md'
   - 'A-Ambiente-Desenvolvimento-Projeto.md'
   - 'LogiComb-Projeto.md'
+  - 'ula-Projeto.md'
 
 - Labs:
 #  - 'Resumo': 'Util-Resumo-Labs.md'

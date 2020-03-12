@@ -3,6 +3,12 @@
 !!! note "Trabalhando em grupo"
     Realizar o lab em trio
 
+!!! warning "Antes de começar"
+    Toda vez que um novo projeto começar será necessário realizar algumas configurações no repositório do grupo, vocês devem seguir para o documento: [`Util/Começando novo Projeto`](https://insper.github.io/Z01.1/Util-Comecando-novo-projeto/) e depois voltar para esse lab.
+
+    - Não seguir sem realizar a etapa anterior.
+
+
 O objetivo desse laboratório é o de trabalharmos com o controle dos sinais da ULA para entendermos as operações da unidade de processamento do nosso computador.
 
 1. Programando FPGA com ULA
