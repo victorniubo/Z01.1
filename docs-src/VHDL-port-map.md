@@ -115,3 +115,158 @@ end architecture;
         ```
     - As vezes é necessário criarmos sinais (`signals`) para atribuirmos aos componentes
         ```
+## Exemplo: Construindo um Adder de 4-bits usando FullAdder de 1-bit
+
+Neste exemplo vamos ver a elaboração de um somador (`adder`) de 4-bits atráves do uso de vários somadores de 1-bit. 
+
+Suponha que você já tenha um somador pronto porém o mesmo é apenas de 1-bit, criar um somador de 4-bits do zero, pode ser uma tarefa trabalhosa, elaborar uma tabela verdade de 2^4 = 16 linhas, econtrar 4 saídas distintas (cada bit de saída), enfim... será que não é possível usar o conceito que vimos de port-map anteriormente e multiplos somadores para obter o desejado?
+
+Sim, é possível, desde que nosso somador de 1-bit seja um Full-Adder, lembre-se que a principal diferença de um Full-Adder e um Half-Adder, é a presença de uma entrada de Carry In, que permite que a ligação em cascata de vários somadores.
+
+Portanto, o nosso somador de 4-bits, nada mais será que uma `caixa preta` que dentro terá 4 somadores de 1-bit realizando o trabalho, para o usuário final, que irá utilizar o componente isto ficará transparente e o mesmo não saberá deste detalhe. 
+
+![](figs/VHDL/VHDL-Esquema-Adder.svg)
+
+Vamos criar nosso componente Somador de 4-bits, `Adder.vhdl` e definir suas entradas e saídas (4-bits).
+``` vhdl
+entity Adder is
+	port
+	(
+		X	: in  std_logic_vector(3 downto 0);
+		Y	: in  std_logic_vector(3 downto 0);
+		Z	: out std_logic_vector(3 downto 0)
+	);
+end Adder;
+
+architecture archAdder of Adder is
+begin
+end archAdder;
+```
+
+Agora suponha que temos o arquivo de nosso `FullAdder` de 1-bit, `FullAdder1.vhdl` e que tenha a definição (entidade da seguinte forma):
+``` vhdl
+entity FullAdder1 is
+	port
+	(
+		X	: in  std_logic;
+		Y	: in  std_logic;
+		Cin : in  std_logic;
+		Z	: out std_logic;
+		Cout: out std_logic
+	);
+end FullAdder1;
+```
+
+Observe que nós preocupamos apenas em ver a entidade (onde existem as entradas e saídas). Quer dizer que agora podemos usar a entidade `FullAdder1` diretamente no `Adder`? Não ainda! O componente ` Adder` não conhece nenhum `FullAdder1` ! para poder usar.
+
+Por isto devemos declarar na arquitetura do Adder que existe um componente com este nome e com tais entradas e saídas disponíveis para uso! Para isso usamos a declaração `component` do VHDL, permitindo especificar os nomes e entradas.
+
+``` vhdl
+architecture archAdder of Adder is
+component FullAdder1
+	port
+	(
+		-- Input ports
+		X	: in  std_logic;
+		Y	: in  std_logic;
+		Cin: in std_logic;
+
+		-- Output ports
+		Z	: out std_logic;
+		Cout: out std_logic
+	);
+end component;
+begin
+end archAdder;
+```
+
+Pronto! Agora podemos usar o componente `FullAdder1`, na verdade, podemos usar vários! Isso mesmo, podemos criar várias instâncias deste `FullAdder1`, vamos precisar de 4. A forma de fazer isto em VHDL, é usar definir um nome de instancia, nome do componente e suas ligações (port-map).
+
+Sintaxe:
+``` vhdl
+<instance_name> : <component_name> 
+	port map 
+	(
+		<formal_input> => <signal>,
+		<formal_output> => <signal>
+	);
+```
+Exemplo para os nosso 4 FAs (por enquanto vamos ligar apenas as entradas X, Y e saídas Z sem se preocupar com os Cin/Cout).
+
+``` vhdl
+    A0 : FullAdder1
+	port map 
+	(
+		X => X(0),
+		Y => Y(0),
+		Z => Z(0)
+	);
+	
+	A1 : FullAdder1
+	port map 
+	(
+		X => X(1),
+		Y => Y(1),
+		Z => Z(1)
+	);
+	
+	A2 : FullAdder1
+	port map 
+	(
+		X => X(2),
+		Y => Y(2),
+		Z => Z(2)
+	);
+	
+	A3 : FullAdder1
+	port map 
+	(
+		X => X(3),
+		Y => Y(3),
+		Z => Z(3)
+	);
+```
+
+Observe que conseguimos facilmente instanciar 4 somadores de 1-bit! Outro detalhe importante no port-map é que sempre o sinal a esquerda pertence ao componente e este é conectado ao sinal da direita (pertence ao arquivo atual). Por isto podemos ligar X a X(0), sem dar erro de nome duplicado, pois o VHDL é espertinho e sabe que o primeiro X se refere ao X do componente e o segundo, ao do nosso Adder de 4-bits.
+
+Agora precisamos ligar os Carrys para que nosso somador some corretamente, lembre, o primeiro somador (bit 0), terá carry de entrada (Cin) zero (0), e os demais somadores receberam o carry de saída (Cout) do somador anterior. 
+
+No entanto no VHDL não é possível ligar diretamente entre componentes diferentes!! E agora?
+Existem no VHDL, sinais virtuais, literalmente chamados `signals`, podemos pensar nestes sinais como um `fio`, cuidado, eles não são variavéis (o VHDL possui elas, porém tem algumas pecularidades diferentes que não iremos abordar aqui)
+
+Os sinais devem serem declarados dentro de um arquitetura com a seguinte sintaxe
+``` vhdl
+signal <name> : <type>;
+```
+Como teremos 4 carrys de saída, podemos usar então
+``` vhdl
+signal carry : std_logic_vector(3 downto 0);
+```
+
+Agora basta ligar o carry dos somadores intermediarios e o final, no anterior (não esquece de ligar o carry de entrada e saída). Exemplo dos dois primeiros somadores.
+
+
+``` vhdl
+	A0 : FullAdder1
+	port map 
+	(
+		X => X(0),
+		Y => Y(0),
+		Cin => '0',
+		Z => Z(0),
+		Cout => carry(0)
+	);
+	
+	A1 : FullAdder1
+	port map 
+	(
+		X => X(1),
+		Y => Y(1),
+		Cin => carry(0),
+		Z => Z(1),
+		Cout => carry(1)
+	);
+	...
+```
+
+Feito isto, seu somador está completo, basta utiliza-lo em um TopLevel ou outro VHDL que desejar para ver os resultados!
