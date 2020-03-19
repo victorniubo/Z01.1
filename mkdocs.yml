@@ -91,11 +91,14 @@ nav:
   - 'Teoria-Aritmetica-Binaria.md'
   - 'Teoria-Aritmetica-Binaria-HW.md'
   - 'Teoria-ULA.md'
-  - 'Teoria-VHDL-basico.md'
-  - 'Teoria-VHDL-Combinacional.md'
-  - 'Teoria-VHDL-port-map.md'
-  - 'Teoria-VHDL-exemplos.md'
+  - 'Teoria-Logica-Sequencial.md'
   - 'Vídeo Aulas (Luciano)': 'Util-Video-Aulas.md'
+
+- 'VHDL':
+  - 'VHDL-basico.md'
+  - 'VHDL-Combinacional.md'
+  - 'VHDL-port-map.md'
+  - 'VHDL-exemplos.md'
 
 - 'Estudo':
   - 'Exercicio-Algebra-Booleana-1.md'
