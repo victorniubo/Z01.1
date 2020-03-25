@@ -1,31 +1,49 @@
-Rubricas a serem usadas para os papeis: `Facilitador` e `Desenvolvedor`
+# Rubricas individuais - Corona
 
-## Desenvolvedor
-
-| Conceito       |                                                                                |
-|----------------|--------------------------------------------------------------------------------|
-| Insatisfatório |                                                                                |
-| (I)            | - Se comprometeu a fazer algum desenvolvimento (kanban) e não fez.             |
-|                | - Criou o branch mas não fez o desenvolvimento completo.                       |
-|                |                                                                                |
-| Satisfatório   |                                                                                |
-| (A)            | - Desenvolveu as rotinas atribuídas pelo Facilitador para passarem nos testes! |
-|                | - Acompanhou o Kanban board (github project). Ex: Puxou tarefas, etc.          |
-|                | - Submeteu alterações por pull requests.                                       |
+!!! tip
+    Atualizado devido ao corona.
+    
+!!! tip
+    Só começa a valer a partir do próximo projeto (D-Lógica-Sequencial).
 
 ## Facilitador
 
-| Conceito       |                                                                                                               |
-|----------------|---------------------------------------------------------------------------------------------------------------|
-| Insatisfatório |                                                                                                               |
-| (I)            | - Não acompanhou o projeto, deixando os colegas sozinhos.                                                     |
-|                | - O relatório das atividades não é condizente com o real desempenho dos integrantes (analisado via git).      |
-|                |                                                                                                               |
-| Satisfatório   |                                                                                                               |
-| (A)            | - Atualizou o repositório pelo Fork.                                                                          |
-|                | - Fez a manutenção do Kanban board (GitHub project). Ex: cria cards, atribui tarefas, da feedback de inssues. |
-|                | - Aceitou os pull-requests.                                                                                   |
-|                | - Resolveu conflitos de merge nos pull requests.                                                              |
-|                | - Acompanhou o desenvolvimento do grupo, dando o suporte sempre que necessário                                |
-|                | - **Entregou o branch master sem nenhum erro (passando no travis)**                                           |
-|                | - Fez o relatório das atividades descrevendo o papel de cada integrante com clareza.                          |
+O facilitador será avaliado pelos 'Desenvolvedores' com base em seus objetivos:
+
+- Fez a manutenção do Kanban board (GitHub project). Ex: cria cards, atribui tarefas, da feedback de inssues.
+- Gerenciou os pull-requests.
+- Acompanhou o desenvolvimento do grupo, dando o suporte sempre que necessário
+- Ajudou outros colegas com o objetivo da entrega final e não somente das suas tarefas
+
+A nota final será a média das notas de cada 'Desenvolvedor' vezes `Fator de participação em aula`(1, 0.5, 0).
+
+- Fator de Participação em aula: 
+    - 1: Esteve presente e participou nas aulas referentes aos projetos
+    - 0.6: Faltou e/ou não participou de alguma aula referente ao projeto
+    - 0: Faltou e/ou não participou da maioria das aulas do projeto
+
+!!! warning
+    Se algum facilitador não preencher o formulário no prazo estipulado sua nota será D/I
+
+## Desenvolvedor
+
+**Se o facilitador tiver média maior que C**, a nota dos desenvolvedores será dada pelo facilitador com base em seus objetivos:
+
+- **Participou das aulas referentes ao projetos (handouts, labs)**
+- Desenvolveu as rotinas atribuídas pelo Facilitador para passarem nos testes!      
+- Submeteu alterações por pull requests.                         
+- Acompanhou o desenvolvimento do grupo, dando o suporte sempre que necessário
+- Entregas orientadas para o objetivo do projeto 
+
+A nota final será a nota do 'Facilitador' vezes `Fator de participação em aula`(1, 0.75, 0.5).
+
+- Fator de Participação em aula: 
+    - 1: Esteve presente e participou nas aulas referentes aos projetos
+    - 0.75: Faltou e/ou não participou de alguma aula referente ao projeto
+    - 0.5: Faltou e/ou não participou da maioria das aulas do projeto
+
+Caso a nota do Facilitador seja inferior a C, a nota dos desenvolvedores se dará pela média
+da avaliação dos seus colegas.
+
+!!! warning
+    Se algum desenvolvedor não preencher o formulário no prazo estipulado sua nota será D/I

@@ -28,6 +28,10 @@ nav:
   - 'index.md'
   - 'Critérios de Avaliação': 'Sobre-Criterios-de-Avaliacao.md'
   - 'Rubricas Projetos': 'Sobre-Rubricas.md'
+  - 'Util-Corona.md'
+
+- Aulas:
+  - 'Util-Aulas.md'
 
 - 'Projetos':
 #  - 'Util-Resumo-Projetos.md'
@@ -56,7 +60,9 @@ nav:
 #  - 'E - Lógica Sequencial': 'E-Sequencial-Projeto.md'
   - 'A-Ambiente-Desenvolvimento-Projeto.md'
   - 'LogiComb-Projeto.md'
-  - 'ula-Projeto.md'
+  - 'C-ULA':
+    - 'ula-Projeto.md'
+    - 'ula-Projeto-dicas.md'
 
 - Labs:
 #  - 'Resumo': 'Util-Resumo-Labs.md'
@@ -82,6 +88,7 @@ nav:
   - 'ula-Lab-1.md'
   - 'ula-Lab-2.md'
   - 'ula-Lab-3.md'
+  - 'ula-lab-4.md'
 
 - 'Teoria':
   - 'Teoria-Algebra-Booleana.md'
@@ -106,11 +113,8 @@ nav:
   - 'Exercicio-Dados-1.md'
   - 'Exercicio-Dados-2.md'
   - 'Handout Aritmetica Booleana': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf'
-- 'Simulados': 
-    - 'AV1': 'https://github.com/Insper/2020-1-Elementos-Simulado-AV1'
-
-#- 'Aulas':
-#    'Aulas': 'Util-Aulas.md'
+- 'Avaliações':
+    - 'Avaliacoes.md'
 
 - Útil:
   - 'Util-Comecando-novo-projeto.md'
@@ -124,6 +128,9 @@ nav:
     - 'Resumo VM': 'Util-Resumo-VM.md'
   - 'Infraestrutura': 'Util-Infraestrutura.md'
   - 'Util-VM-Linux.md'
+
+- Atendimento:
+  - 'Atendimento.md'
 
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
