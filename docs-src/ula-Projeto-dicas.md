@@ -1,4 +1,4 @@
-# Dicas rubricas B e A
+# C - Dicas (A,B)
 
 Como não temos mais o hardware disponível, teremos que modificar os testes para podermos testar a novas funcionalidades da ULA.
 
