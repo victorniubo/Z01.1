@@ -115,7 +115,12 @@ end architecture;
         ```
     - As vezes é necessário criarmos sinais (`signals`) para atribuirmos aos componentes
         ```
-## Exemplo: Construindo um Adder de 4-bits usando FullAdder de 1-bit
+
+## Video-Exemplo: Construindo um Adder de 4-bits usando FullAdder de 1-bit
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GfpuRfTqWwc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Versão Texto - Exemplo: Construindo um Adder de 4-bits usando FullAdder de 1-bit
 
 Neste exemplo vamos ver a elaboração de um somador (`adder`) de 4-bits atráves do uso de vários somadores de 1-bit. 
 
