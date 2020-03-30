@@ -1,15 +1,7 @@
 # Lógica Sequencial
 
-| Estudando      |                                                                              |
-| ---------      | --                                                                           |
-| Bibliografia   |                                                                              |
-|                | [Cap1. Cap2. NISAN, 2005]                                                    |
-|                | [Cap6. TOCCI, 2011]                                                          |
-|                | [Cap1. FLOYD, 2007]                                                          |
-|                | [LAING, 2004]                                                                |
-| Vídeos (extra) |                                                                              |
-|                | [Logic 101 (#11): Truth Tables](https://www.youtube.com/watch?v=_Lb2c18xdeo) |
-                  
+<iframe width="692" height="519" src="https://www.youtube.com/embed/lNW2d26S-gI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 !!! info "Colossus"
     O Colossus foi um computador Britânico de 1700 válvulas, feito
     em 1943 para decifrar códigos nazistas durante a segunda
@@ -64,9 +56,7 @@ Nesse circuito normalmente as entradas `S` e `R`, conhecidas como Set e Reset, f
 
 Um outro circuito biestável é o latch tipo D, nesse caso o circuito mantem o valor da entrada de Dados D enquanto a entrada de Enable `E` estiver em nível alto, se o sinal `E` for para nível baixo o circuito não muda de estado. 
 
-![](https://commons.wikimedia.org/wiki/File:D-type_Transparent_Latch_(NOR).svg.png)
-
-> Fonte: [WikiBook](https://en.wikibooks.org/wiki/Digital_Circuits/Latches)
+![](figs/Teoria/Logica-Sequencial-latch-D.svg){width=300}
 
 Esse componente possui a tabela verdade a seguir:
 
@@ -77,10 +67,8 @@ Esse componente possui a tabela verdade a seguir:
 | `1` | `0` | Copia Entrada `D`: `0` | Copia Entrada `D` negada: `1` |
 | `0` | `1` | Copia Entrada `D`: `1` | Copia Entrada `D` negada: `0` |
 
-> Fonte https://en.wikipedia.org/wiki/Flip-flop_(electronics)
 
-!!! warning "TODO"
-    TODO: Vídeo + Figura
+<iframe width="900" height="506" src="https://www.youtube.com/embed/KGVeOCovTEQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Clock
 
@@ -90,7 +78,7 @@ Em sistemas digitais, precisamos considerar que cada porta lógica possui um tem
 
 O clock é um sinal elétrico periódico utilizado para sincronizar sistemas digitais, utilizado em todo circuito síncrono, serve como o 'baterista' da banda, dando o ritmo de execução para a eletrônica. A cada novo clock (instante que ocorre uma mudança no sinal `1` -> `0` ou de `0` -> `1`), o sistema começa uma nova operação. O sinal do clock é geralmente periódico e de modulação 50% (50% em alto e 50% em baixo):
 
-![](figs/Teoria/Logica-Sequencial-clock.svg){width=400}
+![](figs/Teoria/Logica-Sequencial-clock.svg){width=500}
 
 !!! note "Clock de 3Ghz"
     São 3 bilhões `3_000_000_000` de bordas (`0` -> `1`) em um segundo!! Imagine que a cada borda, uma operação é realizada no computador, são 3 bilhões de operações em um único segundo....
@@ -108,23 +96,68 @@ O clock é um sinal elétrico periódico utilizado para sincronizar sistemas dig
     - borda de descida (`falling_edge`): `1` -> `0`.
     - double data rate (DDR): Uma nova mudança a cada borda, subida e descida. (**Dai que vem o nome da memória DDR4 do seu computador!**)
     
+<iframe width="640" height="360" src="https://www.youtube.com/embed/CDjQlw8bRU8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
 - http://slideplayer.com.br/slide/370185/
 -  http://www.plantation-productions.com/Webster/www.artofasm.com/Linux/HTML/SystemOrganizationa4.html
 - http://www.gitam.edu/eresource/comp/gvr/6.1.htm
 
 ## Flip-Flop
 
-Flip-Flop é um circuito similar ao LATCH porém síncrono, ou seja, a mudança só ocorre na borda do clock.
+Flip-Flop (FF) é um circuito similar ao LATCH porém síncrono, ou seja, a mudança na saída (`Q`) só ocorre na borda do clock. 
 
-- o que é/ para que serve
-- tipo d
-- como é construído
-- tabela verdade e waveform
-- outros tipos
+!!! tip
+    FF são usados por diversas razões, nesse curso vamos explorar o uso do FF para a criação de uma unidade de armazenamento de bits.
+    
+!!! note
+    Sabe o CI 555? Aquele usado em acionamentos para gerar o PWM? Internamente ele possui um FF do tipo D:
+    
+    ![](https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/waveforms-tim37.gif)
+    
+    > Fonte: https://www.electronics-tutorials.ws/waveforms/555_timer.html
+    
+Existem diversos tipos de FF, mas vamos olhar apenas para o FF do tipo D.
 
-## Binary-digit
+### FF tipo D
 
-- o que é/ para que serve
-- como é contruído
-- para que serve
-- tabela verdade e waveform
+O FF tipo D possui as seguintes portas:
+
+- $D$ entrada do de `Dado`
+- $Q$ saída do dado copiado
+- $\bar{Q}$ saída do dado copiado
+- $CLK$ entrada do clock
+
+![](figs/Teoria/Logica-Sequencial-FF-D.svg){width=300}
+
+Toda vez que o clock é mudado, o sinal que está na entrada `D` é copiado para a saída `Q`, conforme diagrama a seguir:
+
+![](figs/Teoria/Logica-Sequencial-FF-D-time.svg){width=500}
+
+A tabela verdade desse componente é:
+
+| $D$ (in)  | $clk$ (in) | $Q$ (out)   |
+|-----------|------------|-------------|
+| `0`       | `0`        | `Q*`        |
+| `1`       | `1`        | `Q*`        |
+| `0`       | `^`        | `0`         |
+| `1`       | `^`        | `1`         |
+
+- `^`: borda de subida
+- `Q*`: Q armazenado anteriormente 
+
+
+#### Clear e Preset
+
+FF do tipo D podem possuir mais dois sinais de controle: `clear` e `preset`. O sinal `clear` faz com que a saída `Q` vá para `0` independe da entada `D` e do `clock`. O sinal `preset` faz com que a saída `Q` vá para `1` independente da entrada `D` e do `clock`.
+
+A tabela verdade com esses sinais a mais fica:
+
+| $D$ (in) | $clr$ | $set$ | $clk$ (in) | $Q$ (out) |
+|----------|-------|-------|------------|-----------|
+| `x`      | `0`   | `0`   | `x`        | `Q*`      |
+| `x`      | `1`   | `0`   | `x`        | `0`       |
+| `x`      | `0`   | `1`   | `x`        | `1`       |
+| `0`      | `0`   | `0`   | `^`        | `0`       |
+| `1`      | `0`   | `0`   | `^`        | `1`       |
+
+<iframe width="900" height="506" src="https://www.youtube.com/embed/60ne-hmsd8g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

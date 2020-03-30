@@ -1,4 +1,4 @@
-# Lab 10: Pequena CPU
+# Lab 9: Pequena CPU
 
 !!! tip "Sugestão de trabalho"
     1. Cada um faz na sua máquina 

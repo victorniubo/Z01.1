@@ -1,4 +1,4 @@
-#  VHDL - Exemplos completos
+# Exemplos completos
 
 - http://esd.cs.ucr.edu/labs/tutorial/
 

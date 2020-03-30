@@ -1,4 +1,4 @@
-# Lab 9: ULA 
+# Lab 8: ULA 
 
 !!! note "Trabalhando em grupo"
     Realizar o lab em trio

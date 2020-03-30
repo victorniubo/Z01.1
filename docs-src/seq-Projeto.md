@@ -1,16 +1,15 @@
-# E - Lógica Sequencia
+# D - Lógica Sequencia
 
-![ULA](figs/E-LogSeq/sistema-seq.png)
-
+![](figs/E-LogSeq/sistema-seq.png)
 
 Neste projeto você terá que desenvolver os componentes de memória que serão utilizados no computador Z01.
 
 ## Instruções 
 
-A pasta do projeto `E-LogicaSequencial` no repositório Z01, possui a seguinte estrutura:
+A pasta do projeto `D-LogicaSequencial` no repositório Z01, possui a seguinte estrutura:
 
 ```
-/E-LogicaSequencial
+/D-LogicaSequencial
     testeLogicaSequencial.py
     /Quartus
     /src
@@ -28,7 +27,7 @@ A pasta do projeto `E-LogicaSequencial` no repositório Z01, possui a seguinte e
 
 ### Executando o Script de Teste 
 
-Abra o terminal na pasta `E-LogicaSequencial` e execute o script python localizado nessa pasta:
+Abra o terminal na pasta `D-LogicaSequencial` e execute o script python localizado nessa pasta:
 
 ```bash
 $ python testeLogicaSequencial.py
@@ -42,13 +41,12 @@ O mesmo irá compilar os arquivos `src/rtl/*.vhd` e executar os testes unitário
 # Projeto
 
 - Deve-se gerar uma imagem com a forma de onda desses módulos.
-- Deve-se gerar um RTL para cada módulo do projeto ([`E-LogicaSequencial-Lab-1`](E-Sequencial-Lab-1))
-- Note que é possível reaproveitar, via `port map`, os módulos dos projetos anteriores. Para isso basta declarar o componente e usar o módulo.
-
+- Deve-se gerar um RTL para cada módulo do projeto (Lab 10)
+- Note que é possível reaproveitar, via `port map`, os módulos dos projetos anteriores. Para isso basta usar port map.
 
 ## Módulos 
 
-Esses arquivos estão localizados em  `E-LogicaSequencial/src/rtl/` e detalhados no [**Capítulo 3 - The Elements of Computing Systems**](https://docs.wixstatic.com/ugd/44046b_862828b3a3464a809cda6f44d9ad2ec9.pdf)
+Esses arquivos estão localizados em  `D-LogicaSequencial/src/rtl/` e detalhados no [**Capítulo 3 - The Elements of Computing Systems**](https://docs.wixstatic.com/ugd/44046b_862828b3a3464a809cda6f44d9ad2ec9.pdf)
 
 ---------------------------
 
@@ -182,21 +180,16 @@ Cada integrante do grupo irá receber duas notas: uma referente ao desenvolvimen
 
 | Conceito |                                                                                          |
 |----------|------------------------------------------------------------------------------------------|
-| I        | - Menos da metade dos módulos funcionando                                                |
+| A        | - Gravou e testou a memória RAM8 na FPGA. (gravou um vídeo para mostrar o funcionamento) |
 |          |                                                                                          |
-| D        | - Ao menos um módulo não foi implementando ou não passa no testes.                       |
+| B        | - Usou sempre que possível outros módulos para criar um novo (hierarquia)                |
+|          | - Exemplo: usou o `inc16`, `mux16` e `reg16` para criar PC                               |
 |          |                                                                                          |
 | C        | - Todos os módulos sendo testados no Travis                                              |
 |          | - **O ramo master passa nos testes do travis**                                           |
 |          | - Todos os módulos passam nos testes                                                     |
 |          | - Possui a forma de onda e rtl de todos os módulos (.png)                                |
 |          |                                                                                          |
-| B        | - Usou sempre que possível outros módulos para criar um novo (hierarquia)                |
-|          | - Exemplo: usou o `inc16`, `mux16` e `reg16` para criar PC                                      |
+| D        | - Ao menos um módulo não foi implementando ou não passa no testes.                       |
 |          |                                                                                          |
-| A        | - Gravou e testou a memória RAM8 na FPGA. (gravou um vídeo para mostrar o funcionamento) |
-
-
-## Desenvolvedor e Scrum Master
-
-- [Rubricas Scrum e Desenvolvedor](/Sobre-Rubricas/)
+| I        | - Menos da metade dos módulos funcionando                                                |

@@ -1,4 +1,4 @@
-# VHDL - port map
+# port map
 
 ## Desenvolvimento hierárquico
 

@@ -1,4 +1,4 @@
-# VHDL - Combinacional
+# Combinacional
 
 Em sistemas digitais, lógica combinacional é aquela que não depende do estado anterior (não possui memória), podemos classificar portas lógicas (and, or, nand ...), mux, demux, comparadores, full address e outros componentes como sendo do tipo combinacional.
 

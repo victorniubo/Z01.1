@@ -1,4 +1,4 @@
-# VHDL - Introdução
+# Introdução
 
 | Estudando        |                                                                                                                                                                                                            |
 | ---------        | --                                                                                                                                                                                                         |

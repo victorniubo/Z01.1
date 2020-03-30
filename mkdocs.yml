@@ -62,6 +62,7 @@ nav:
   - 'LogiComb-Projeto.md'
   - 'ula-Projeto.md'
   - 'ula-Projeto-dicas.md'
+  - 'seq-Projeto.md'
 
 - Labs:
 #  - 'Resumo': 'Util-Resumo-Labs.md'
@@ -78,7 +79,6 @@ nav:
 #  - 'Lab 13 : F Assembly - 3': 'F-Assembly-Lab-3.md'
 #  - 'Lab 12 : F Assembly - 2': 'F-Assembly-Lab-2.md'
 #  - 'Lab 11 : F Assembly - 1': 'F-Assembly-Lab-1.md'
-#  - 'Lab 10 : E Sequencial - 1': 'E-Sequencial-Lab-1.md'
   - 'A-Ambiente-Lab-1.md'
   - 'A-Ambiente-Lab-2.md'
   - 'A-Transistores-Lab-1.md'
@@ -88,22 +88,26 @@ nav:
   - 'ula-Lab-2.md'
   - 'ula-Lab-3.md'
   - 'ula-lab-4.md'
+  - 'seq-Lab-1.md'
 
 - 'Teoria':
   - 'Teoria-Algebra-Booleana.md'
-  - 'Teoria-RTL.md'
+  - 'Teoria-RTL'
   - 'Teoria-Dados.md'
   - 'Teoria-Componentes.md'
   - 'Teoria-Aritmetica-Binaria.md'
   - 'Teoria-Aritmetica-Binaria-HW.md'
   - 'Teoria-ULA.md'
   - 'Teoria-Logica-Sequencial.md'
+  - 'Teoria-Sequencial-Componentes.md'
   - 'Vídeo Aulas (Luciano)': 'Util-Video-Aulas.md'
 
 - 'VHDL':
   - 'VHDL-basico.md'
   - 'VHDL-Combinacional.md'
   - 'VHDL-port-map.md'
+  - 'VHDL-Sequencial.md'
+  - 'VHDL-RTL.md'
   - 'VHDL-exemplos.md'
 
 - 'Estudo':
