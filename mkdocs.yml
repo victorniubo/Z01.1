@@ -18,7 +18,7 @@ docs_dir: 'docs-src'
 site_url: 'https://insper.github.io/Z01.1/'
 repo_name: 'GitHub'
 repo_url: 'https://github.com/insper/Z01.1'
-edit_url: 'edit/master/docs-src/'
+edit_url: 'edit/docs/docs-src/'
 
 # Copyright
 copyright: 'Copyright &copy; Rafael Corsi @ insper'
@@ -116,6 +116,7 @@ nav:
   - 'Exercicio-Dados-1.md'
   - 'Exercicio-Dados-2.md'
   - 'Handout Aritmetica Booleana': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf'
+  - 'Lógica Sequencial - 1': 'https://forms.gle/XMsFCDMYsmz1qUP86'
 - 'Avaliações':
     - 'Avaliacoes.md'
 

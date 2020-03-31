@@ -37,6 +37,7 @@ entity ALU is
 			no:    in STD_LOGIC;                     -- inverte o valor da saída
 			zr:    out STD_LOGIC;                    -- setado se saída igual a zero
 			ng:    out STD_LOGIC;                    -- setado se saída é negativa
+      carry : out STD_LOGIC;
 			saida: out STD_LOGIC_VECTOR(15 downto 0) -- saída de dados da ALU
 	);
 end entity;
