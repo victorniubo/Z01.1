@@ -30,3 +30,4 @@ Note que nesse código estamos usando os botões (`KEY`) da FPGA, além dos LEDs
 >
 > O correto seria colocarmos um pino de "enable" que ativaria ou não o FF quando o botão fosse pressionado.
 
+e

@@ -7,6 +7,8 @@
 
 Nesse lab iremos implementar um flip-flop do tipo D e um binary digit.
 
+
+
 Estudo prévio necessário para realizar esse lab:
 
 | Leitura                    |
@@ -23,10 +25,13 @@ Estudo prévio necessário para realizar esse lab:
 !!! example "Execute"
     1. Faça uma branch
     1. Implemente local no seu PC
-    1. Só um integrante do grupo deve enviar para a master via PR ao final
+    1. **Só um integrante do grupo deve enviar para a master via PR ao final**
 
 !!! tip
     - Esse já é um dos módulos da entrega do projeto!
+
+!!! warning 
+    Antes de seguir você deve fazer uma leitura rápida do material de lógica sequencial em VHDL [VHDL -> Sequencial](https://insper.github.io/Z01.1/VHDL-Sequencial/)
 
 Vamos agora implementar um FF tipo D em VHDL, para isso iremos modificar o arquivo `D-LogicaSequencial/src/rtl/FlipFlopD.vhd` que declara a entidade de um Flip Flop do tipo D.
 
@@ -64,9 +69,6 @@ end process;
     
 Agora você pode executar o script de teste do projeto e verificar se a implementação está correta.
 
-!!! tip ""
-    Só continuar se estiver passando nos testes
- 
 !!! example "Tarefa: waveform" 
     - execute `./testeLogicaSequencial -g` 
     - analise a forma de onda do teste do FF no modelsim
@@ -79,6 +81,8 @@ Agora você pode executar o script de teste do projeto e verificar se a implemen
     - Gere o RTL (via quartus) analise o resultado do FF.
     - Salve a forma de onda na pasta `src/rtl/` do projeto com o nome `FlipFlop.png`.
     
+**Agora somente um integrante do grupo deve fazer o envio para a master via PR.**
+
 ### Checkpoint
 
 Ao final dessa etapa você deve ser capaz de:
@@ -88,4 +92,17 @@ Ao final dessa etapa você deve ser capaz de:
 - Explicar a forma de onda do **FlipFlopD** gerada no **modelsim**
 - Explicar o **RTL** do **FlipFlopD** criado pelo **Quartus**
 
-## 
+## Implementando o binary-digit
+
+Com o FFD implementando, vocês são capazes de implementar o binary-digit, que possui internamente um FF tipo D:
+
+![](figs/E-LogSeq/binarydigit.png){600px}
+
+Para isso vocês terão que modificar o arquivo: `D-LogicaSequencial/src/rtl/BinaryDigit.vhd` e utilizando `port map` criar o componente `binaryDigit`.
+
+!!! example "Tarefa"
+    1. Implemente o binary-digit
+    1. Teste 
+
+!!! warning
+    Assim como no FFD cada um do grupo vai ter uma implementação do binary-digit e só um deve enviar o PR para a `master`.
