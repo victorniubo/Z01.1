@@ -178,18 +178,17 @@ Cada integrante do grupo irá receber duas notas: uma referente ao desenvolvimen
 
 ## Projeto
 
-| Conceito |                                                                                          |
-|----------|------------------------------------------------------------------------------------------|
-| A        | - Gravou e testou a memória RAM8 na FPGA. (gravou um vídeo para mostrar o funcionamento) |
-|          |                                                                                          |
-| B        | - Usou sempre que possível outros módulos para criar um novo (hierarquia)                |
-|          | - Exemplo: usou o `inc16`, `mux16` e `reg16` para criar PC                               |
-|          |                                                                                          |
-| C        | - Todos os módulos sendo testados no Travis                                              |
-|          | - **O ramo master passa nos testes do travis**                                           |
-|          | - Todos os módulos passam nos testes                                                     |
-|          | - Possui a forma de onda e rtl de todos os módulos (.png)                                |
-|          |                                                                                          |
-| D        | - Ao menos um módulo não foi implementando ou não passa no testes.                       |
-|          |                                                                                          |
-| I        | - Menos da metade dos módulos funcionando                                                |
+| Conceito |                                                                           |
+|----------+---------------------------------------------------------------------------|
+| A        | -                                                                         |
+|          |                                                                           |
+| B        | - Usou sempre que possível outros módulos para criar um novo (hierarquia) |
+|          | - Exemplo: usou o `inc16`, `mux16` e `reg16` para criar PC                |
+|          |                                                                           |
+| C        | - Todos os módulos sendo testados no Travis                               |
+|          | - Todos os módulos passam nos testes                                      |
+|          | - Possui a forma de onda (.png) e rtl de todos os módulos (.png)           |
+|          |                                                                           |
+| D        | - Ao menos um módulo não foi implementando ou não passa no testes.        |
+|          |                                                                           |
+| I        | - Menos da metade dos módulos funcionando                                 |
