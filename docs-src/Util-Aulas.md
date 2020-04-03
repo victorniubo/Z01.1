@@ -1,5 +1,16 @@
 # Resumo Aulas
 
+## Aula 11 - Sexta Feira - 3 / 4
+
+| Estudo prévio |
+| ------------  |
+|               |
+
+| Início-Fim     | Atividade          | Canal Teams |
+| ---------      | ----------         | -----       |
+| 7h35h35 - 7h45 | Teoria - Memória   | **Geral**   |
+| 7h45-9h30      | Projeto D          | **Grupo**   |
+
 ## Aula 10 - Quarta Feira - 1 / 4
 
 | Estudo prévio                                                                          |

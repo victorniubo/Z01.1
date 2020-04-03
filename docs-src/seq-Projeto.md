@@ -179,16 +179,48 @@ Cada integrante do grupo irá receber duas notas: uma referente ao desenvolvimen
 ## Projeto
 
 | Conceito |                                                                           |
-|----------+---------------------------------------------------------------------------|
-| A        | -                                                                         |
+|----------|---------------------------------------------------------------------------|
+| A        | - Módulos extras (rtl + tests)                                              |
 |          |                                                                           |
 | B        | - Usou sempre que possível outros módulos para criar um novo (hierarquia) |
 |          | - Exemplo: usou o `inc16`, `mux16` e `reg16` para criar PC                |
 |          |                                                                           |
 | C        | - Todos os módulos sendo testados no Travis                               |
 |          | - Todos os módulos passam nos testes                                      |
-|          | - Possui a forma de onda (.png) e rtl de todos os módulos (.png)           |
+|          | - Possui a forma de onda (.png) e rtl de todos os módulos (.png)          |
 |          |                                                                           |
 | D        | - Ao menos um módulo não foi implementando ou não passa no testes.        |
 |          |                                                                           |
 | I        | - Menos da metade dos módulos funcionando                                 |
+
+### A - Módulos extras
+
+Para a rubrica A o grupo deve implementar os seguintes módulos extras e os seus testes (estão fazios!)
+
+!!! warning
+    Vocês devem implementar o módulos e seus testes!
+
+- Flip Flop JK
+   - **Arquivo**: `conceitoA/FlipFlopJK.vhd`
+   - **Arquivo Teste**: `tests/tst/tb_FlipFlopJK.vhd`
+   - **Dependência**:
+ 
+É é flipflop do tipo [JK](https://en.wikipedia.org/wiki/Flip-flop_(electronics))
+
+- Flip Flop T
+   - **Arquivo**: `ConceitoA/FlipFlopT.vhd`
+   - **Arquivo Teste**: `tests/tst/tb_FlipFlopT.vhd`
+   - **Dependência**:
+ 
+É é flipflop do tipo [T](https://en.wikipedia.org/wiki/Flip-flop_(electronics))
+
+- Counter Down
+   - **Arquivo**: `ConceitoA/CounterDown.vhd`
+   - **Arquivo Teste**: `tests/tst/CoubterDown.vhd`
+   - **Dependência**: `FlipFlopT`
+ 
+ O CouterDown é componente capaz de contar para 'baixo' em binário (000 -> 111 -> 110 -> 101 -> 100), esse componente é formado por FlipFlops do tipo T, como demonstrado no diagrama a seguir:
+ 
+![](figs/E-LogSeq/CounterDown.png)
+
+> Fonte: (2008) Fundamentals of Digital Logic with VHDL Design - pg. 406
