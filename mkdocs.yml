@@ -78,7 +78,6 @@ nav:
 #  - 'Lab 14 : G CPU Lab 1': 'G-CPU-Lab-1.pdf'
 #  - 'Lab 13 : F Assembly - 3': 'F-Assembly-Lab-3.md'
 #  - 'Lab 12 : F Assembly - 2': 'F-Assembly-Lab-2.md'
-#  - 'Lab 11 : F Assembly - 1': 'F-Assembly-Lab-1.md'
   - 'A-Ambiente-Lab-1.md'
   - 'A-Ambiente-Lab-2.md'
   - 'A-Transistores-Lab-1.md'
@@ -89,6 +88,7 @@ nav:
   - 'ula-Lab-3.md'
   - 'ula-lab-4.md'
   - 'seq-Lab-1.md'
+  - 'assembly-Lab-1.md'
 
 - 'Teoria':
   - 'Teoria-Algebra-Booleana.md'
@@ -100,6 +100,7 @@ nav:
   - 'Teoria-ULA.md'
   - 'Teoria-Logica-Sequencial.md'
   - 'Teoria-Sequencial-Componentes.md'
+  - 'Teoria-Z01.md'
   - 'Vídeo Aulas (Luciano)': 'Util-Video-Aulas.md'
 
 - 'VHDL':
@@ -109,6 +110,12 @@ nav:
   - 'VHDL-Sequencial.md'
   - 'VHDL-RTL.md'
   - 'VHDL-exemplos.md'
+
+- 'Z01':
+  - 'Resumo Assembly': 'Util-Resumo-Assembly.md'
+  - 'Z01.1 Cheat Sheet': 'Util-Z01.1-Cheat-Sheet.md'
+  - 'Instruction Set': 'Util-InstructionSet.md'
+  - 'Resumo VM': 'Util-Resumo-VM.md'
 
 - 'Estudo':
   - 'Exercicio-Algebra-Booleana-1.md'
@@ -125,11 +132,6 @@ nav:
   - 'Util-vixi-sou-scrum.md'
   - 'Dicas git': 'Util-Dicas-GIT.md'
   - 'Util-Dicas-Travis.md'
-  - 'ZO1.1':
-    - 'Z01.1 Cheat Sheet': 'Util-Z01.1-Cheat-Sheet.md'
-    - 'Instruction Set': 'Util-InstructionSet.md'
-    - 'Resumo Assembly': 'Util-Resumo-Assembly.md'
-    - 'Resumo VM': 'Util-Resumo-VM.md'
   - 'Infraestrutura': 'Util-Infraestrutura.md'
   - 'Util-VM-Linux.md'
 

@@ -1,37 +1,16 @@
+# Z01 - Resumo Assembly
 
-!!! note "Tipo A"
+!!! tip "Notação"
+    - **reg** : Registrador (`%A`, `%D`)
+    - **mem** : Acesso a memória (%A)
+    - **im**: Imediato, pode ser: (`$1`, `$0`, `$-1`)
+    - **const**: Constante positiva (`$0`, `$9`, ....)
 
-    - [LEA  - Carregamento Efetivo do Endereço](#lea---carregamento-efetivo-do-endereco-(valor))
-
-!!! note "Tipo C"
-
-    - [MOV  - Copia Valores](#mov---copia-valores)
-    - [ADD  - Adição de Inteiros](#add---adição-de-inteiros)
-    - [SUB  - Subtração de Inteiros](#sub---subtração-de-inteiros)
-    - [RSUB - Subtração de Inteiros Reversa](#rsub---subtração-de-inteiros-reversa)
-    - [INC  - Incrementa Inteiro](#inc---incrementa-inteiro)
-    - [DEC  - Decrementa Inteiro](#dec---decrementa-inteiro)
-    - [NOT  - Negação por Complemento de Um](#not----negação-por-complemento-de-um)
-    - [NEG  - Negação por Complemento de dois](#neg----negação-por-complemento-de-dois)
-    - [AND  - Operador E (and)](#and----operador-e-and)
-    - [OR   - Operador OU (or)](#or----operador-ou-or)
-    - [JMP  - Jump](#jmp----jump)
-    - [JE   - Desvia Execução se Igual a Zero](#je----desvia-execução-se-igual-a-zero)
-    - [JNE  - Desvia Execução se Diferente de Zero](#jne----desvia-execução-se-diferente-de-zero)
-    - [JG   - Desvia Execução se Maior que Zero](#jg----desvia-execução-se-maior-que-zero)
-    - [JGE  - Desvia Execução se Maior Igual a Zero](#jge----desvia-execução-se-maior-igual-a-zero)
-    - [JL   - Desvia Execução se Menor que Zero](#jl----desvia-execução-se-menor-que-zero)
-    - [JLE  - Desvia Execução se Menor Igual a Zero](#jle----desvia-execução-se-menor-igual-a-zero)
-    - [NOP  - Não faz nada (No Operation)](#nop----não-faz-nada-no-operation)
-
----------------------------------------
-
-## Notação
-
-- **reg** : Registrador (`%A`, `%D`, `%S`)
-- **mem** : Acesso a memória (%A)
-- **im**: Imediato, pode ser: (`$1`, `$0`, `$-1`)
-- **const**: Constante positiva (`$0`, `$9`, ....)
+!!! note "Arquivos: extensões"
+    - `.nasm`: Arquivo assembly
+    - `.hack`: Linguagem de máquina (arquivo com zeros e uns)
+    - `.mif `: Arquivo .hack que pode ser salvo na memória da FPGA
+    - `.lst `: saída do simulador com os estados da CPU
 
 ## Instruções
 
@@ -43,7 +22,7 @@
 !!! warning "Restrição"
     A operação de **leaw** só aceita o registrador `%A`
 
-A instrução *lea* armazena o valor passado (`const`) no
+A instrução *leaw* armazena o valor passado (`const`) no
 registrador especificado 
 
 ```nasm
@@ -66,8 +45,8 @@ leaw $15, %A
 a segunda posição (terceira e quarta opcional).
 
 ```nasm
-; Exemplo: S = RAM[A]
-movw (%A), %S
+; Exemplo: D = RAM[A]
+movw (%A), %D
 ```
 
 ---------------------------------------
@@ -85,8 +64,8 @@ valor e armazena o resultado no terceiro parâmetro (quarto e quinto
 opcional).
 
 ```nasm
-; Exemplo: S = RAM[A]+D 
-addw (%A), %D, %S
+; Exemplo: D = RAM[A]+D 
+addw (%A), %D, %D
 ```
 
 ---------------------------------------
@@ -252,7 +231,7 @@ para o endereço armazenado em %A, somente se o valor do reg. for igual a
 zero.
 
 ```nasm
-je %S
+je %D
 ```
 
 ---------------------------------------
@@ -282,7 +261,7 @@ endereço armazenado em %A, somente se o valor do reg. for maior que
 zero.
 
 ```nasm
-jg %s
+jg %D
 ```
 
 ---------------------------------------
@@ -297,7 +276,7 @@ para o endereço armazenado em %A, somente se o valor do reg. for maior
 ou igual a zero.
 
 ```nasm
-jge %S
+jge %D
 ```
 
 ---------------------------------------
@@ -312,7 +291,7 @@ endereço armazenado em %A, somente se o valor do reg. for menor que
 zero.
 
 ```nasm
-jl %S
+jl %D
 ```
 
 ---------------------------------------
@@ -361,7 +340,7 @@ mnemônico origem, destino
 **Registradores**
 
 Todos os registradores devem ter como prefixo o sinal de porcentagem
-'%\', por exemplo: %A ou %D ou %S.
+'%\', por exemplo: %A ou %D.
 
 **Valores Literais**
 
