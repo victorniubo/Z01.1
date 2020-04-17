@@ -92,7 +92,6 @@ nav:
 
 - 'Teoria':
   - 'Teoria-Algebra-Booleana.md'
-  - 'Teoria-RTL'
   - 'Teoria-Dados.md'
   - 'Teoria-Componentes.md'
   - 'Teoria-Aritmetica-Binaria.md'
@@ -101,6 +100,8 @@ nav:
   - 'Teoria-Logica-Sequencial.md'
   - 'Teoria-Sequencial-Componentes.md'
   - 'Teoria-Z01.md'
+  - 'Teoria-Z01-mapadeMemoria.md'
+  - 'Teoria-nasm-jump.md'
   - 'Vídeo Aulas (Luciano)': 'Util-Video-Aulas.md'
 
 - 'VHDL':
