@@ -1,4 +1,4 @@
-# nasm - jump
+# Z01 - jump
 
 Nossa CPU é capaz de realizar códigos com condição, tal como:
 
@@ -49,11 +49,15 @@ Para executarmos um salto é necessário alterarmos o valor do PC, no Z01 isso �
 
 O exemplo a seguir realiza um loop infinito (e não faz nada), ele trava nesse loop:
 
-```nasm
-0: leaw $0, %A   ; carrega 0 em %A (linha 0)
-1: jmp           ; faz o salto incondicional
-2: nop           ; nop
-``` 
+=== "código"
+    ```nasm
+    0: leaw $0, %A   ; carrega 0 em %A (linha 0)
+    1: jmp           ; faz o salto incondicional
+    2: nop           ; nop
+    ``` 
+
+=== "simulador"
+    ![](figs/Teoria/Z0-jmp-loop.gif)
 
 O PC desse código fica:
 
@@ -96,12 +100,16 @@ Para facilitar o uso de saltos, podemos criar `labels` no nosso código assembly
 
 O código anterior ficaria o seguinte com uso de label:
 
-```nasm
-0 LOOP:             ; label LOOP
-1 leaw $LOOP, %A    ; Aqui, $LOOP seria substituido por 0 pelo montador
-2 jmp
-3 nop
-```
+=== "código"
+    ```nasm
+    LOOP:             ; label LOOP
+    leaw $LOOP, %A    ; Aqui, $LOOP seria substituido por 0 pelo montador
+    jmp
+    nop
+    ```
+
+=== "simulador"
+    ![](figs/Teoria/Z0-jmp-loop-label.gif)
 
 !!! tip
     Teste o código anterior no `Z01-Simulator`.
@@ -130,31 +138,36 @@ O salto condicional é aquele que é utilizado para realizarmos `if ... else`, n
         RAM[2] = 2
     ```
     
-    Esse código em assembly seria:
+    === "nasm" 
     
-    ```nasm
-    leaw $1, %A    ; faz %A apontar para RAM[1]
-    movw (%A), %D  ; carrega o valor de RAM[1] em %D
-    leaw $ELSE, %A ; precisamos carregar em %A o valor do salto
-    jle %D         ; salta se valor em %D for menor ou igual a zero
-    nop            ; 
-                   ; if
-    leaw $1, %A    ; 
-    movw %A, %D    ;
-    leaw $2, %A    ;
-    movw %D, (%A)  ; 
-                   ;
-    leaw $END, %A  ; agora não podemos executar o trecho 
-    jmp            ; do else, vamos pular para o fim 
-    nop            ; do código
-                   ;
-    ELSE:          ; else
-                   ;
-    leaw $2, %A    ; 
-    movw %A, (%A)  ; 
-                   ;
-    END:           ;
-    ```
+          Esse código em assembly seria:
+
+        ```nasm
+        leaw $1, %A    ; faz %A apontar para RAM[1]
+        movw (%A), %D  ; carrega o valor de RAM[1] em %D
+        leaw $ELSE, %A ; precisamos carregar em %A o valor do salto
+        jle %D         ; salta se valor em %D for menor ou igual a zero
+        nop            ; 
+                       ; if
+        leaw $2, %A    ; 
+        movw $1, (%A)  ; 
+                       ;
+        leaw $END, %A  ; agora não podemos executar o trecho 
+        jmp            ; do else, vamos pular para o fim 
+        nop            ; do código
+                       ;
+        ELSE:          ; else
+                       ;
+        leaw $2, %A    ; 
+        movw %A, (%A)  ; 
+                       ;
+        END:           ;
+        ```
+    
+    === "simulador"
+        > RAM[1] = 0
+ 
+        ![](figs/Teoria/Z0-nasm-jump-cond1.gif)
 
 !!! tip
     Teste o código anterior no `Z01-Simulator`.

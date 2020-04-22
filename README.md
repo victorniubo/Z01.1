@@ -11,7 +11,7 @@ $ # Clone o repositório
 $ git clone https://github.com/Insper/Z01.1
 $ cd Z01.1
 $ # instale e/ou atualize o Z01.1
-$ updateZ01tools.sh
+$ ./updateZ01tools.sh
 $ # instale as dependencias python
 $ pip install -r requirements.txt --user
 ```

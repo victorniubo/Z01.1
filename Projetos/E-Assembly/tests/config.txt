@@ -1,0 +1,38 @@
+# nome | quantidade de testes | us de execucao
+# us -> clock = /20
+
+##########################
+# exemplos
+##########################
+R-LCD.nasm 1 4000
+
+##########################
+# conceito C
+##########################
+
+add.nasm 1 1000
+#sub.nasm 1 1000
+#mov.nasm 1 1000
+#max.nasm 2 10000
+#abs.nasm 2 1000
+#isEven.nasm 2 1000
+#mult.nasm 1 10000
+#mod.nasm 2 10000
+#div.nasm  2 10000
+
+###########################
+## conceito B
+###########################
+
+##factorial.nasm 2 10000
+##pow.nasm 2 10000
+#palindromo.nasm 2 1000
+#stringLength.nasm 2 2000
+
+##########################
+## conceito A
+##########################
+#matrizDetermnante.nasm 1 2000
+#stringTrim.nasm
+#SWeLED.nasm
+

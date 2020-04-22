@@ -1,26 +1,17 @@
 site_name: '2020-1 - Elementos de Sistemas - Z01'
 theme:
-  language: 'pt'
-  feature:
-    tabs: true
   name: 'material'
+  features:
+    - tabs
   palette:
       primary: 'white'
       accent: 'pink'
-  logo:
-      icon: 'developer_board'
-  font:
-    text: Roboto
-    code: Roboto Mono
-  custom_dir: 'custom_theme'
 
 docs_dir: 'docs-src'
 site_url: 'https://insper.github.io/Z01.1/'
 repo_name: 'GitHub'
 repo_url: 'https://github.com/insper/Z01.1'
 edit_url: 'edit/docs/docs-src/'
-
-# Copyright
 copyright: 'Copyright &copy; Rafael Corsi @ insper'
 
 nav:
@@ -89,6 +80,9 @@ nav:
   - 'ula-lab-4.md'
   - 'seq-Lab-1.md'
   - 'assembly-Lab-1.md'
+  - 'assembly-Lab-2.md'
+  - 'assembly-Lab-3.md'
+  - 'assembly-Lab-4.md'
 
 - 'Teoria':
   - 'Teoria-Algebra-Booleana.md'
@@ -143,8 +137,6 @@ extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
   - 'translate_admonitions.js'
 
-extra_css:
-  - css/printing.css
 
 # Extensions
 markdown_extensions:
@@ -174,10 +166,10 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.superfences
+  - pymdownx.tabbed
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
 
 plugins:
     - search
-#    - pdf-export
