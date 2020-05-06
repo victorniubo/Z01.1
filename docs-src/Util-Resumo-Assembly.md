@@ -12,6 +12,17 @@
     - `.mif `: Arquivo .hack que pode ser salvo na memória da FPGA
     - `.lst `: saída do simulador com os estados da CPU
 
+!!! warning
+    Nosso hardware não suporta operações que realizam escrita e leitura na memória RAM ao mesmo tempo. Operações como:
+    
+    - `incw (%A)`
+    - `decw (%A)`
+    - `addw (%A), %D, (%A)`
+    - `subw %D, (%A), (%A)`
+    - ...
+    
+    Vão ser aceitas pelo assembler, mas vão executar erradas no HW.
+
 ## Instruções
 
 #### LEA - Carregamento Efetivo do Endereço (Valor)
@@ -89,7 +100,7 @@ subw %D, (%A), %A
 #### RSUB - Subtração de Inteiros Reversa
 
 !!! note ""
-     **rsubw** reg/mem/im*, rem/mem, reg/mem {, reg/mem, reg/mem}
+     **rsubw** reg/mem/im*, rem/mem, reg {, reg, reg}
 
  A instrução rsub, subtrai o segundo valor do primeiro
 valor e armazena o resultado no terceiro parâmetro (quarto e quinto
@@ -106,7 +117,7 @@ rsubw %D, (%A), %A
 #### INC - Incrementa Inteiro
 
 !!! note ""
-     **incw** reg/mem
+     **incw** reg
 
 !!! warning "Restrição"
     O destino é o próprio registrador! A operação não permite
@@ -135,7 +146,7 @@ incw %D
 #### DEC - Decrementa Inteiro
 
 !!! note ""
-     **decw** reg/mem
+     **decw** reg
  
 A instrução *dec,* subtrai um (1) do valor do registrador
 ou memória.
@@ -165,7 +176,7 @@ notw %D
 #### NEG - Negação por Complemento de dois
 
 !!! note ""
-     negw reg/mem
+     negw reg
 
  A instrução *neg,* faz o valor ficar negativo, ou seja,
 um valor de x é modificado para -x.

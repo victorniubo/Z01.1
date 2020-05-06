@@ -1,4 +1,22 @@
-# Inserindo display HEX
+# Dicas B/A
+
+##  B
+
+Não vamos ter o teste do `memoryIO` nem do `controlUnit` adequados para as mudanças, será necessário testar direto no Hardware:
+
+1. Abrir Quartus e compilar projeto
+1. Executar `programMyFPGA.py`
+
+Como vocês alteraram o InstructionSet, será necessário escrever um programa em linguagem de máquina, para isso:
+
+1. Altere o arquivo: `testeComputador.mif` com suas operações
+1. Execute  `./programSoftware.py -m testeComputador.mif` para programar a ROM do Z01.1 com seu programa.
+
+**Note que o arquivo `testeComputador.mif` possui um campo que é `DEPTH=30;` Você deve alterar esse valor para a quantidade de linhas que seu programa possui!**
+
+
+
+## A
 
 Para inserir o display sete segmentos (7s) será necessário:
 
@@ -39,7 +57,7 @@ entity Computador is
 end entity;
 ```
 
-# Programando ROM com linguagem de máquina 
+## Programando ROM com linguagem de máquina 
 
 Uma vez implementando as modificações no HW não temos mais como realizar os testes lógicos na CPU (`testeHW` e `testeAssemblyMyCPU`), já que o nosso Assembler não está adequado para essas modificações. 
 
@@ -84,7 +102,7 @@ Esse arquivo é geralmente gerado pelo `Assembler`:
                     |---------> SIMULADOR
 ```
 
-# Teclado como periférico
+## Teclado como periférico
 
 Adicionar os seguintes sinais na entidade do `Computador.vhd` e do `memoryIO.vhd`
 

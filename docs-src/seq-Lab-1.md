@@ -7,8 +7,6 @@
 
 Nesse lab iremos implementar um flip-flop do tipo D e um binary digit.
 
-
-
 Estudo prévio necessário para realizar esse lab:
 
 | Leitura                    |

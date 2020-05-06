@@ -55,6 +55,11 @@ nav:
   - 'ula-Projeto-dicas.md'
   - 'seq-Projeto.md'
   - 'assembly-Projeto.md'
+  - 'F - CPU':
+      - 'cpu-Projeto.md'
+      - 'cpu-Testando.md'
+      - 'cpu-DicasBeA.md'
+
 - Labs:
 #  - 'Resumo': 'Util-Resumo-Labs.md'
 #  - '17: J VM Translator Lab 1': 'J-VMtranslator-Lab-1.md'
@@ -83,6 +88,7 @@ nav:
   - 'assembly-Lab-2.md'
   - 'assembly-Lab-3.md'
   - 'assembly-Lab-4.md'
+  - 'cpu-lab-1.md'
 
 - 'Teoria':
   - 'Teoria-Algebra-Booleana.md'
