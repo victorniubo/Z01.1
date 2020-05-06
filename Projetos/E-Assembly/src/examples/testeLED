@@ -34,7 +34,7 @@ DELAY:
   ;; %S = 32k
 LOOP1:
   leaw $32000, %A
-  movw %A, %S
+  movw %A, %D
   leaw $LOOP2, %A
 
 LOOP2:

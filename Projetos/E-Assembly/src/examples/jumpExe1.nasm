@@ -7,10 +7,10 @@
 	  ;;  s = s+1
 INICIO:
 	  leaw $0, %A
-	  movw %A, %S                   ; Carrega 0 em S
+	  movw %A, %D                   ; Carrega 0 em S
 
 ADD:                              ; Label para saltar
-	  incw %S                       ; Incrementa S
+	  incw %D                       ; Incrementa S
 	  leaw $ADD, %A                 ; Carrega endereço do label ADD
 	                                ; (3 no caso)
 	  jmp                           ; Salto incondicional
