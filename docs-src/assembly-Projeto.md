@@ -101,5 +101,18 @@ Deve-se implementar diversos programas na linguagem de máquina do Z01 que irão
 
 #### Conceito A
 
-==ainda vou publicar!== 
+- Mean
+    - **Arquivo** : `vectorMean.nasm`
+- SWeLED2 
+    - **Arquivo** : `SWeLED2.nasm`
+    
+#### Extra
+
+- excelToLCD.py
+    - **Arquivo** : `excelToLCD.py`
+    - Criar um programa em python que converte um tabela do excel (onde cada célula equivale a um px pintado) em um código nasm que executa no Z01 e gera a imagem da tabela
+
+
+
+
 

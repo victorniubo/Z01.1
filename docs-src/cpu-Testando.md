@@ -20,17 +20,7 @@ $ ./testeAssemblyMyCPU.py
 !!! tip
     SE O TESTE TRAVAR: VERIFICAR DICAS AO FINAL DESSA PÁGINA
 
-3. Testar o Computador na FPGA
-
-- Abrir Quartus e compilar projeto
-- Executar `programMyFPGA.py`
-- Executar o programa `letra` / `nome`:
-
-```bash
-$ ./programSoftware.py -n ../E-Assembly/src/nasm/LCDnomeGrupo.nasm
-```
-
-## Se o `testeAssemblyMyCPU.py` travar
+### Se o `testeAssemblyMyCPU.py` travar
 
 Se por algum motivo o teste `testeAssemblyMyCPU.py` travar no primeiro teste, isso é sinônimo de que algo está errado com o seu HDL. Esse teste faz o seguinte para cada arquivo `.nasm` incluso no arquivo de configuração do **Projeto E**:
 

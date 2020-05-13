@@ -1,8 +1,8 @@
-# F - CPU
+# Projeto
 
-![](figs/G-CPU/sistema-pc.png)
+![](figs/G-CPU/sistema-cpu.svg)
 
-Nesse projeto cada grupo terá que implementar a CPU do Z01. 
+Nesse projeto cada grupo terá que implementar sua própria CPU do Z01. 
 
 ## Começando
 
@@ -127,41 +127,34 @@ Os módulos estão listados de maneira Top - Down
 
 ---------------------------
 
-![Computador.vhd](figs/G-CPU/computador.png)
-
----------------------------
-
 ![MemoryIo.vhd](figs/G-CPU/memoryIO.png)
 
 ---------------------------
 
-![CPU.vhd](figs/G-CPU/CPU.png)
-
----------------------------
-
-ControlUnit
-
-![ControlUnit.vhd](figs/G-CPU/controlUnit.png)
+![ControlUnit.vhd](figs/G-CPU/controlUnit.svg){width=400}
 
 ---------------------------
 
 ## Rubrica do projeto
 
+!!! warning
+    Os conceitos B e A devem ser feitos em um outro branch!
+    
+    - `git checkout -B CPU-Extras`
 
-| Conceito |                                                                                   |
-|----------|-----------------------------------------------------------------------------------|
-| I        | - Menos da metade dos módulos funcionando                                         |
-|          |                                                                                   |
-| D        | - Ao menos um módulo não está feito e não passa no testes.                        |
-|          |                                                                                   |
-| C        | - Construiu com os módulos do grupo o seu próprio computador                      |
-|          | - Todos os módulos sendo testados no Travis.                                      |
-|          | - Todos os módulos passam nos testes.                                             |
-|          | - Executa o escreve a letra do grupo no LCD usando o seu computador               |
-|          |                                                                                   |
-| B        | - Adiciona um novo registrador a CPU  (`%S`)                                      |
-|          | - Adiciona os displays de Sete Segmentos aos periféricos do Computador (memoryIO) |
-|          | - Modifica os testes para testar esse novo recurso!                               |
-|          |                                                                                   |
-| A        | - Possibilita realizar carregamento efetivo em %D (`leaw $5, %D`)  **OU**         |
-|          | - Modifica os testes para testar esse novo recurso!                               |
+| Conceito |                                                                                     |
+|----------|-------------------------------------------------------------------------------------|
+| I        |  Menos da metade dos módulos funcionando                                           |
+|          |                                                                                    |
+| D        |  Ao menos um módulo não está feito e não passa no testes.                          |
+|          |                                                                                    |
+| C        |  Construiu com os módulos do grupo o seu próprio computador                        |
+|          |  Todos os módulos sendo testados no Travis.                                        |
+|          |  Todos os módulos passam nos testes.                                               |
+|          |                                                                                    |
+| B        |  Adiciona um novo registrador a CPU  (`%S`)                                        |
+|          | ~~Adiciona os displays de Sete Segmentos aos periféricos do Computador (memoryIO)~~ |
+|          |  Modifica os testes para testar esse novo recurso!                                 |
+|          |                                                                                    |
+| A        |  Possibilita realizar carregamento efetivo em %D (`leaw $5, %D`)                   |
+|          |  Modifica os testes para testar esse novo recurso!                                 |

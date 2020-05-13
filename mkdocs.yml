@@ -58,7 +58,7 @@ nav:
   - 'F - CPU':
       - 'cpu-Projeto.md'
       - 'cpu-Testando.md'
-      - 'cpu-DicasBeA.md'
+#      - 'cpu-DicasBeA.md'
 
 - Labs:
 #  - 'Resumo': 'Util-Resumo-Labs.md'
@@ -102,6 +102,7 @@ nav:
   - 'Teoria-Z01.md'
   - 'Teoria-Z01-mapadeMemoria.md'
   - 'Teoria-nasm-jump.md'
+  - 'Teoria-Linguagem-de-Maquina.md'
   - 'Vídeo Aulas (Luciano)': 'Util-Video-Aulas.md'
 
 - 'VHDL':
