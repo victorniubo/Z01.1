@@ -1,5 +1,8 @@
 # Bem vindo disciplina de Elementos de Sistemas!
 
+!!! info ""
+    Site atualizado?  ![mkdocs](https://github.com/insper/Z01.1/workflows/mkdocs/badge.svg?branch=docs)
+
 ![](figs/icon-elementos.png)
 
 - **Curso:** Engenharia Da Computação - Terceiro semestre

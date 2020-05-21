@@ -1,4 +1,4 @@
-# LAB 15: Control Unit
+# Lab 15: Control Unit
 
 !!! warning "Antes de começar"
     Aqui começa o projeto **F-CPU**. ==Vocês devem escolher um novo Mediador==

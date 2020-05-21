@@ -1,3 +1,5 @@
+# Introdução
+
 Esse laboratório introduz uma série de conceitos e ferramentas e deve ser realizado individualmente ou em dupla (como indicado no começo de cada parte). 
 
 Ao final do laboratório você deverá:
@@ -10,10 +12,11 @@ Ao final do laboratório você deverá:
 1. Saber como extrair informações dos testes unitários
 1. Ter o `fillSymbolTable.initialize` implementando
 
-### Próximos passos
+## Antes de começar
 
-**Você é `Scrum Master` e não sabe por onde começar? De uma olhada nessas dicas: [Vixi! Sou Scrum Master](Vixi!-Sou-Scrum-Master)**
+Toda vez que um novo projeto começar será necessário realizar algumas configurações no repositório do grupo, vocês devem seguir para o documento: [`Util/Começando novo Projeto`](https://insper.github.io/Z01.1/Util-Comecando-novo-projeto/) e depois voltar para esse lab.
 
-- **Scrum Master** atualize o repositório com o upstream antes de continuar
+!!! warning
+    Não seguir sem realizar a etapa anterior.
 
-> [SEGUIR PARA A PRIMEIRA PARTE](H-Assembler-Lab-1-[parte-1])
+> [SEGUIR PARA A PRIMEIRA PARTE](assembler-Lab-1-parte-1)

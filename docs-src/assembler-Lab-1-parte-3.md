@@ -1,5 +1,7 @@
+# parte 3
+
 !!! warning ""
-    Deve ser realizado em dupla
+    Deve ser realizado individual (porém discutindo no grupo)
     
 Iremos agora implementar um dos métodos da classe **Code**, a parte responsável por gerar os três bits referentes ao `jump`:
 

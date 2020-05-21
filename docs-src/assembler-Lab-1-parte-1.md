@@ -1,4 +1,6 @@
-Agora iremos desenvolver um programa em java que será capaz de ler nossos programas em .nasm e converter eles para .hack (binário). Nosso arquivo `.hack` é um arquivo de **texto** que possui apenas `1`s e `0`s. Cada linha desse arquivo `.hack` é uma instrução a ser armazenada na memória.
+# LAB 16: parte 1
+
+Agora iremos desenvolver um programa em java que será capaz de ler nossos programas  `.nasm` e converter eles para `.hack` (binário). Nosso arquivo `.hack` é um arquivo de **texto** que possui apenas `1`s e `0`s. Cada linha desse arquivo `.hack` é uma instrução a ser armazenada na memória ROM e executado pela CPU.
 
 Exemplo de um arquivo `.hack`:
 
@@ -10,9 +12,9 @@ Exemplo de um arquivo `.hack`:
 000000000000001011
 ```
 
-> Você pode abrir seus arquivos .hack, basta ir em `F-Assembly/bin/hack/` que vai encontrar seus programas em linguagem de máquina.
+> Você pode abrir seus arquivos .hack, basta ir em `E-Assembly/bin/hack/` que vai encontrar seus binários (executáveis).
 
-O arquivo `.hack` é um formato que não conseguimos fazer o download para a FPGA, é necessário convertemos esse formato em um que o Quartus entenda. Esse formato do Quartus é chamado de `.mif` e é gerado automaticamente pelos scripts de teste, esse arquivo `.mif` é simular ao `.hack` salvo um cabeçalho e a indicação do endereço na qual a linha deve ser salva:
+O arquivo `.hack` é um formato que não conseguimos fazer o download para a FPGA, então é necessário convertemos esse formato em um que o Quartus entenda. Esse formato do Quartus é chamado de `.mif` e é gerado automaticamente pelos scripts de teste, esse arquivo `.mif` é similar ao `.hack` salvo um cabeçalho e a indicação do endereço na qual a linha deve ser salva:
 
 ```
 WIDTH=18;
@@ -30,18 +32,19 @@ CONTENT BEGIN
 END;
 ```
 
-> **O Assembler de vocês deve gerar um arquivo .hack. A conversão para o .mif é feita pelos scripts em python já fornecidos**
+!!! info
+    O Assembler de vocês deve gerar um arquivo `.hack`. A conversão para o `.mif` é feita pelos scripts em python já fornecidos (`./testeAssembly.py`)
 
 
 ```
-       assembler        script
+       assembler        script python
 .nasm ---------> .hack --------> .mif 
                                    v
                                    |---------> FPGA
                                    |---------> SIMULADOR
 ```
 
-# Assembler
+## Assembler
 
 O assembler será um programa escrito em java e que foi estruturado em **quatro classes**:
     
@@ -66,4 +69,4 @@ Note que o 'orquestrador' da montagem (esse é o termo em português utilizado) 
 
 ### Próximos passos
 
-Agora vamos começar a trabalhar no código java. [SIGA PARA PARTE 2](H-Assembler-Lab-1-[parte-2])
+Agora vamos configurar a ide para podermos trabalhar no código java. [SIGA PARA PARTE 2](assembler-Lab-1-parte-2)

@@ -1,5 +1,5 @@
-!!! warning ""
-    Deve ser realizado em dupla```diff
+# parte 4
+
 
 [Desenvolvimento baseado em testes](https://en.wikipedia.org/wiki/Test-driven_development) é uma técnica que temos utilizado até agora para os nosso projetos, nesse método fragmentando o desenvolvimento em pequenos módulos que são testados de forma individual, por testes unitários. O desenvolvimento é focado em fazer com que os módulos passem nos testes.
 
@@ -7,7 +7,7 @@ Como os testes não são perfeitos e não conseguem cobrir toda a funcionalidade
 
 Utilizaremos o mesmo recurso agora em java, onde cada módulo (método) possui um teste e quando todos os módulos estivem implementados e funcionando realizamos um teste de integração que valida tudo.
 
-Os testes unitários foram feitos com o [JUnit](https://junit.org/junit5/) e estão na pasta do projeto: `H-Assembler/Assembler/test/java/assembler`. Os testes cobrem todas os métodos do projeto.
+Os testes unitários foram feitos com o [JUnit](https://junit.org/junit5/) e estão na pasta do projeto: `G-Assembler/Assembler/test/java/assembler`. Os testes cobrem todas os métodos do projeto.
 
 ## Exemplo parser
 
@@ -47,8 +47,6 @@ public void testParser_commandType() {
       assertTrue("leaw $0,%A",parser.commandType("leaw $0,%A")==Parser.CommandType.A_COMMAND);
       assertTrue("abc:",parser.commandType("abc:")==Parser.CommandType.L_COMMAND);
       assertTrue("movw %A,%D",parser.commandType("movw %A,%D")==Parser.CommandType.C_COMMAND);
-      assertTrue("movw %A,%S",parser.commandType("movw %A,%S")==Parser.CommandType.C_COMMAND);
-
       ....
       ....
    }
@@ -67,4 +65,6 @@ Com essa informação complementar conseguimos inciar o desenvolvimento dessa cl
 
 !!! warning "Antes de continuar"
      1. Implemente a classe `parser.commandType`
-     1. Execute o teste unitário do `parser` até que o `comandType` passe nos testes.**
+     1. Execute o teste unitário do `parser` até que o `comandType` passe nos testes.
+     
+ 

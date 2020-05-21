@@ -1,7 +1,6 @@
-```diff
-+ Deve ser realizado em dupla
-```
+# parte 5
 
 Implemente o método `initialize` da classe `SymbolTable` utilizando os conceitos visto nos outros labs.
 
-- [Dicas sobre o SymbolTable](H-Assembler-Dicas-SymbolTable)
+- [Dicas sobre o SymbolTable](/assembler-Dicas-SymbolTable)
+
