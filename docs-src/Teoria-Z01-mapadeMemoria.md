@@ -1,4 +1,4 @@
-# Z01 - Mapa de memória
+# Mapa de memória
 
 A forma na qual a maioria dos computadores acessam periféricos (teclado/ mouse/ USB/ tela/ ...) é a do periférico mapeado em memória. Essa técnica utiliza da capacidade do computador de escrever e ler da memória RAM, **fazendo com que regiões de endereços da memória não sejam uma 'memória' física, mas sim um periférico do computador.**
 

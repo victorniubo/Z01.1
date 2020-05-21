@@ -84,3 +84,21 @@ O assembler necessita ler os opcodes e transformar em linguagem de máquina, ess
 
 ![](figs/Teoria/Assembler-code.svg)
 
+
+## Ferramental do curso
+
+Desenvolvemos no projeto E-Assembly uma série de programas escritos em nasm, mas você já parou para pensar como esses programas são montados? Quando vocês executam o script `./testeAssembly.py` algumas coisas acontecem:
+
+1. O script abre o arquivo de configurações de teste: `config.txt` e busca quais módulos nasm deve compilar
+1. Para cada arquivo `.nasm` encontrado é chamado um programa em java que é o assembler, exemplo:
+
+``` bash
+$ java -jar ~/Z01-Tools/jar/Z01-Assembler.jar -i ./src/add.nasm -o /bin/add.hack
+```
+
+!!! tip
+    Experimento você rodar esse comando e ver o que ele gera de output.
+
+O programa em java está dentro da pasta `Z01-Tools/jar` na raiz do usuário de vocês no linux. Esse programa em java implementa o assembler, e gera para cada nasm passado um executável.
+
+O script de teste não para por ai, ele precisa agora pegar esse executável, junto com os testes e jogar no Hardware, executar e pegar o resultado.

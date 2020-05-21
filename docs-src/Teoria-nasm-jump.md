@@ -1,4 +1,4 @@
-# Z01 - jump
+# jump
 
 Nossa CPU é capaz de realizar códigos com condição, tal como:
 
