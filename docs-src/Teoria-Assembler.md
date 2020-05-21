@@ -1,28 +1,29 @@
 # Assembler
 
 !!! info "EDSAC"
-    O EDSAC (Electronic Delay Storage Automatic Calculator)  é creditado como um dos primeiros computadores a utilizar um Assembler.
+    O EDSAC (Electronic Delay Storage Automatic Calculator) é creditado como um dos primeiros computadores a utilizar um Assembler.
     
     ![](https://www.i-programmer.info/images/stories/ComputerCreators/wilkes/edsac1.jpg)
     
     > https://people.cs.clemson.edu/~mark/edsac.html
 
 !!! info "Grace Hopper"
-    Foi uma das primeiras pessoas a programas os computadores Mark I, Mark II, Mark III, UNIVAC I e UNIVAC II o que tornou ela uma das grandes pioneiras da computação e seus trabalhas influenciaram gerações. Ela desenvolveu compiladores como o A-O e B-O que levaram ao desenvolvimento do COBOL, que foi usada durante muito tempo em diversos sistemas computacionais.
+    Foi uma das primeiras pessoas a programar os computadores Mark I, Mark II, Mark III, UNIVAC I e UNIVAC II o que tornou ela uma das grandes pioneiras da computação e seus trabalhos influenciaram futuras gerações. Ela desenvolveu compiladores como o A-O e B-O que levaram ao desenvolvimento do COBOL, que foi usada durante muito tempo em diversos sistemas computacionais e ainda hoje, possui uso em sistemas críticos de [governos](https://www.nextgov.com/ideas/2020/05/learning-new-jersey-why-government-organizations-should-cut-ties-cobol/165356/) e [instituições financeiras](https://www.quora.com/Who-still-uses-COBOL) ao redor do mundo.
     
-    Também um fato curioso, é que o primeiro bug de computadores se atribui a ela, no caso ela encontrou uma mariposa preso a um reley do Mark II que interrompeu uma execução de um programa dela.
+    
+    Também um fato curioso, é que o primeiro bug de computadores se atribui a ela, no caso ela encontrou uma mariposa preso a um relay do Mark II que interrompeu uma execução de um programa dela.
     
     ![](https://upload.wikimedia.org/wikipedia/commons/3/37/Grace_Hopper_and_UNIVAC.jpg)
 
     > https://en.wikipedia.org/wiki/Grace_Hopper
     
-Linguagens Assembly são a representação simbólica dos comandos binários do computador (linguagem de máquina), facilitando o desenvolvimento de programas. Essa é uma linguagem que chamamos de baixo nível, ou seja, ela não é tão sofisticada como uma linguagem C onde as instruções são mais podersas, mas não tem uma mapeamento direto para o hardware. ou seja, em geral instruções Assembly são convertidas diretamente para uma instrução de linguagem de máquina. Podemos dizer que é um mapeamento um para um, assim cada instrução Assembly vira uma instrução de máquina.
+Linguagens Assembly são as representações simbólicas dos comandos binários do computador (linguagem de máquina), facilitando o desenvolvimento de programas. Essa é uma linguagem que chamamos de baixo nível, ou seja, ela não é tão sofisticada como uma linguagem C onde as instruções são mais poderosas, mas não tem uma mapeamento direto para o hardware. ou seja, em geral instruções Assembly são convertidas diretamente para uma instrução de linguagem de máquina. Podemos dizer que é um mapeamento um para um, assim cada instrução Assembly vira uma instrução de máquina.
 
 ## O que um assembler faz?
 
 ![](figs/Teoria/Assembler-assembler.svg)
 
-As CPUs tem suas linguagens máquinas, que são descritas pelas sequencias de bits, ou seja, seus 0s e 1s. O assembly é um formalismo que permite a criação dos programas em uma linguagem mais humanamente tratável, porém os computadores não conseguem executar diretamente esse tipo de instrução, uma série de tratamentos e conversões são necessárias e o que o Assembler faz é justamente traduzir essa linguagem de mnemônicos para os códigos binários da arquitetura em questão, ou seja, os 0s e 1s que o computador consegue diretamente executar.
+As CPUs tem suas linguagens máquinas, que são descritas pelas sequências de bits, ou seja, seus 0s e 1s. O assembly é um formalismo que permite a criação dos programas em uma linguagem mais humanamente tratável, porém os computadores não conseguem executar diretamente esse tipo de instrução, uma série de tratamentos e conversões são necessárias e o que o Assembler faz é justamente traduzir essa linguagem de mnemônicos para os códigos binários da arquitetura em questão, ou seja, os 0s e 1s que o computador consegue diretamente executar.
 
 !!! tip
     Os Assemblers presentes nos sistemas operacionais disponíveis são normalmente o NASM para a sintaxe intel e o GAS para a sintaxe AT&T, mas podem haver variações.
@@ -99,6 +100,6 @@ $ java -jar ~/Z01-Tools/jar/Z01-Assembler.jar -i ./src/add.nasm -o /bin/add.hack
 !!! tip
     Experimento você rodar esse comando e ver o que ele gera de output.
 
-O programa em java está dentro da pasta `Z01-Tools/jar` na raiz do usuário de vocês no linux. Esse programa em java implementa o assembler, e gera para cada nasm passado um executável.
+O programa em Java está dentro da pasta `Z01-Tools/jar` na raiz do usuário de vocês no linux. Esse programa em Java implementa o Assembler, e gera para cada nasm passado um executável.
 
 O script de teste não para por ai, ele precisa agora pegar esse executável, junto com os testes e jogar no Hardware, executar e pegar o resultado.
