@@ -1,8 +1,9 @@
 name: mkdocs
 on:
   push:
-    branches: [ docs ]
-
+    branches:
+      - docs
+ 
 # Environment
 env:
   CI: true
