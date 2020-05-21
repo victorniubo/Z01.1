@@ -1,0 +1,86 @@
+# Assembler
+
+!!! info "EDSAC"
+    O EDSAC (Electronic Delay Storage Automatic Calculator)  é creditado como um dos primeiros computadores a utilizar um Assembler.
+    
+    ![](https://www.i-programmer.info/images/stories/ComputerCreators/wilkes/edsac1.jpg)
+    
+    > https://people.cs.clemson.edu/~mark/edsac.html
+
+!!! info "Grace Hopper"
+    Foi uma das primeiras pessoas a programas os computadores Mark I, Mark II, Mark III, UNIVAC I e UNIVAC II o que tornou ela uma das grandes pioneiras da computação e seus trabalhas influenciaram gerações. Ela desenvolveu compiladores como o A-O e B-O que levaram ao desenvolvimento do COBOL, que foi usada durante muito tempo em diversos sistemas computacionais.
+    
+    Também um fato curioso, é que o primeiro bug de computadores se atribui a ela, no caso ela encontrou uma mariposa preso a um reley do Mark II que interrompeu uma execução de um programa dela.
+    
+    ![](https://upload.wikimedia.org/wikipedia/commons/3/37/Grace_Hopper_and_UNIVAC.jpg)
+
+    > https://en.wikipedia.org/wiki/Grace_Hopper
+    
+Linguagens Assembly são a representação simbólica dos comandos binários do computador (linguagem de máquina), facilitando o desenvolvimento de programas. Essa é uma linguagem que chamamos de baixo nível, ou seja, ela não é tão sofisticada como uma linguagem C onde as instruções são mais podersas, mas não tem uma mapeamento direto para o hardware. ou seja, em geral instruções Assembly são convertidas diretamente para uma instrução de linguagem de máquina. Podemos dizer que é um mapeamento um para um, assim cada instrução Assembly vira uma instrução de máquina.
+
+## O que um assembler faz?
+
+![](figs/Teoria/Assembler-assembler.svg)
+
+As CPUs tem suas linguagens máquinas, que são descritas pelas sequencias de bits, ou seja, seus 0s e 1s. O assembly é um formalismo que permite a criação dos programas em uma linguagem mais humanamente tratável, porém os computadores não conseguem executar diretamente esse tipo de instrução, uma série de tratamentos e conversões são necessárias e o que o Assembler faz é justamente traduzir essa linguagem de mnemônicos para os códigos binários da arquitetura em questão, ou seja, os 0s e 1s que o computador consegue diretamente executar.
+
+!!! tip
+    Os Assemblers presentes nos sistemas operacionais disponíveis são normalmente o NASM para a sintaxe intel e o GAS para a sintaxe AT&T, mas podem haver variações.
+    
+    http://www.ibm.com/developerworks/library/l-gas-nasm/
+
+## Etapas de montagem
+
+O montador proposto nesse curso tem as seguintes etapas:
+
+1. Abrir arquivo
+1. Análise sintática
+1. Parsing (Tabela de Símbolos)
+1. Geração de código (code)
+
+### Análise Sintática
+
+O assemble faz a análise sintática (parsing) dos arquivos, identificando cada sequencia de caracteres, e posteriormente gerando os códigos binários para uma determinada arquitetura.
+
+Fazer o Parsing significa detectar cada símbolo para determinar a estrutura sintática de uma expressão, que é escrita de acordo com as regras de uma determinada gramática. Para analisar essa expressão, você tem que dividi-la no que chamamos de tokens:
+
+![](figs/Teoria/Assembler-parsing.svg)
+
+### Símbolos
+
+Uma das dificuldade em se programar em Assembly está relacionada ao gerenciamento de memória, ou seja, como saber em que endereço de memória devemos armazenar um valor ou para qual endereço realizar um salto, ou seja, um JUMP, ou Branching.
+
+Para isso podemos usar referências simbólicas nos programas para endereçar memórias físicas no computador. Usamos uma variável como em linguagens de alto nível e esses símbolos são posteriormente convertidos em números pelo Assembler. 
+
+``` nasm
+leaw $END, %A
+```
+
+Para as variáveis de valores podemos escolher endereços seguindo alguma regra, que posteriormente podem ser recuperados se armazenados num tabela que relaciona o nome ao valor. 
+
+```nasm
+leaw $var1, %A
+movw %D, (%A)
+```
+
+Já para os saltos, como a tradução do Assembly é direta, ou seja, as instruções em Assembly se mapeiam em instruções em linguagem de máquina como uma função bijetora, A tabela de símbolos pode ser usada para localizar onde estão marcados os marcadores que vamos chamar aqui de ==Labels== e também armazenar na memória.
+
+Finalmente vale ressaltar que a tabela de símbolos muitas vezes vem com uma série de símbolos pré definidos, que podem acessar posições de memória padronizadas para algo específico da arquitetura.
+
+``` nasm
+leaw $R0, %A
+leaw $LED, %A
+```
+
+O programa assembler varre o código em busca desses símbolos e cria uma tabela relacionando o seu nome a um valor que pode ser convertido em binário:
+
+![](figs/Teoria/Assembler-symbol.svg)
+
+Sempre que o assembler encontrar um símbolo, ele consulta essa tabela em busca do valor associado a ele.
+
+### Geração de código
+
+O assembler necessita ler os opcodes e transformar em linguagem de máquina, essa etapa que irá realmente criar uma saída binária. A geração de código deve identificar o tipo do comando que está sendo executado, os seus parâmetros e símbolos e então gerar a saída binária com base no instruction set de referência.
+
+![](figs/Teoria/Assembler-code.svg)
+

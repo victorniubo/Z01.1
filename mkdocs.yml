@@ -25,30 +25,6 @@ nav:
   - 'Util-Aulas.md'
 
 - 'Projetos':
-#  - 'Util-Resumo-Projetos.md'
-#  - 'X - Mundo real': 'X-Processadores-Projeto.md'
-#  - 'J - VM Translator':
-#    - 'Projeto': 'J-VMtranslator-Projeto.md'
-#    - 'VM Função': 'J-VMtranslator-memoria.md'
-#  - 'I - VM':
-#    - 'Projeto': 'I-VM-Projeto.md'
-#    - 'VM Linguagem': 'Util-Resumo-VM.md'
-#    - 'VM Memória': 'I-VM-Ferramental-Memoria.md'
-#  - 'H - Assembler':
-#    - 'Projeto': 'H-Assembler-Projeto.md'
-#    - 'Prerequisitos': 'H-Assembler-Prerequisitos.md'
-#    - 'Testando': 'H-Assembler-Testando.md'
-#    - 'Dicas SymbolTable': 'H-Assembler-Dicas-SymbolTable.md'
-#    - 'Dicas Macro': 'H-Assembler-Dicas-Macro.md'
-#  - 'G - CPU':
-#    - 'CPU Projeto': 'G-CPU-Projeto.md'
-#    - 'Dicas testando': 'G-CPU-Testando.md'
-#    - 'Dicas rubrica B': 'G-CPU-Dicas-Conceito-B-e-A.md'
-#  - 'F - Assembly':
-#    - 'Projeto': 'F-Assembly-Projeto.md'
-#    - 'Dicas': 'F-Assembly-Dicas.md'
-#    - 'Resumo Assembly': 'Util-Resumo-Assembly.md'
-#  - 'E - Lógica Sequencial': 'E-Sequencial-Projeto.md'
   - 'A-Ambiente-Desenvolvimento-Projeto.md'
   - 'LogiComb-Projeto.md'
   - 'ula-Projeto.md'
@@ -58,23 +34,9 @@ nav:
   - 'F - CPU':
       - 'cpu-Projeto.md'
       - 'cpu-Testando.md'
-#      - 'cpu-DicasBeA.md'
   - 'X-Processadores-Projeto.md'
 
 - Labs:
-#  - 'Resumo': 'Util-Resumo-Labs.md'
-#  - '17: J VM Translator Lab 1': 'J-VMtranslator-Lab-1.md'
-#  - '16: I VM Lab 1': 'I-VM-Lab-1.md'
-#  - '15: H Assembler Lab 1':
-#      - 'H-Assembler-Lab-1.md'
-#      - 'Parte 1': 'H-Assembler-Lab-1-[parte-1].md'
-#      - 'Parte 2': 'H-Assembler-Lab-1-[parte-2].md'
-#      - 'Parte 3': 'H-Assembler-Lab-1-[parte-3].md'
-#      - 'Parte 4': 'H-Assembler-Lab-1-[parte-4].md'
-#      - 'Parte 5': 'H-Assembler-Lab-1-[parte-5].md'
-#  - 'Lab 14 : G CPU Lab 1': 'G-CPU-Lab-1.pdf'
-#  - 'Lab 13 : F Assembly - 3': 'F-Assembly-Lab-3.md'
-#  - 'Lab 12 : F Assembly - 2': 'F-Assembly-Lab-2.md'
   - 'A-Ambiente-Lab-1.md'
   - 'A-Ambiente-Lab-2.md'
   - 'A-Transistores-Lab-1.md'
@@ -90,6 +52,16 @@ nav:
   - 'assembly-Lab-3.md'
   - 'assembly-Lab-4.md'
   - 'cpu-lab-1.md'
+  - '15: H Assembler Lab 1':
+    - 'H-Assembler-Lab-1.md'
+    - 'Parte 1': 'H-Assembler-Lab-1-[parte-1].md'
+    - 'Parte 2': 'H-Assembler-Lab-1-[parte-2].md'
+    - 'Parte 3': 'H-Assembler-Lab-1-[parte-3].md'
+    - 'Parte 4': 'H-Assembler-Lab-1-[parte-4].md'
+    - 'Parte 5': 'H-Assembler-Lab-1-[parte-5].md'
+#  - 'Resumo': 'Util-Resumo-Labs.md'
+#  - '17: J VM Translator Lab 1': 'J-VMtranslator-Lab-1.md'
+#  - '16: I VM Lab 1': 'I-VM-Lab-1.md'
 
 - 'Teoria':
   - 'Teoria-Algebra-Booleana.md'
@@ -104,6 +76,7 @@ nav:
   - 'Teoria-Z01-mapadeMemoria.md'
   - 'Teoria-nasm-jump.md'
   - 'Teoria-Linguagem-de-Maquina.md'
+  - 'Teoria-Assembler.md'
   - 'Vídeo Aulas (Luciano)': 'Util-Video-Aulas.md'
 
 - 'VHDL':
