@@ -16,4 +16,4 @@ for (var i = 0; i < admonitions_to_translate.length; i++) {
     }
 }
 
-document.body.innerHTML = document.body.innerHTML.replace( /\\newpage/g, "");
+//document.body.innerHTML = document.body.innerHTML.replace( /\\newpage/g, "");

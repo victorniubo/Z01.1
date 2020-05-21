@@ -8,10 +8,10 @@ theme:
       accent: 'pink'
 
 docs_dir: 'docs-src'
-site_url: 'https://insper.github.io/Z01.1/'
-repo_name: 'GitHub'
+repo_name: 'Insper/Z01.1'
 repo_url: 'https://github.com/insper/Z01.1'
-edit_url: 'edit/docs/docs-src/'
+edit_uri: 'edit/docs/docs-src/'
+
 copyright: 'Copyright &copy; Rafael Corsi @ insper'
 
 nav:
@@ -120,6 +120,8 @@ extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
   - 'translate_admonitions.js'
 
+plugins:
+    - search
 
 # Extensions
 markdown_extensions:
@@ -154,5 +156,3 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
-plugins:
-    - search
