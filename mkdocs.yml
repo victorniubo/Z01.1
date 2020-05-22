@@ -79,6 +79,7 @@ nav:
   - 'Teoria-nasm-jump.md'
   - 'Teoria-Linguagem-de-Maquina.md'
   - 'Teoria-Assembler.md'
+  - 'assembler-Dicas-SymbolTable.md'
   - 'Vídeo Aulas (Luciano)': 'Util-Video-Aulas.md'
 
 - 'VHDL':
