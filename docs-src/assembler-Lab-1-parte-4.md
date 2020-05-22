@@ -67,4 +67,6 @@ Com essa informação complementar conseguimos inciar o desenvolvimento dessa cl
      1. Implemente a classe `parser.commandType`
      1. Execute o teste unitário do `parser` até que o `comandType` passe nos testes.
      
- 
+## Continuando
+
+Siga para a próxima parte.

@@ -69,4 +69,4 @@ Note que o 'orquestrador' da montagem (esse é o termo em português utilizado) 
 
 ### Próximos passos
 
-Agora vamos configurar a ide para podermos trabalhar no código java. [SIGA PARA PARTE 2](assembler-Lab-1-parte-2)
+Agora vamos configurar a ide para podermos trabalhar no código java, siga para a próxima parte.

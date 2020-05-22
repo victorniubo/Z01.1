@@ -73,3 +73,6 @@ Note que o teste falhou, já que a nossa implementação está incompleta.
 
 ![](figs/H-Assembler/code-test-result.png)
 
+## Continuando
+
+Siga para a próxima parte.

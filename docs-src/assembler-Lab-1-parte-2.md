@@ -29,4 +29,4 @@ Verifique se o intellij associou um SDK ao projeto:
 
 ### Próximos passos
 
-Agora vamos começar a trabalhar no código java. [SIGA PARA PARTE 3](assembler-Lab-1-parte-3)
+Agora vamos começar a trabalhar no código java. Siga para a próxima parte.
