@@ -118,6 +118,9 @@ nav:
   - 'Infraestrutura': 'Util-Infraestrutura.md'
   - 'Util-VM-Linux.md'
 
+- História:
+  - 'Historia-linux.md'
+
 - Atendimento:
   - 'Atendimento.md'
 
