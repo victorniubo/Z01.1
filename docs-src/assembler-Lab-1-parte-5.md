@@ -7,7 +7,6 @@ O initialize utiliza outros métodos dessa classe, edite eles:
 ```java
     public void addEntry(String symbol, int address) {
         symbolTable.put(symbol, address);
-        return;
     }
 ```
 
