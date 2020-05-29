@@ -1,9 +1,31 @@
 # parte 5
 
-Implemente o método `initialize` da classe `SymbolTable` utilizando os conceitos visto nos outros labs.
+Implemente o método `initialize` da classe `SymbolTable` utilizando os conceitos visto nos outros labs. 
 
-- [Dicas sobre o SymbolTable](/assembler-Dicas-SymbolTable)
+O initialize utiliza outros métodos dessa classe, edite eles:
+
+```java
+    public void addEntry(String symbol, int address) {
+        symbolTable.put(symbol, address);
+        return;
+    }
+```
+
+```java
+  public Boolean contains(String symbol) {
+        return symbolTable.containsKey(symbol);
+    }
+```
+
+```java
+ public Integer getAddress(String symbol) {
+        return symbolTable.get(symbol);
+    }
+```
+
+Agora com os demais métodos implementando faça o `initialize`.
 
 !!! tip
     Use os testes para ajudar entender o que o método faz.
 
+Tabela de símbolos? De uma lida na [teoria/Tabela de Símbolos](Z01.1/assembler-Dicas-SymbolTable/)
