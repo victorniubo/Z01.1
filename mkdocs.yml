@@ -60,9 +60,7 @@ nav:
     - 'assembler-Lab-1-parte-3.md'
     - 'assembler-Lab-1-parte-4.md'
     - 'assembler-Lab-1-parte-5.md'
-#  - 'Resumo': 'Util-Resumo-Labs.md'
-#  - '17: J VM Translator Lab 1': 'J-VMtranslator-Lab-1.md'
-#  - '16: I VM Lab 1': 'I-VM-Lab-1.md'
+  - 'vm-Lab-1.md'
 
 - 'Teoria':
   - 'Teoria-Algebra-Booleana.md'
@@ -80,6 +78,10 @@ nav:
   - 'Teoria-Linguagem-de-Maquina.md'
   - 'Teoria-Assembler.md'
   - 'assembler-Dicas-SymbolTable.md'
+  - 'Teoria-vm.md'
+  - 'Teoria-vm-segmentos.md'
+  - 'Teoria-vm-jump.md'
+  - 'Teoria-vm-funcoes.md'
   - 'Vídeo Aulas (Luciano)': 'Util-Video-Aulas.md'
 
 - 'VHDL':
