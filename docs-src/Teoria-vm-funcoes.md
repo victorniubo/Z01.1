@@ -21,7 +21,7 @@ Onde :
 - **functionName:** é o nome da função
 - **numberOfVars:** a quantidade de variáveis locais que essa função possui.
     
-Como exemplo, vamos transformar a seguinte função em python para vm  :
+Como exemplo, vamos transformar a seguinte função em Python para VM:
 
 ```python
 def SimpleFunction(a, b):
@@ -30,7 +30,7 @@ def SimpleFunction(a, b):
    return(aux1+aux0)
 ```
 
-Em vm:
+Em VM:
 
 ```
 function SimpleFunction 2
@@ -70,7 +70,7 @@ Note que os parâmetros devem ser apenas leitura, não devendo escrever nesses s
 
 ## return
 
-A função considera como retorno o último valor da pilha, e sempre retorna um único 
+A função considera como retorno o último valor da pilha, e sempre retorna um único valor apenas.
 
 ## Chamada de função
 
@@ -92,7 +92,7 @@ Onde :
 - **functioName** : nome da função a ser chamada
 - **numberOfPar** : quantidade de parâmetros que essa função recebe.
 
-O exemplo a seguir chama a função SimpleFunction com os valores 5 e 8
+O exemplo a seguir chama a função SimpleFunction com os valores 5 e 8 como argumentos / parâmetros da função.
 
 ```
 function Main.main 0
