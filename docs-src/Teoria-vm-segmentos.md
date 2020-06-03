@@ -1,6 +1,6 @@
 # VM - Segmentos
 
-Os comandos **push** e **pop** são a única maneira que temos de acessar/manipular a memória. O comando **push** traz para a pilha um valor da memória (RAM ou ROM) e o comando **pop** salva na memória um valor da pila (RAM). Os comandos possuem a seguinte sintaxe :
+Os comandos **push** e **pop** são a única maneira que temos de acessar/manipular a memória. O comando **push** traz para a pilha um valor da memória (RAM ou ROM) e o comando **pop** salva na memória um valor da pilha (RAM). Os comandos possuem a seguinte sintaxe :
 
 - **push** *segment index*
 - **pop**  *segment index*
