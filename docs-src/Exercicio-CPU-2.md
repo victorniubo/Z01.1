@@ -36,6 +36,8 @@ Que possui a RAM iniciada com os seguintes valores:
       <source src="http://54.162.111.146/shared/ele/erro-loadA.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video> 
+    
+    - Se o vídeo não abrir acesse pelo link e faça o download:  http://54.162.111.146/shared/ele/erro-loadA.mp4
 
 
 ## Engenharia reversa
@@ -55,3 +57,7 @@ Encontre os ==três== comandos em nasm que estão sendo executados no hardware n
       <source src="http://54.162.111.146/shared/ele/eng-rev.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video> 
+    
+    - Se o vídeo não abrir acesse pelo link e faça o download: http://54.162.111.146/shared/ele/eng-rev.mp4
+
+
