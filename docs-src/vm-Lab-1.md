@@ -3,9 +3,9 @@
 !!! tip
     Realizar o laboratório individualmente.
 
-Nesse lab iremos criar programas em VM para o nosso Z01.1, essa entrega é individual e não vale nota, mas será cobrado em prova e servirá para vocês entenderem o próximo projeto: `I-VMTranslator` e será cobrado na ultima avaliação.
+Nesse lab iremos criar programas em VM para o nosso Z01.1, essa entrega é individual e não vale nota, mas será cobrado em prova e servirá para vocês entenderem o próximo projeto: `I-VMTranslator`, assim como este conteúdo será cobrado na ultima avaliação.
 
-Esse laboratório mistura exercícios com leitura de teoria, você deve realizar as leituras recomenda para cada secção e então voltar para fazer os exercícios. 
+Esse laboratório mistura exercícios com leitura de teoria, é essencial que você realize as leituras recomendadas para cada secção e então voltar para fazer os exercícios. 
 
 !!! warning "Antes de começar"
     Esse laboratório não faz parte de um projeto, mas será necessário atualizar o repositório de vocês com o Z01 para buscarem a nova pasta (`upstream`). Escolham um do grupo para fazer isso, ele não será um scrum master!
@@ -57,19 +57,18 @@ Implementem o código a seguir que realiza uma divisão:
 
 ## funções
 
-Vamos agora fazer o uso de funções em VM, o que ira nos permitir fazer as seguintes operações: $10/2 + 15*3*\sqrt{121}/2^5$, lembre que no nosso hardware não possuímos os operadores de multiplicação, divisão, raiz quadrada e nem exponencial. Mas com o uso de
-funções podemos implementar isso em código e usar para implementar a equação anterior.
+Vamos agora fazer o uso de funções em VM, o que irá nos permitir fazer as seguintes operações: $10/2 + 15*3*\sqrt{121}/2^5$, lembre que no nosso hardware não possuímos os operadores de multiplicação, divisão, raiz quadrada e muito menos exponencial. Mas com o uso de funções podemos implementar isso em código e usar para implementar a equação anterior.
 
 ```
 div(10,2) + div(mult(mult(15,3), sqrt(121.2))), exp(2,5))
 ``` 
 
-- note que os operadores viraram chamada de função.
+- note que os operadores viraram chamadas de funções.
 
 !!! info "TEORIA"
     Leia a [Teoria/VM - Funções](/Teoria-vm-funcoes/) antes de seguir.
     
-Vamos agora trabalhar com funções na nossa vm, implementem os códigos a seguir:
+Vamos agora trabalhar com funções na nossa VM, implementem os códigos a seguir:
 
 - `H-VM/src/vm/2b-Calculadora`
 - `H-VM/src/vm/2c-Calculadora`
