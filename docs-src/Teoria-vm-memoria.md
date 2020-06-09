@@ -1,6 +1,9 @@
-Para a máquina virtual funcionar corretamente devemos agora definir regiões de memória que servirá para aplicações específicas, tal como armazenar: o topo da pilha (*SP*, Stack Pointer), os locais dos parâmetros passados na chamada de função (*ARG*, argument), os endereços das variáveis locais de uma função (*LCL*, local) ... 
+# VM - Memória
 
-A seguir um resumo dos endereços de memória e suas funções :
+
+Para a máquina virtual funcionar corretamente devemos agora definir regiões de memória que serviram para aplicações específicas, tal como armazenar: o topo da pilha (*SP*, Stack Pointer), os locais dos parâmetros passados na chamada de função (*ARG*, argument), os endereços das variáveis locais de uma função (*LCL*, local) ... 
+
+A seguir um resumo dos endereços de memória e suas funções:
 
 | Endereço (RAM) | Símbolo | Nome          | Uso                                               |
 |----------------|---------|---------------|---------------------------------------------------|
@@ -23,7 +26,7 @@ Além dos endereços específicos (que possuem papeis especiais), devemos també
 
 Iremos detalhar um pouco de cada item descrito nesse resumo.
 
-# Stack
+## Stack
 
 A stack é a região de memória utilizada pela VM para armazenar valores e realizar operações, funciona como uma forma de abstração do hardware, já que agora toda manipulação de dados acontece na Stack e não mais nos registradores. É claro que essa manipulação influencia nos registradores do hardware, mas o programador não mais precisa ter todo o conhecimento do hardware nas operações. Por exemplo a operação :
 
@@ -39,21 +42,20 @@ Teremos 8 no topo da pilha. O hardware vai influenciar o VMtranslator que deve t
 
 A stack é utilizada também para armazenar os valores passados na chamada de função e também para armazenar o resultado (return) de uma função.
 
-## Stack Pointer
+### Stack Pointer
 
 É um ponteiro que indica a onde está o endereço do topo da pilha, como a pilha cresce e diminui dinamicamente (conforme os push, pops e operações) necessitamos armazenar em algum local o endereço do topo da pilha, conforme figura a seguir :
 
-![Stack Pointer](figs/I-VM/SP.svg)
+![Stack Pointer](figs/I-VM/SP.svg){width=230}
 
-### Stack overflow?
+!!! info "Stack Overflow"
+    Agora fica mais claro o significado do site stack overflow ? Indica o estouro da pilha. Imagine a situação na qual só oclocamos dados na pilha e nunca tiramos (**pop**, em algum momento a pilha irá passar seu valor máximo, que no nosso caso é : 2047 - 256 =  1791 endereços e começará a escrever na região reservada peara o Heap, corrompendo os dados ali salvos.
 
-Agora fica mais claro o significado do site stack overflow ? Indica o estouro da pilha. Imagine a situação na qual só oclocamos dados na pilha e nunca tiramos (**pop**, em algum momento a pilha irá passar seu valor máximo, que no nosso caso é : 2047 - 256 =  1791 endereços e começará a escrever na região reservada peara o Heap, corrompendo os dados ali salvos.
+## Funções
 
-## Função
+Os ponteiros `LCL` e `ARG` são utilizados somente na execução de uma função o ARG indica o endereço da stack na qual os parâmetros que serão passados para a função estão salvos e o LCL é indicado para apontar para o endereço na pilha utilizado para armazenar variáveis locais.
 
-Os ponteiros LCL e ARG são utilizados somente na execução de uma função o ARG indica o endereço da stack na qual os parâmetros que serão passados para a função estão salvos e o LCL é indicado para apontar para o endereço na pilha utilizado para armazenar variáveis locais.
-
-O fluxo de chamada de função, de forma simplificada é :
+O fluxo de chamada de função, de forma simplificada é:
 
 1. Coloca na pilha os argumentos que ser passado para a função 
      - a quantidade varia conforme a demanda da função
@@ -64,10 +66,10 @@ O fluxo de chamada de função, de forma simplificada é :
 O fluxo de chamada de função (call) é um pouco complexo, pois demanda que salvemos algumas informações da pilha antes de executarmos a função (precisamos conseguir após a execução da função retornar para um estado similar antes da execução). Para isso é salvo na pilha :
 
 - Endereço de retorno 
-- LCL (antes da chamada de função)
-- ARG (antes da chamada de função)
-- This (antes da chamada de função)
-- That (antes da chamada de função)
+- `LCL` (antes da chamada de função)
+- `ARG` (antes da chamada de função)
+- `This` (antes da chamada de função)
+- `That` (antes da chamada de função)
 
 ### LCL - Local 
 
@@ -75,7 +77,7 @@ Local indica o endereço na pilha na qual foi alocado para as variáveis locais 
 
 Peguemos como exemplo uma função em java :
 
-```
+``` c
 void example(int a, int b){
  int aux0;
  int aux1;
@@ -91,7 +93,7 @@ Note que essa função possui duas variáveis locais : **aux0, aux1**, que são 
 
 O exemplo em java anterior seria traduzido para a linguagem VM (de forma imediata) na seguinte maneira :
 
-```
+``` 
  function example 2
      push argument 0  // coloca na pilha o valor a
      pop local 0       // aux0 = a
@@ -116,7 +118,7 @@ O ponteiro ARG indica a onde na pilha estão salvos os argumentos que a função
 !!! tip
     Endereço `argument n` = ARG + n
 
-# Static variables
+## Static variables
 
 É a região da memória utilizada para armazenar variáveis compartilhadas entre o mesmo arquivo .vm, conforme figura a seguir :
 
@@ -151,7 +153,7 @@ public class class1 {
     
     ^1: https://beginnersbook.com/2013/05/static-variable/
 
-# HEAP
+## HEAP
 
 O HEAP é a região de memória a ser utilizada para armazenamento objetos e vetores, um objeto será construído a partir de uma classe  e compartilhará as mesma variáveis estáticas mas não as mesmas variáveis locais ao objeto. Vamos tomar como ponto de partida o exemplo a seguir que inicializa dois objetos (terra e lua) do tipo corpoCeleste :
 
