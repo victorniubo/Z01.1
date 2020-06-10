@@ -12,6 +12,8 @@ Esse laboratório mistura exercícios com leitura de teoria, é essencial que vo
     
     - ==Não seguir sem realizar a etapa anterior.==
 
+!!! warning "Z01-Tools"
+    Atualizar Z01-Tools! antes de seguir...
 
 ## Treinando RPN
 
