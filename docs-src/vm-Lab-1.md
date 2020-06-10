@@ -50,9 +50,13 @@ Nossa linguagem vm suporta realizar condições e loops, vamos ver como isso é 
 !!! info "TEORIA"
     Leia a [Teoria/VM - jump](/Z01.1/Teoria-vm-jump/) antes de seguir.
     
-Implementem o código a seguir que realiza uma divisão:
+Implementem os códigos a seguir
 
+- `H-VM/src/vm/1c-loop`
 - `H-VM/src/vm/1c-div`
+
+!!! tip
+    De uma olhada nos códigos de exemplo, tem coisa de condição lá!
 
 ## funções
 
