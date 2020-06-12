@@ -14,21 +14,21 @@ A seguir um resumo dos endereços de memória e suas funções:
 |              4 | THAT    | That          | Ponteiro para a base do segmento that             |
 |          5..12 | Temp    | Temporary     | Endereços para armazenar variáveis temporárias    |
 
-Além dos endereços específicos (que possuem papeis especiais), devemos também definir regiões da memória que serão utilizadas para armazenar tipos de dados específicos, são eles :
+Além dos endereços específicos (que possuem papéis especiais), devemos também definir regiões da memória que serão utilizadas para armazenar tipos de dados específicos, são essas :
 
 
 | Endereço (RAM) | Nome   | Uso                                                   |
 |----------------|--------|-------------------------------------------------------|
 |         16-255 | Static | Variáveis estáticas (acessíveis por todas as funções) |
-|       256-2047 | Stack  | Pilha utilizada pela vm (stack pointer)               |
+|       256-2047 | Stack  | Pilha utilizada pela VM (stack pointer)               |
 |     2048-16383 | Heap   | Usada para armazenar objetos e vetores                |
 |         16384- | I/O    | Periféricos mapeados em memória                       |
 
-Iremos detalhar um pouco de cada item descrito nesse resumo.
+Vamos detalhar um pouco de cada item descrito nesse resumo.
 
 ## Stack
 
-A stack é a região de memória utilizada pela VM para armazenar valores e realizar operações, funciona como uma forma de abstração do hardware, já que agora toda manipulação de dados acontece na Stack e não mais nos registradores. É claro que essa manipulação influencia nos registradores do hardware, mas o programador não mais precisa ter todo o conhecimento do hardware nas operações. Por exemplo a operação :
+A stack é a região de memória utilizada pela VM para armazenar valores e realizar operações, funciona como uma forma de abstração do hardware, já que agora toda manipulação de dados acontece na Stack e não mais nos registradores. É claro que essa manipulação influência nos registradores do hardware, mas o programador não mais precisa ter todo o conhecimento do hardware nas operações. Por exemplo a operação :
 
 ```
 push constant 5
@@ -38,7 +38,7 @@ add
 
 Adiciona o valor 5 e o 3 para o topo da pilha e os soma, resultando em um único valor : 8. Notem que para essa operação ser realizada no hardware do Z01 tivemos que usar os registradores para tornar a operação viável, porém isso não é mais visível do programa VM. Nesse camada de software não interessa mais se o hardware possui 2, 3, ... N registradores o resultado da operação será a mesma.
 
-Teremos 8 no topo da pilha. O hardware vai influenciar o VMtranslator que deve traduzir a linguagem de máquina virtual por pilha para a linguagem assembly, o número de registradores pode influenciar a performance do computador mas não irá mudar o conceito de pilha. 
+Teremos 8 no topo da pilha. O hardware vai influenciar o VMTranslator que deve traduzir a linguagem de máquina virtual por pilha para a linguagem Assembly, o número de registradores pode influenciar a performance do computador mas não irá mudar o conceito de pilha. 
 
 A stack é utilizada também para armazenar os valores passados na chamada de função e também para armazenar o resultado (return) de uma função.
 
@@ -49,11 +49,11 @@ A stack é utilizada também para armazenar os valores passados na chamada de fu
 ![Stack Pointer](figs/I-VM/SP.svg){width=230}
 
 !!! info "Stack Overflow"
-    Agora fica mais claro o significado do site stack overflow ? Indica o estouro da pilha. Imagine a situação na qual só oclocamos dados na pilha e nunca tiramos (**pop**, em algum momento a pilha irá passar seu valor máximo, que no nosso caso é : 2047 - 256 =  1791 endereços e começará a escrever na região reservada peara o Heap, corrompendo os dados ali salvos.
+    Agora fica mais claro o significado do site stack overflow ? Indica o estouro da pilha. Imagine a situação na qual só colocamos dados na pilha e nunca tiramos (**pop**, em algum momento a pilha irá passar seu valor máximo, que no nosso caso é : 2047 - 256 =  1791 endereços e começará a escrever na região reservada para o Heap, corrompendo os dados que estavam ali salvos).
 
 ## Funções
 
-Os ponteiros `LCL` e `ARG` são utilizados somente na execução de uma função o ARG indica o endereço da stack na qual os parâmetros que serão passados para a função estão salvos e o LCL é indicado para apontar para o endereço na pilha utilizado para armazenar variáveis locais.
+Os ponteiros `LCL` e `ARG` são utilizados somente na execução de uma função, o ARG indica o endereço da stack na qual os parâmetros que serão passados para a função estão salvos e o LCL é indicado para apontar para o endereço na pilha utilizado para armazenar variáveis locais.
 
 O fluxo de chamada de função, de forma simplificada é:
 
@@ -63,7 +63,7 @@ O fluxo de chamada de função, de forma simplificada é:
 1. Aloca na pilha os endereços de memória para armazenar os locals
 1. Atualiza os ponteiros : SP, LCL, ARG
 
-O fluxo de chamada de função (call) é um pouco complexo, pois demanda que salvemos algumas informações da pilha antes de executarmos a função (precisamos conseguir após a execução da função retornar para um estado similar antes da execução). Para isso é salvo na pilha :
+O fluxo de chamada de função (call) é um pouco complexo, pois demanda que salvemos algumas informações da pilha antes de executarmos a função (precisamos conseguir após a execução da função retornar para um estado similar antes da execução), isto é conhecido como **salvar contexto** (antes da execução da função) e **restaurar contexto** (após da execução da função). Para isso é salvo na pilha:
 
 - Endereço de retorno 
 - `LCL` (antes da chamada de função)
@@ -75,7 +75,7 @@ O fluxo de chamada de função (call) é um pouco complexo, pois demanda que sal
 
 Local indica o endereço na pilha na qual foi alocado para as variáveis locais de uma função, a quantidade de endereços alocados varia conforme a declaração da função, que pode possuir zero ou mais variáveis temporárias.
 
-Peguemos como exemplo uma função em java :
+Veja como fica um exemplo em Java :
 
 ``` c
 void example(int a, int b){
@@ -91,7 +91,7 @@ Note que essa função possui duas variáveis locais : **aux0, aux1**, que são 
 
 ![Local](figs/I-VM/lclArg.svg)
 
-O exemplo em java anterior seria traduzido para a linguagem VM (de forma imediata) na seguinte maneira :
+O exemplo em Java anteriormente seria traduzido para a linguagem VM (de forma imediata) na seguinte maneira :
 
 ``` 
  function example 2
@@ -155,7 +155,7 @@ public class class1 {
 
 ## HEAP
 
-O HEAP é a região de memória a ser utilizada para armazenamento objetos e vetores, um objeto será construído a partir de uma classe  e compartilhará as mesma variáveis estáticas mas não as mesmas variáveis locais ao objeto. Vamos tomar como ponto de partida o exemplo a seguir que inicializa dois objetos (terra e lua) do tipo corpoCeleste :
+O HEAP é a região de memória a ser utilizada para armazenamento objetos e vetores, um objeto será construído a partir de uma classe e compartilhará as mesma variáveis estáticas mas não as mesmas variáveis locais ao objeto. Vamos tomar como ponto de partida o exemplo a seguir que inicializa dois objetos (terra e lua) do tipo corpoCeleste :
 
 ``` java
 void main(){
@@ -222,7 +222,7 @@ Código principal:
     }
 ```
 
-Nesse exemplo, incluímos um novo método (compareMass) na classe corpoCeleste, esse novo método compara a massa de um outro objeto com a do próprio objeto, retornando verdadeiro ou falso dependendo do resultado.
+Nesse exemplo, incluimos um novo método (compareMass) na classe corpoCeleste, esse novo método compara a massa de um outro objeto com a do próprio objeto, retornando verdadeiro ou falso dependendo do resultado.
 
 Como esse código seria traduzido para VM? O objeto em questão será acessado utilizando o ponteiro `this` e o objeto a ser comparado será acessado via o `that`. O compilador da linguagem de alto nível para VM será responsável por alocar os objetos nos endereços certos.
 
@@ -244,4 +244,4 @@ function corpoCeleste.compareMass 0
     return
 ```
 
-Note que quando o método for chamado (no caso da vm o método será traduzido para uma função), os ponteiros **this** e **that** devem ser passados via a chama da função, e no começo da função atualizado os endereços RAM[3] - This e RAM[4] - That. 
+Note que quando o método for chamado (no caso da vm o método será traduzido para uma função), os ponteiros **this** e **that** devem ser passados via a chamada da função, e no começo da função atualizado os endereços RAM[3] - This e RAM[4] - That. 

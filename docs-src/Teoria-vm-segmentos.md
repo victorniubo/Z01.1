@@ -40,16 +40,6 @@ Podemos também trazer o *temp 3* para a pilha:
 push temp 3
 ```
 
-!!! example "Programando"
-    Implemente os programas a seguir e teste com `testeVm.py`.
-
-    - `Projetos/I-VM/src/vm/1a-Add`
-    - `Projetos/I-VM/src/vm/1b-Add`
-    - `Projetos/I-VM/src/vm/2a-Calculadora`
-
-!!! warning "Antes de Continuar"
-    Só Continue após implementar e testar todos os programas!
-
 ### Escrevendo um pixel no LCD
 
 Para atualizarmos o LCD via VM será necessário primeiro atualizarmos para onde o **that** aponta, **that** é a maneira que possuímos de escrever em qualquer endereço da memória. O exemplo a seguir ilustra como usamos o segmento **that** para escrever nos pixels centrais do LCD, supondo que gostaríamos de realizar a seguinte operação em C.
