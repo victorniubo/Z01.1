@@ -21,8 +21,8 @@ nav:
   - 'Rubricas Projetos': 'Sobre-Rubricas.md'
   - 'Util-Corona.md'
 
-- Aulas:
-  - 'Util-Aulas.md'
+#- Aulas:
+#  - 'Util-Aulas.md'
 
 - 'Projetos':
   - 'A-Ambiente-Desenvolvimento-Projeto.md'
@@ -61,6 +61,7 @@ nav:
     - 'assembler-Lab-1-parte-4.md'
     - 'assembler-Lab-1-parte-5.md'
   - 'vm-Lab-1.md'
+  - 'VMtranslator-Lab-1.md'
 
 - 'Teoria':
   - 'Teoria-Algebra-Booleana.md'
