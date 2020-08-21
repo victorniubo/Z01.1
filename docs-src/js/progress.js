@@ -34,28 +34,56 @@ function checkCookie() {
   return username;
 }
 
+function setButDefauld(but) {
+  but.className = "button0";
+  but.firstChild.data = "Cheguei Aqui!";
+}
+
+function setButNameError(but) {
+  but.firstChild.data = "Preencha o nome antes de seguir.";
+  but.className = "button1";
+  setTimeout(() => { setButDefauld(but)}, 2000);
+}
+
+function setButDone(but) {
+  but.firstChild.data = "Progresso reportado!";
+  but.className = "button0 buttonDone";
+}
+
+function setButDoneOld(but) {
+  but.firstChild.data = "Progresso já reportado!";
+  but.className = "button0 buttonDone";
+}
+
+var url = window.location.href;
+var usrname = checkCookie();
+
 function progressBut(button_id) {
-    var usrname = checkCookie();
     var but = document.getElementById(button_id);
     var text = but.firstChild;
-    if (usrname != "") {
-        if(text.data == "Cheguei Aqui!"){
-            text.data = "Progresso reportado!";
-            but.className = "button0 buttonDone";
+    if (usrname != "" && text.data == "Cheguei Aqui!"){
+      setButDone(but);
+      setCookie(url+button_id, 'true', 365);
 
-            f = new FormData();
-            f.append('name', usrname);
-            f.append('time', new Date());
-            f.append('id', button_id);
-            f.append('url', window.location.href);
-            fetch(scriptURL, { method: 'POST', body: f})
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message));
-        }
+      f = new FormData();
+      f.append('name', usrname);
+      f.append('time', new Date());
+      f.append('id', button_id);
+      f.append('url', url);
+      fetch(scriptURL, { method: 'POST', body: f})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message));
     } else {
-        text.data = "Preencha o nome antes de seguir.";
-        but.className = "button1";
-        setTimeout(() => { but.className = "button0";
-                           text.data = "Cheguei Aqui!";}, 2000);
+      setButNameError(but);
     }
+}
+
+var buttons = document.getElementsByClassName( "button0");
+
+for ( var i = 0; i < buttons.length; i++) {
+  var but = buttons[i];
+  var isTrue = getCookie(url+but.id);
+  if (isTrue == 'true'){
+    setButDoneOld(but)
+  }
 }
