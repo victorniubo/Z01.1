@@ -1,14 +1,17 @@
 # A - Ambiente de desenvolvimento
 
+!!! tip "2020-2"
+    - [x] Material revisado
+
 Nesse projeto iremos configurar grande parte do ambiente de desenvolvimento a ser utilizado por toda a disciplina, que é composto basicamente pelas ferramentas:
 
 1. Repositório github
-1. Slack
+1. Teams
 1. Travis CI
 
 Esse projeto também tem como objetivo introduzir a dinâmica de trabalho e avaliação que será usada na disciplina, onde uma pessoa é responsável pela gestão do projeto e avaliação dos colegas e as demais por implementar o que é pedido.
 
-Para executar esse projeto basta completar os laboratórios: [Lab1](); [Lab2]();
+Para executar esse projeto basta completar os laboratórios: [Lab 1: Configurando Github](/A-Ambiente-Lab-1); [Lab 2: Github](A-Ambiente-Lab-2/);
 
 ## Rubricas
 
@@ -25,8 +28,8 @@ Para obter A é necessário:
 1. `INTEGRANTES.json` atualizado
 1. Teste de arquivos `.json` passando
 1. Travis configurado
-1. Grupo realizou pull-request e os mesmos foram aceitos
-1. Ter criado um canal dentro do Slack da disciplina
+1. Integrantes do grupo realizaram pull-request e os mesmos foram aceitos
+1. Ter criado um canal dentro no Teams da disciplina
 
 ### Individual
 
@@ -35,5 +38,5 @@ Para obter A é necessário:
 1. Participar do repositório do grupo
 1. Ter configurado `INTEGRANTES.json`
 1. Ter criado uma branch e realizado o pull-Request
-1. Ter entrado no canal do Slack da disciplina
-1. Ter entrado no canal do grupo no slack da disciplina
+1. Ter entrado no canal da disciplina (teams)
+1. Ter entrado no canal do grupo (teams)

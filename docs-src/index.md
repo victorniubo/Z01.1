@@ -1,5 +1,8 @@
 # Bem vindo disciplina de Elementos de Sistemas!
 
+!!! tip "2020-2"
+    - [x] Material Atualizado
+
 !!! info ""
     Site atualizado?  ![mkdocs](https://github.com/insper/Z01.1/workflows/mkdocs/badge.svg?branch=docs)
 
@@ -41,8 +44,7 @@ rubrica diferente e avalia objetivo diferentes do curso.
 
 ## Infraestrutura
 
-O ferramental da disciplina foi desenvolvido para o sistema operacional  **Linux**, 
-e necessita de uma série de softwares e configurados. Você receberá um SSD com tudo pronto.
+O ferramental da disciplina foi desenvolvido para o sistema operacional  **Linux** e necessita de uma série de softwares e configurados. Você receberá um SSD com tudo pronto.
  
 ## Bibliografia
 

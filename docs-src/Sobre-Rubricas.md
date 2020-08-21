@@ -1,11 +1,8 @@
-# Rubricas individuais - Corona
+# Rubricas individuais
 
-!!! tip
-    Atualizado devido ao corona.
+!!! tip "2020-2"
+    - [x] Material Atualizado
     
-!!! tip
-    Só começa a valer a partir do próximo projeto (D-Lógica-Sequencial).
-
 ## Facilitador
 
 O facilitador será avaliado pelos 'Desenvolvedores' com base em seus objetivos:
@@ -19,7 +16,7 @@ A nota final será a média das notas de cada 'Desenvolvedor' vezes `Fator de pa
 
 - Fator de Participação em aula: 
     - 1: Esteve presente e participou nas aulas referentes aos projetos
-    - 0.6: Faltou e/ou não participou de alguma aula referente ao projeto
+    - 0.5: Faltou e/ou não participou de alguma aula referente ao projeto
     - 0: Faltou e/ou não participou da maioria das aulas do projeto
 
 !!! warning
@@ -35,15 +32,8 @@ A nota final será a média das notas de cada 'Desenvolvedor' vezes `Fator de pa
 - Acompanhou o desenvolvimento do grupo, dando o suporte sempre que necessário
 - Entregas orientadas para o objetivo do projeto 
 
-A nota final será a nota do 'Facilitador' vezes `Fator de participação em aula`(1, 0.75, 0.5).
-
-- Fator de Participação em aula: 
-    - 1: Esteve presente e participou nas aulas referentes aos projetos
-    - 0.75: Faltou e/ou não participou de alguma aula referente ao projeto
-    - 0.5: Faltou e/ou não participou da maioria das aulas do projeto
-
-Caso a nota do Facilitador seja inferior a C, a nota dos desenvolvedores se dará pela média
-da avaliação dos seus colegas.
+!!! tip 
+    Caso a nota do Facilitador seja inferior a C, a nota dos desenvolvedores se dará pela média da avaliação dos seus colegas.
 
 !!! warning
     Se algum desenvolvedor não preencher o formulário no prazo estipulado sua nota será D/I

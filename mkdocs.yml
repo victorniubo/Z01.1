@@ -17,12 +17,11 @@ copyright: 'Copyright &copy; Rafael Corsi @ insper'
 nav:
 - Home:
   - 'index.md'
-  - 'Critérios de Avaliação': 'Sobre-Criterios-de-Avaliacao.md'
-  - 'Rubricas Projetos': 'Sobre-Rubricas.md'
-  - 'Util-Corona.md'
+  - 'Sobre-Criterios-de-Avaliacao.md'
+  - 'Sobre-Rubricas.md'
 
-#- Aulas:
-#  - 'Util-Aulas.md'
+- Aulas:
+  - 'Util-Aulas.md'
 
 - 'Projetos':
   - 'A-Ambiente-Desenvolvimento-Projeto.md'
@@ -128,9 +127,13 @@ nav:
 - Atendimento:
   - 'Atendimento.md'
 
+extra_css:
+  - css/progress.css
+
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
   - 'translate_admonitions.js'
+  - 'js/progress.js'
 
 plugins:
     - search

@@ -1,4 +1,4 @@
-# Descrição
+# Critérios de Avaliação
 
 Ao longo do semestre serão utilizados os seguintes critérios de avaliação:
 

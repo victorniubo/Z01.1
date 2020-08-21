@@ -4,12 +4,17 @@ Devemos começar a preparar o terreno para os projetos em grupo que estarão por
 
 O grupo irá trabalhar de forma colaborativa via a utilização do git/ github. É imprescindível que todos trabalhem dessa forma, pois será a maneira que iremos avaliar individualmente vocês. 
 
+
+!!! tip "Como trabalhar nesse lab"
+    Entre no canal do seu grupo no teams, decida quem irá realizar 
+    o lab (somente um por grupo), essa pessoa compartilha a tela e
+    todos acompanham e comentam.
+
 ## Criando o grupo
 
 Grupo de até 6 pessoas! Preencher o form a seguir...
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScaBsuqSTAZhwr1B8WFR5-LVSUO37P75_a2YfhS-qGecUQXMg/viewform?embedded=true" width="640" height="320" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc0g3ZxNALMLoyDz3jmUdXQYPTnDWI0nXqU_UH6FQxAWuv7uA/viewform?embedded=true" width="640" height="320" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 ## GitHub
 
@@ -17,8 +22,8 @@ O git será uma das ferramentas mais importantes para o projeto, com as etapas a
 
 ### Fork
 
-!!! warning "Um por grupo"
-    Daqui até o próximo aviso só uma pessoa do grupo deve fazer! Os demais devem acompanhar.
+!!! warning "Uma pessoa por grupo"
+    Daqui até o final só uma pessoa do grupo deve fazer! Os demais devem acompanhar.
 
 O [Scrum Master](https://www.scrum.org/resources/what-is-a-scrum-master) do grupo (será sorteado em sala) deverá realizar o [fork](https://help.github.com/articles/fork-a-repo/) do repositório do projeto do computador Z01, para isso, basta acessar a página do github do projeto:
 
@@ -33,6 +38,8 @@ Note que criar um **fork** é diferente de criar apenas uma cópia. No **fork** 
 !!! tip "git"
     `fork` não existe no git, é algo implementado pelo github (e similares). É utilizado para criar uma 'cópia' de um repositório para podermos trabalhar nele sem a necessidade de mexermos no original.
 
+<button class="button0" id="1:fork" onClick="progressBut(this.id);">Cheguei Aqui!</button>
+
 ### Alterando o nome do Fork
 
 Acesse a página do repositório de vocês no :arrow_right: `github` :arrow_right: `SETTINGS` :arrow_right:  `Repository Name` :arrow_down: e altere o nome do repositório para:
@@ -41,6 +48,8 @@ Acesse a página do repositório de vocês no :arrow_right: `github` :arrow_righ
 
 !!! tip "NomeDoGrupo"
     O Nome do grupo deve ser uma palavra que começe com a letra que o grupo recebeu...
+    
+<button class="button0" id="2:fork-name" onClick="progressBut(this.id);">Cheguei Aqui!</button>
 
 ### Colaboradores
 
@@ -50,6 +59,8 @@ Isso irá criar uma cópia do repositório na sua conta, uma vez realizado a có
     :point_right: Todos integrantes do grupo já devem ter uma conta no github já criada.
 
 ![Collaborators](figs/A-Transistores/A-Ferramental-github-collaborators.png)
+
+<button class="button0" id="3:colaboradores" onClick="progressBut(this.id);">Cheguei Aqui!</button>
 
 ### Ferramentas github
 
@@ -99,15 +110,14 @@ Na pagina do seu repositório em commits deve aparecer uma pequena bolinha em ca
 
 ## Ativando o Travis
 
-!!! warning "Somente o `owner` do repositório"
-    Daqui até o próximo aviso só uma pessoa do grupo deve fazer! Os demais devem acompanhar.
-
 Será necessário acessar o site do travis:
 
 - [https://travis-ci.org/](https://travis-ci.org/) e adicione o projeto forkado ao travis:
 
 ![Travis](figs/A-Transistores/C-config-travis.gif)
 
+
+<button class="button0" id="4:travis" onClick="progressBut(this.id);">Cheguei Aqui!</button>
 
 ### Arquivo GRUPO.json de configuração 
 
@@ -131,20 +141,4 @@ $ git commit -am "update Grupo"
 $ git push origin master
 ```
 
-## Slack
-
-O [Slack](https://slack.com/intl/pt-br/) é uma ferramenta de conversa similar ao discord porém para uso de empresas (e não para jogos =/). Termos um canal da disciplina no Slack, **e todos devem participar**, para isso basta acessar o link a seguir:
-
-https://join.slack.com/t/z01-2020/shared_invite/enQtOTQ2MjMwNzUyNjc4LWNmMGQzMTdhYzRlZmE5NDI1ODYyZWQzOTcwYTdmNjM2ZDNlODAwYTJiNWZjMDc4OTI0ZDMxZDg1NjU4MGNhYzE
-
-!!! note
-    Como nome de usuário colocar seu Nome e Sobrenome
-    
-## Canal do grupo
-
-!!! warning "Um por grupo"
-    Somente um do grupo deve realizar isso.
-    
-Cada grupo deve ter um canal privado no slack, na qual todos fazer parte e o seus professores também (Rafael Corsi, Eduardo Marossi). O canal deve ser o nome do grupo!
-
-
+<button class="button0" id="4:grupo.json" onClick="progressBut(this.id);">Cheguei Aqui!</button>
