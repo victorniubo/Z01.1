@@ -1,5 +1,8 @@
 # Álgebra Booleana
 
+!!! success "2020-2"
+    Material atualizado.
+
 | Estudando      |                                                                                                                                                                                                            |
 | ---------      | --                                                                                                                                                                                                         |
 | Bibliografia   |                                                                                                                                                                                                            |
@@ -33,18 +36,23 @@ Em Álgebra Booleana as variáveis só podem assumir dois valores. Desligado e l
 Uma equação de lógica booleana pode possuir uma ou mais 'entradas' e apenas uma saída, na equação exemplo a seguir, `X` é uma saída (e pode assumir apenas valor `1` ou `0`) e `A` e `B` são entradas também do tipo binária.
 
 ```
-    X(A,B) = A ^ B
+    X(A,B) = A . B
 ```
 
 ![](figs/Teoria/LogicaBooleana-caixaPreta.png){width=400}
 
 !!! note 
-    A operação `^` é chamada de `E` (`and`) que também pode ser representada pelo simbolo de multiplicação escalar `.`
+    A operação `.` é chamada de `E` (`and`) que também pode ser representada pelo simbolo: `^`
     
+    ```
     X = A and B
+    
     X = A . B
+    
+    X = A ^ B
+    ```
 
-A operação de `and` pode ser entendida como uma multiplicação: A saída (`X`) só é verdadeira se as entradas `A` e `B` forem verdadeiras: `1 . 1 = 1`. Como A e B são números binários, é possível encontrar uma tabela que relaciona o valor da saída `X` com as possíveis entradas de `A` e `B`
+A operação de `and` pode ser entendida como uma multiplicação: A saída (`X`) só é verdadeira se as entradas `A` e `B` forem verdadeiras: `1 . 1 = 1`. Como A e B são números binários, é possível encontrar uma tabela que relaciona o **TODOS** os valor da saída `X` com todas as entradas possiveis: `A` e `B`
 
 | Entrada A | Entrada B | Saída X |
 |-----------|-----------|---------|
@@ -54,15 +62,14 @@ A operação de `and` pode ser entendida como uma multiplicação: A saída (`X`
 | `1`       | `1`       | `1`     |
 
 !!! note "Tabela Verdade"
-    Essa tabela que acabamos de construir chama tabela verdade, e será muito utilizada 
+    Essa tabela que acabamos de construir chama ==tabela verdade==, e será muito utilizada 
     ao longo do curso.
     
-Podemos representar essa equação `X = A ^ B` como sendo um circuito digital, como ilustrado a seguir:
+Também podemos representar essa equação `X = A . B` como sendo um circuito digital:
 
 ![](figs/Teoria/LogicaBooleana-and1.png){width=400}
 
 !!! note 
-
     Resolver funções booleanas é entender quando a saída será `Verdadeira` ou `Falsa` dado a combinação possível de entradas.
 
     <iframe width="710" height="520" src="https://www.youtube.com/embed/rZwCJWOhNG0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

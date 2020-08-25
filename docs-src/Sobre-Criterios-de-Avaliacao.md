@@ -1,5 +1,8 @@
 # Critérios de Avaliação
 
+!!! success "2020-2"
+    Material atualizado.
+
 Ao longo do semestre serão utilizados os seguintes critérios de avaliação:
 
 ### Provas
