@@ -1,11 +1,13 @@
 # Lab 2: Github
 
+!!! success "2020-2"
+    Material atualizado.
+
 Nesse laboratório iremos trabalhar com o uso do git de forma colaborativa.
 
-!!! tip
-    Aconselhável fazer no Linux, mas pode fazer no Windows
+> Aconselhável fazer no Linux, mas pode fazer no Windows (orecisa ter git instalado).
 
-### Clonando
+## Clonando
 
 !!! warning "Individual"
     Todos do grupo devem realizar de maneira individual!
@@ -15,6 +17,8 @@ Uma vez criado o **fork** e adicionado os colegas vocês deverão clonar o repos
 ``` bash
 $ git clone URL_DO_FORK
 ```
+
+<button class="button0" id="0:clonando" onClick="progressBut(this.id);">Cheguei Aqui!</button>
 
 ??? note "URL_DO_FORK"
     A URL do seu fork pode ser obtida pelo botão 'Clone or Download' do github: 
@@ -34,7 +38,7 @@ $ git clone URL_DO_FORK
     Deve ser realizado individual por todos do grupo.
 
 !!! tip
-    Antes de começar, atualize seu repositório com o remote:
+    Antes de começar, atualize seu repositório com o remoto
     
     ```bash
     $ git pull origin master
@@ -47,7 +51,7 @@ Nesse etapa cada integrante do grupo irá editar um arquivo no seu computador e 
 1. Enviar mudanças para o repositório remoto
 1. Gerar pull-request
 
-### Atualizando `INTEGRANTES.json`
+### `INTEGRANTES.json`
 
 **Cada integrante** do grupo deve editar o documento com na raiz do projeto com nome `INTEGRANTES.json` 
 e adicionar a esse arquivo o seu nome, e-mail (insper) e usuário gituhb. Conforme o exemplo a seguir:
@@ -61,37 +65,14 @@ e adicionar a esse arquivo o seu nome, e-mail (insper) e usuário gituhb. Confor
   },
 ```
 
+<button class="button0" id="1:integrantes.json" onClick="progressBut(this.id);">Cheguei Aqui!</button>
+
 !!! warning 
     Uma única pessoa não deve editar o documento com todos os nomes.
     
     - Cada um deve realizar individualmente em seu computador.
 
-### Testando
-
-A disciplina utiliza uma técnica chamada de ["Test Driven Development"](https://en.wikipedia.org/wiki/Test-driven_development) onde utilizamos de teste unitário e de integração para validarmos se a implementação está correta. 
-
-Nesse caso, iremos utilizar um script para validar se o arquivo `.json` editado está com formatação correta. Para isso, execute no terminal:
-
-```bash
-$ ./Projetos/A-AmbienteDesenvolvimento/testeAmbienteDesenvolvimento.py
-```
-
-Você deve obter:
-
-```
-➜  Z01.1 git:(master) ✗ ./Projetos/A-AmbienteDesenvolvimento/testeAmbienteDesenvolvimento.py
-===================================================
-[OK] GRUPO.json
-===================================================
-===================================================
-[OK] INTEGRANTES.json
-===================================================
-```
-
-!!! warning
-    Se obter **[FAIL]** em algum dos dois arquivos, editar o arquivo e executar a etapa anterior novamente. **Só continuar se não tiver falhas!**
-
-### Criando um branch para fazer o commit.
+## branch / commit
 
 A fim de realizarmos um pull-request ao mediador do projeto é preciso salvarmos essas modificações em um novo branch. O comando a seguir faz isso:
 
@@ -117,23 +98,28 @@ $ # enviando o branch para o repositório remoto
 $ git push origin $NOME
 ```
 
+<button class="button0" id="2:branch-push" onClick="progressBut(this.id);">Cheguei Aqui!</button>
+
 !!! tip "git"
     Esse comando diz para o git que é para enviar o branch `$NOME` 
     para o repositório remoto `origin`. Aquele que aparece no comando `$ git remote -v`.
 
-### Realizando pull-request
+## Realizando pull-request
 
-Uma vez enviando o branch para o servidor, podemos via a interface **web** do `github` realizar o `pull-request`. Abra a pagína do github do repositório do seu grupo. 
+Uma vez enviando o branch para o servidor, podemos via a interface **web** do `github` realizar o `pull-request`. Abra a página do github do seu grupo. 
+
+Vamos agora gerar o pull-request na interface do github, de forma similar ao exemplo a seguir:
+
+![](figs/B-CI/pullrequest.gif)
+
+
+<button class="button0" id="3:pullrequest" onClick="progressBut(this.id);">Cheguei Aqui!</button>
 
 !!! tip "git"
     Se tiver instalado o software [`hub`](https://github.com/github/hub) digite na linha de comando: `$ hub browser`.
 
-Vamos agora gerar o pull-request na interface do github, de forma similar ao exemplo a seguir:
-
 !!! warning
     Cuidado! Escolher o seu repositório no momento de realizar o pullrequest.
-
-![](figs/B-CI/pullrequest.gif)
 
 !!! tip
     Ao realizar o PR, o `Travis` irá verificar o seu arquivo com o mesmo teste que você executou anteriormente, esse será o fluxo geral da disciplina, onde o mesmo teste é realizado local na máquina de cada aluno e remoto automaticamente pelo Travis.
@@ -145,5 +131,9 @@ Vamos agora gerar o pull-request na interface do github, de forma similar ao exe
 
 O **mediador** do projeto deve revisar os pull-requests (e corrigir eventuais erros de merge) 
 e aceitar ou negar o pedido. 
+
+<button class="button0" id="4:aceitandoPR" onClick="progressBut(this.id);">Cheguei Aqui!</button>
+
+Note que todos PR é testado! 
 
 ![](figs/B-CI/pullrequest-accept.gif)

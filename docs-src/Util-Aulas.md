@@ -19,10 +19,11 @@ Estudar lógica booleana e praticar; Introdução ao git com trabalho coletivo.
 Aula de apresentação da matéria; visão geral do que vai ser feito; Criação de grupo e preparar github.
 
 - Slides:
-    - [Organização de computadores](https://prezi.com/view/InQMPs4wjxMtznUGlW6L/)
+    - [Slide]
+    - [Prezi](https://prezi.com/view/InQMPs4wjxMtznUGlW6L/)
     
 - Handout/ Estudo:
     - [Mural](https://app.mural.co/t/elementos9119/m/elementos9119/1597285239955/b0ee33c2c314f45deed54bff567249274e9cccc6)
     
 - Lab: 
-    - [Lab 1: Configurando GitHub](/A-Ambiente-Lab-1)
+    - [Lab 1: Configurando GitHub](/Z01.1/A-Ambiente-Lab-1)

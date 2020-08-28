@@ -103,8 +103,12 @@
  |     1 |     1 |     1 |     1 |
 
 1. Crie uma fórmula em álgebra booleana que represente a tabela via SoP e PoS.
+
+> SoP: Soma dos Produtos / PoS: Produto das Somas
+
 1. Simplifique SoP (interprete o resultado!)
-1. Desenhe um circuito usando os ícones da álgebra booleana. 
+
+1. Desenhe um circuito usando os símbolos da álgebra booleana. 
 
 ----------------
 
@@ -114,20 +118,13 @@ $A \bar{B} \bar{C} + \bar{A} B C + \bar{A} B \bar{C} + A \bar{B} \bar{C} + A B C
 
 ----------------
 
-### Qual das seguintes opções é uma característica importante da forma canônica de soma de produtos?
-
-1. Os circuitos lógicos são reduzidos a nada mais do que simples portas AND e OR.
-1. Os tempos de atraso são muito reduzidas em relação a outras formas.
-1. Nenhum sinal deve passar por mais de dois portas lógicas, não incluindo inversores.
-1. O número máximo de portas que qualquer sinal deve passar é reduzido por um factor de dois.
-
-----------------
-
 ### Qual é a expressão em álgebra booleana do seguinte circuito:
 
 ![](figs/Exercicios/Algebra-Booleana-1.png)
 
 ----------------
+
+\newpage
 
 ### Gere a Tabela Verdade das equações a seguir:
 
@@ -149,7 +146,6 @@ $A . B . C + A \bar{B} \bar{C} + A . \bar{B} C + A . B . \bar{C} + \bar{A} . \ba
 ### Determine os valores de A, B, C e D que fazem a fórmula a seguir ser igual a zero (Z = 0).
 
  $Z = \bar{A} + B + \bar{C} + D$
-
 
 ----------------
 
@@ -222,12 +218,10 @@ $ABC\bar{D} + \bar{A}\bar{B}CD + A \bar{B}\bar{C}D + \bar{A} + \bar{B} + \bar{C}
 
 ### A seguinte expressão foi resultado da forma canônica do produto de somas de uma tabela verdade para a produção de um circuito lógico. O objetivo é simplificar a álgebra booleana dessa lógica para o menor número possível de portas, porém visivelmente quem fez essa fórmula não percebeu que se tivesse feito a soma de produtos já partiria com um número menor de termos. Converta essa fórmula para a soma de produtos e minimize ela.
 
-```
-               _       _       _         _ _
-(A+B+C) * (A+B+C) * (A+B+C) * (A+B+C) * (A+B+C)
-```
+$(A+B+C)(A+B+\bar{C})(A+\bar{B}+C)(\bar{A}+B+C)(\bar{A}+\bar{B}+C)$
+
+> dica: Equação -> tabela verdade -> soma dos produtos
 
 ----------------
-
 
 Acabou? Os exercícios não param por aqui, tem a parte 2!
