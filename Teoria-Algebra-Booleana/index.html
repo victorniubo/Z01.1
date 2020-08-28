@@ -1,0 +1,2908 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <link rel="canonical" href="https://github.com/insper/Z01.1/Teoria-Algebra-Booleana/">
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.9">
+    
+    
+      
+        <title>Álgebra Booleana - 2020-1 - Elementos de Sistemas - Z01</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.36ee6aaa.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.83bccb1f.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ffffff">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../css/progress.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#algebra-booleana" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://github.com/insper/Z01.1" title="2020-1 - Elementos de Sistemas - Z01" class="md-header-nav__button md-logo" aria-label="2020-1 - Elementos de Sistemas - Z01">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            2020-1 - Elementos de Sistemas - Z01
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Álgebra Booleana
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/insper/Z01.1/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Insper/Z01.1
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href=".." class="md-tabs__link">
+          Home
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Util-Aulas/" class="md-tabs__link">
+          Aulas
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../A-Ambiente-Desenvolvimento-Projeto/" class="md-tabs__link">
+          Projetos
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../A-Ambiente-Lab-1/" class="md-tabs__link">
+          Labs
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" class="md-tabs__link md-tabs__link--active">
+          Teoria
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../VHDL-basico/" class="md-tabs__link">
+          VHDL
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Util-Resumo-Assembly/" class="md-tabs__link">
+          Z01
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Exercicio-Algebra-Booleana-1/" class="md-tabs__link">
+          Estudo
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Avaliacoes/" class="md-tabs__link">
+          Avaliações
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Util-Comecando-novo-projeto/" class="md-tabs__link">
+          Útil
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Historia-linux/" class="md-tabs__link">
+          História
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Atendimento/" class="md-tabs__link">
+          Atendimento
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://github.com/insper/Z01.1" title="2020-1 - Elementos de Sistemas - Z01" class="md-nav__button md-logo" aria-label="2020-1 - Elementos de Sistemas - Z01">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    2020-1 - Elementos de Sistemas - Z01
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/insper/Z01.1/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Insper/Z01.1
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Home
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Home" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Home
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Bem vindo disciplina de Elementos de Sistemas!" class="md-nav__link">
+      Bem vindo disciplina de Elementos de Sistemas!
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Sobre-Criterios-de-Avaliacao/" title="Critérios de Avaliação" class="md-nav__link">
+      Critérios de Avaliação
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Sobre-Rubricas/" title="Rubricas individuais" class="md-nav__link">
+      Rubricas individuais
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Aulas
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aulas" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aulas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-Aulas/" title="Resumo Aulas" class="md-nav__link">
+      Resumo Aulas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Projetos
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Projetos" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Projetos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A-Ambiente-Desenvolvimento-Projeto/" title="A - Ambiente de desenvolvimento" class="md-nav__link">
+      A - Ambiente de desenvolvimento
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../LogiComb-Projeto/" title="B - Lógica Combinacional" class="md-nav__link">
+      B - Lógica Combinacional
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ula-Projeto/" title="C - ULA" class="md-nav__link">
+      C - ULA
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ula-Projeto-dicas/" title="C - Dicas (A,B)" class="md-nav__link">
+      C - Dicas (A,B)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../seq-Projeto/" title="D - Lógica Sequencia" class="md-nav__link">
+      D - Lógica Sequencia
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assembly-Projeto/" title="E - Assembly" class="md-nav__link">
+      E - Assembly
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7">
+    
+    <label class="md-nav__link" for="nav-3-7">
+      F - CPU
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="F - CPU" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        F - CPU
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cpu-Projeto/" title="Projeto" class="md-nav__link">
+      Projeto
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cpu-Testando/" title="Testando" class="md-nav__link">
+      Testando
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assembler-Projeto/" title="G - Assembler" class="md-nav__link">
+      G - Assembler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../X-Processadores-Projeto/" title="Mundo Real" class="md-nav__link">
+      Mundo Real
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Labs
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Labs" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Labs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A-Ambiente-Lab-1/" title="Lab 1: Configurando Github" class="md-nav__link">
+      Lab 1: Configurando Github
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A-Ambiente-Lab-2/" title="Lab 2: Github" class="md-nav__link">
+      Lab 2: Github
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A-Transistores-Lab-1/" title="Lab 3: Transistores" class="md-nav__link">
+      Lab 3: Transistores
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../LogiComb-Lab-1/" title="Lab 4: FPGA - VHDL" class="md-nav__link">
+      Lab 4: FPGA - VHDL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../LogiComb-Lab-2/" title="Lab 5: Lógica Combinacional" class="md-nav__link">
+      Lab 5: Lógica Combinacional
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ula-Lab-1/" title="Lab 6: Adders" class="md-nav__link">
+      Lab 6: Adders
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ula-Lab-2/" title="Lab 7: Visualizando simulação" class="md-nav__link">
+      Lab 7: Visualizando simulação
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ula-Lab-3/" title="Lab 8: ULA" class="md-nav__link">
+      Lab 8: ULA
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ula-lab-4/" title="Lab 9: Pequena CPU" class="md-nav__link">
+      Lab 9: Pequena CPU
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../seq-Lab-1/" title="Lab 10: Lógica Sequencial" class="md-nav__link">
+      Lab 10: Lógica Sequencial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assembly-Lab-1/" title="Lab 11: Assembly" class="md-nav__link">
+      Lab 11: Assembly
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assembly-Lab-2/" title="Lab 12: Periféricos" class="md-nav__link">
+      Lab 12: Periféricos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assembly-Lab-3/" title="Lab 13: saltos (jmp)" class="md-nav__link">
+      Lab 13: saltos (jmp)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assembly-Lab-4/" title="Lab 14: praticando nasm" class="md-nav__link">
+      Lab 14: praticando nasm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cpu-lab-1/" title="Lab 15: Control Unit" class="md-nav__link">
+      Lab 15: Control Unit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-16" type="checkbox" id="nav-4-16">
+    
+    <label class="md-nav__link" for="nav-4-16">
+      Lab 16: Assembler
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Lab 16: Assembler" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-16">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Lab 16: Assembler
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assembler-Lab-1/" title="Introdução" class="md-nav__link">
+      Introdução
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assembler-Lab-1-parte-1/" title="LAB 16: parte 1" class="md-nav__link">
+      LAB 16: parte 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assembler-Lab-1-parte-2/" title="parte 2" class="md-nav__link">
+      parte 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assembler-Lab-1-parte-3/" title="parte 3" class="md-nav__link">
+      parte 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assembler-Lab-1-parte-4/" title="parte 4" class="md-nav__link">
+      parte 4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assembler-Lab-1-parte-5/" title="parte 5" class="md-nav__link">
+      parte 5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vm-Lab-1/" title="Lab 17 - vm" class="md-nav__link">
+      Lab 17 - vm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../VMtranslator-Lab-1/" title="Lab 18: Vm Translator" class="md-nav__link">
+      Lab 18: Vm Translator
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Teoria
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Teoria" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Teoria
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Álgebra Booleana
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Álgebra Booleana" class="md-nav__link md-nav__link--active">
+      Álgebra Booleana
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#equacoes" class="md-nav__link">
+    Equações
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operacoes" class="md-nav__link">
+    Operações
+  </a>
+  
+    <nav class="md-nav" aria-label="Operações">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#not-and-or-nor" class="md-nav__link">
+    not, and, or, nor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabela-verdade" class="md-nav__link">
+    Tabela Verdade
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcoes-geradas-a-partir-de-tabelas-verdade" class="md-nav__link">
+    Funções geradas a partir de Tabelas Verdade
+  </a>
+  
+    <nav class="md-nav" aria-label="Funções geradas a partir de Tabelas Verdade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#soma-dos-produtos" class="md-nav__link">
+    Soma Dos Produtos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#produto-das-somas" class="md-nav__link">
+    Produto das somas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simplificacao" class="md-nav__link">
+    Simplificação
+  </a>
+  
+    <nav class="md-nav" aria-label="Simplificação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simplificacao-algebrica" class="md-nav__link">
+    Simplificação algébrica
+  </a>
+  
+    <nav class="md-nav" aria-label="Simplificação algébrica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplos" class="md-nav__link">
+    Exemplos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapa-de-karnaugh-mk" class="md-nav__link">
+    Mapa de Karnaugh (MK)
+  </a>
+  
+    <nav class="md-nav" aria-label="Mapa de Karnaugh (MK)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-criando-o-mapa" class="md-nav__link">
+    2. Criando o Mapa
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-grupos" class="md-nav__link">
+    3. Grupos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-gerando-as-equacoes" class="md-nav__link">
+    4. Gerando as equações
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Teoria-Dados/" title="Dados Digitais" class="md-nav__link">
+      Dados Digitais
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Teoria-Componentes/" title="Componentes Digitais" class="md-nav__link">
+      Componentes Digitais
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Teoria-Aritmetica-Binaria/" title="Aritmética Binária" class="md-nav__link">
+      Aritmética Binária
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Teoria-Aritmetica-Binaria-HW/" title="Aritmética Binária - HW" class="md-nav__link">
+      Aritmética Binária - HW
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Teoria-ULA/" title="ULA" class="md-nav__link">
+      ULA
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Teoria-Logica-Sequencial/" title="Lógica Sequencial" class="md-nav__link">
+      Lógica Sequencial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Teoria-Sequencial-Componentes/" title="Componentes Síncronos" class="md-nav__link">
+      Componentes Síncronos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Teoria-Z01/" title="Z01" class="md-nav__link">
+      Z01
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Teoria-Assembly/" title="Assembly" class="md-nav__link">
+      Assembly
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Teoria-Z01-mapadeMemoria/" title="Mapa de memória" class="md-nav__link">
+      Mapa de memória
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Teoria-nasm-jump/" title="jump" class="md-nav__link">
+      jump
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Teoria-Linguagem-de-Maquina/" title="Linguagem de máquina" class="md-nav__link">
+      Linguagem de máquina
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Teoria-Assembler/" title="Assembler" class="md-nav__link">
+      Assembler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assembler-Dicas-SymbolTable/" title="Tabela de Símbolos" class="md-nav__link">
+      Tabela de Símbolos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Teoria-vm/" title="VM" class="md-nav__link">
+      VM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Teoria-vm-segmentos/" title="VM - Segmentos" class="md-nav__link">
+      VM - Segmentos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Teoria-vm-jump/" title="VM - jump" class="md-nav__link">
+      VM - jump
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Teoria-vm-funcoes/" title="VM - Funções" class="md-nav__link">
+      VM - Funções
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Teoria-vm-memoria/" title="VM - Memória" class="md-nav__link">
+      VM - Memória
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-Video-Aulas/" title="Vídeo Aulas (Luciano)" class="md-nav__link">
+      Vídeo Aulas (Luciano)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      VHDL
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="VHDL" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        VHDL
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../VHDL-basico/" title="Introdução" class="md-nav__link">
+      Introdução
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../VHDL-Combinacional/" title="Combinacional" class="md-nav__link">
+      Combinacional
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../VHDL-port-map/" title="port map" class="md-nav__link">
+      port map
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../VHDL-Sequencial/" title="Sequencial" class="md-nav__link">
+      Sequencial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../VHDL-RTL/" title="RTL Viewer" class="md-nav__link">
+      RTL Viewer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../VHDL-exemplos/" title="Exemplos completos" class="md-nav__link">
+      Exemplos completos
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Z01
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Z01" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Z01
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-Resumo-Assembly/" title="Resumo Assembly" class="md-nav__link">
+      Resumo Assembly
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-Z01.1-Cheat-Sheet/" title="Z01.1 Cheat Sheet" class="md-nav__link">
+      Z01.1 Cheat Sheet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-InstructionSet/" title="Instruction Set" class="md-nav__link">
+      Instruction Set
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-Resumo-VM/" title="Resumo VM" class="md-nav__link">
+      Resumo VM
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Estudo
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Estudo" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Estudo
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Exercicio-Algebra-Booleana-1/" title="Álgebra Booleana - 1" class="md-nav__link">
+      Álgebra Booleana - 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Exercicio-Algebra-Booleana-2/" title="Álgebra Booleana - 2" class="md-nav__link">
+      Álgebra Booleana - 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Exercicio-Dados-1/" title="Dados Digitais - 1" class="md-nav__link">
+      Dados Digitais - 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Exercicio-Dados-2/" title="Dados Digitais - 2" class="md-nav__link">
+      Dados Digitais - 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf" title="Handout Aritmetica Booleana" class="md-nav__link">
+      Handout Aritmetica Booleana
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="https://forms.gle/XMsFCDMYsmz1qUP86" title="Lógica Sequencial - 1" class="md-nav__link">
+      Lógica Sequencial - 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="https://forms.gle/6jNZR4CAELJ69ZjXA" title="Linguagem de Máquina - 1" class="md-nav__link">
+      Linguagem de Máquina - 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Exercicio-CPU-1/" title="Exercicio CPU - 1" class="md-nav__link">
+      Exercicio CPU - 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Exercicio-CPU-2/" title="Exercicio CPU - 2" class="md-nav__link">
+      Exercicio CPU - 2
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Avaliações
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Avaliações" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Avaliações
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Avaliacoes/" title="Avaliações" class="md-nav__link">
+      Avaliações
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Útil
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Útil" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Útil
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-Comecando-novo-projeto/" title="Começando novo projeto" class="md-nav__link">
+      Começando novo projeto
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-vixi-sou-scrum/" title="Vixi! Sou scrum master" class="md-nav__link">
+      Vixi! Sou scrum master
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-Dicas-GIT/" title="Dicas git" class="md-nav__link">
+      Dicas git
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-Dicas-Travis/" title="Dicas Travis" class="md-nav__link">
+      Dicas Travis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-Infraestrutura/" title="Infraestrutura" class="md-nav__link">
+      Infraestrutura
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-VM-Linux/" title="Boot SSD via VirtualBox" class="md-nav__link">
+      Boot SSD via VirtualBox
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      História
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="História" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        História
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Historia-linux/" title="Historia linux" class="md-nav__link">
+      Historia linux
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Atendimento
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Atendimento" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Atendimento
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Atendimento/" title="Atendimento" class="md-nav__link">
+      Atendimento
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#equacoes" class="md-nav__link">
+    Equações
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operacoes" class="md-nav__link">
+    Operações
+  </a>
+  
+    <nav class="md-nav" aria-label="Operações">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#not-and-or-nor" class="md-nav__link">
+    not, and, or, nor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabela-verdade" class="md-nav__link">
+    Tabela Verdade
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcoes-geradas-a-partir-de-tabelas-verdade" class="md-nav__link">
+    Funções geradas a partir de Tabelas Verdade
+  </a>
+  
+    <nav class="md-nav" aria-label="Funções geradas a partir de Tabelas Verdade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#soma-dos-produtos" class="md-nav__link">
+    Soma Dos Produtos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#produto-das-somas" class="md-nav__link">
+    Produto das somas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simplificacao" class="md-nav__link">
+    Simplificação
+  </a>
+  
+    <nav class="md-nav" aria-label="Simplificação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simplificacao-algebrica" class="md-nav__link">
+    Simplificação algébrica
+  </a>
+  
+    <nav class="md-nav" aria-label="Simplificação algébrica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplos" class="md-nav__link">
+    Exemplos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapa-de-karnaugh-mk" class="md-nav__link">
+    Mapa de Karnaugh (MK)
+  </a>
+  
+    <nav class="md-nav" aria-label="Mapa de Karnaugh (MK)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-criando-o-mapa" class="md-nav__link">
+    2. Criando o Mapa
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-grupos" class="md-nav__link">
+    3. Grupos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-gerando-as-equacoes" class="md-nav__link">
+    4. Gerando as equações
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/insper/Z01.1/edit/docs/docs-src/Teoria-Algebra-Booleana.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="algebra-booleana">Álgebra Booleana<a class="headerlink" href="#algebra-booleana" title="Permanent link">&para;</a></h1>
+<div class="admonition success">
+<p class="admonition-title">2020-2</p>
+<p>Material atualizado.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Estudando</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bibliografia</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>[Cap1. Cap2. NISAN, 2005]</td>
+</tr>
+<tr>
+<td></td>
+<td>[Cap6. TOCCI, 2011]</td>
+</tr>
+<tr>
+<td></td>
+<td>[Cap1. FLOYD, 2007]</td>
+</tr>
+<tr>
+<td></td>
+<td>[LAING, 2004]</td>
+</tr>
+<tr>
+<td>Vídeos (extra)</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="👍" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f44d.svg" title=":+1:" /></td>
+<td><iframe width="200" height="200" src="https://www.youtube.com/embed/YYIucfsQKl4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://www.youtube.com/watch?v=_Lb2c18xdeo">Logic 101 (#11): Truth Tables</a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://youtu.be/UaGM8T4o9xI?list=PLKI1h_nAkaQq5MDWlKXu0jeZmLDt-51on">Logic 101 (#12): Truth Table Practice</a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://www.youtube.com/watch?v=3vkMgTmieZI">Computer Science: Karnaugh Maps – Introduction</a></td>
+</tr>
+<tr>
+<td><img alt="👍" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f44d.svg" title=":+1:" /></td>
+<td><a href="https://www.youtube.com/watch?v=YJSqf_Z024w">Computer Science: Karnaugh Maps - 4 vars</a></td>
+</tr>
+</tbody>
+</table>
+<p>A álgebra booleana foi desenvolvida por <a href="https://pt.wikipedia.org/wiki/George_Boole">George Boole</a>, um matemático britânico que desenvolveu os conceitos em 1847, base da computação moderna. Muito tempo depois, nos anos 30, Claude Shannon, um importante engenheiro na história da computação moderna, aplicou as ideias de Boole em circuitos elétricos. Ele trabalhava no Analisador Diferencial de Vannevar Bush, e logo percebeu a relação dos relés com álgebra booleana. Ele fazia um relé acionar o outro usando usando uma lógica binária do relé fechado ou aberto. Sua dissertação e artigos, levaram outras pessoas a perceber os benefícios da álgebra booleana em eletrônica e consequentemente computação.</p>
+<p>Em Álgebra Booleana as variáveis só podem assumir dois valores. Desligado e ligado, ou falso e verdadeiro, 0 volt e 5 volts, branco e preto. Porém normalmente na computação usamos <code>0</code> e <code>1</code> pela conveniência. Todos os computadores tem como sua menor unidade de dado, esse elemento. Em computação chamamos isso de bit. que vem de dígito binário (ou do inglês binary digit).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Bit é a unidade mais simples de representação de dados digitais, um bit é uma unidade que pode assumir apenas dois valores: <code>0</code> ou <code>1</code>. Com um bit podemos representar o estado de uma luz na sala de aula, se uma cadeira está vazio ou não, .... não conseguimos representar <strong>com apenas um bit</strong> uma informação que não seja binária. Mas se combinarmos mais de um bit, criando um vetor de bits, somos capazes de representar quantos estados desejarmos.</p>
+<p><iframe width="710" height="520" src="https://www.youtube.com/embed/ewokFOSxabs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; -picture" allowfullscreen></iframe></p>
+</div>
+<h2 id="equacoes">Equações<a class="headerlink" href="#equacoes" title="Permanent link">&para;</a></h2>
+<p>Uma equação de lógica booleana pode possuir uma ou mais 'entradas' e apenas uma saída, na equação exemplo a seguir, <code>X</code> é uma saída (e pode assumir apenas valor <code>1</code> ou <code>0</code>) e <code>A</code> e <code>B</code> são entradas também do tipo binária.</p>
+<div class="highlight"><pre><span></span><code>    X(A,B) = A . B
+</code></pre></div>
+
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-caixaPreta.png" width="400" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A operação <code>.</code> é chamada de <code>E</code> (<code>and</code>) que também pode ser representada pelo simbolo: <code>^</code></p>
+<div class="highlight"><pre><span></span><code>X = A and B
+
+X = A . B
+
+X = A ^ B
+</code></pre></div>
+
+</div>
+<p>A operação de <code>and</code> pode ser entendida como uma multiplicação: A saída (<code>X</code>) só é verdadeira se as entradas <code>A</code> e <code>B</code> forem verdadeiras: <code>1 . 1 = 1</code>. Como A e B são números binários, é possível encontrar uma tabela que relaciona o <strong>TODOS</strong> os valor da saída <code>X</code> com todas as entradas possiveis: <code>A</code> e <code>B</code></p>
+<table>
+<thead>
+<tr>
+<th>Entrada A</th>
+<th>Entrada B</th>
+<th>Saída X</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>0</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>0</code></td>
+<td><code>1</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>0</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>1</code></td>
+<td><code>1</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Tabela Verdade</p>
+<p>Essa tabela que acabamos de construir chama <mark>tabela verdade</mark>, e será muito utilizada 
+ao longo do curso.</p>
+</div>
+<p>Também podemos representar essa equação <code>X = A . B</code> como sendo um circuito digital:</p>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-and1.png" width="400" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Resolver funções booleanas é entender quando a saída será <code>Verdadeira</code> ou <code>Falsa</code> dado a combinação possível de entradas.</p>
+<p><iframe width="710" height="520" src="https://www.youtube.com/embed/rZwCJWOhNG0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+</div>
+<h2 id="operacoes">Operações<a class="headerlink" href="#operacoes" title="Permanent link">&para;</a></h2>
+<p>O <code>and</code> utilizado no exemplo anterior é um operador da lógica booleana, operadores possuem uma ou mais entradas e geram uma saída. Os operadores mais comuns são: <code>not</code>, <code>and</code>, <code>or</code>, <code>nand</code>, <code>nor</code>, <code>xor</code>.</p>
+<h3 id="not-and-or-nor">not, and, or, nor<a class="headerlink" href="#not-and-or-nor" title="Permanent link">&para;</a></h3>
+<details class="note"><summary>not</summary><p>O operador <code>not</code> atua sobre uma variável, tornando a saída o inverso da entrada, ou seja, se a entrada do operador for <code>1</code> sua saída será <code>0</code> e vice versa.</p>
+<blockquote>
+<p>Uso: a luz interna do carro será acesa ('1') quando a porta estiver fechada ('0').</p>
+</blockquote>
+<ul>
+<li>Notação: <code>not</code>, <code>-</code>, <code>~</code>, <code>¬</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code>                            _
+X = not A  /  X = A  /  X = Ã / X = ¬ A
+</code></pre></div>
+
+<ul>
+<li>Tabela Verdade</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Entrada A</th>
+<th>X  = not A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Simbologia</li>
+</ul>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-not.png" width="300" /></p>
+</details>
+<details class="note"><summary>and</summary><p>O operador <code>and</code> atua sobre duas variável, tornando a saída <code>verdadeira</code> somente se as duas entradas forem <code>verdadeiras</code>, se uma das entradas forem <code>falsa</code> a saída será <code>falsa</code>.</p>
+<blockquote>
+<p>Uso: o cofre será aberto somente quando as duas chaves de seguranças forem inseridas.</p>
+</blockquote>
+<ul>
+<li>Notação:  <code>and</code>, <code>.</code>, <code>^</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code>X = A and B  /  X = A . B   /  X = A ^ B
+</code></pre></div>
+
+<ul>
+<li>Tabela Verdade</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>X = A and B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>0</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>0</code></td>
+<td><code>1</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>0</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>1</code></td>
+<td><code>1</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Simbologia</li>
+</ul>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-and1.png" width="300" /></p>
+</details>
+<details class="note"><summary>or</summary><p>O operador <code>or</code> atua sobre duas variável, tornando a saída <code>verdadeira</code> sempre que uma das entradas forem <code>verdadeira</code>.</p>
+<blockquote>
+<p>Uso: O alarme de incêndio será acionado caso alguns dois dois botões sejam pressionados.  </p>
+</blockquote>
+<ul>
+<li>Notação:  <code>or</code>, <code>+</code>, <code>v</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code>X = A or B  /  X = A + B   /  X = A v B
+</code></pre></div>
+
+<ul>
+<li>Tabela Verdade</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>X = A or B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>0</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>0</code></td>
+<td><code>1</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>0</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>1</code></td>
+<td><code>1</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Simbologia</li>
+</ul>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-or.png" width="300" /></p>
+</details>
+<details class="note"><summary>nand</summary><p>Podemos começar a 'unir' operadores para formar novos comportamentos, o <code>nand</code> é a inversão (<code>not</code>) da porta lógica <code>and</code>. Na porta <code>nand</code> a saída só é <code>verdadeira</code> quando as entradas são <code>falsas</code>.</p>
+<blockquote>
+<p>Uso: Soar o alarme se os sensores de batimento cardíaco e o de pressão falharem.  </p>
+</blockquote>
+<ul>
+<li>Notação:  <code>nand</code>, <code>¬( ∧ )</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code>                    _____
+X = A nand B  /  X = A . B  / X = ¬(A ∧ B)
+</code></pre></div>
+
+<ul>
+<li>Tabela Verdade</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>X = A nand B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>0</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>0</code></td>
+<td><code>1</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>0</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>1</code></td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Simbologia</li>
+</ul>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-nand.png" width="300" /></p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">nor / xor / xnor</p>
+<p>Para as demais portas lógicas, consulte a referência: </p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Logic_gate#Symbols">https://en.wikipedia.org/wiki/Logic_gate#Symbols</a></li>
+</ul>
+</div>
+<iframe width="710" height="520" src="https://www.youtube.com/embed/UvI-AMAtrvE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<div class="admonition example">
+<p class="admonition-title">Check-Point</p>
+<p><div class="riddle_target" data-rid-id="227742" data-fg="#1486CD" data-bg="rgb(255, 255, 255)" style="margin:0 auto;max-width:100%;width:640px;" data-auto-scroll="false" data-auto-scroll-offset="0">
+  <script src="https://www.riddle.com/files/js/embed.js"></script>
+  <link href="https://www.riddle.com/files/css/embed.css" rel="stylesheet">
+  <iframe style="width:100%;height:300px;border:1px solid #cfcfcf;" src="https://www.riddle.com/a/227742?" title="Pop Quiz - ﻿Lógica booleana 1 "><section><h2><h2><strong>﻿Lógica booleana 1 </strong></h2></h2><p><p>Questões básicas</p></p></section><section><h2><h2>O que é correto afirmar sobre bits?</h2></h2></section><section><h3><p>1 AND 0</p></h3><p><p>Se aplicarmos as entradas 1 e 0 a porta, a saída será:</p></p></section><section><h3><p>1 OR 0</p></h3><p><p>Se aplicarmos as entradas 1 e 0 a porta, a saída será:</p></p></section><section><h2></h2></section><section><h3></h3></section></iframe>
+  </div></p>
+</div>
+<h2 id="tabela-verdade">Tabela Verdade<a class="headerlink" href="#tabela-verdade" title="Permanent link">&para;</a></h2>
+<p>Nessa tabela criamos colunas para cada variável de entrada e de saída e colocamos as situações possíveis (resultado). Para construirmos uma tabela verdade basta seguir as regras a seguir (na sequência):</p>
+<ol>
+<li>Criar uma coluna para cada entrada do sistema (n)</li>
+<li>Criar uma coluna para cada saída do sistema </li>
+<li>A tabela verdade vai ter 2^n números de linhas  (onde n é a quantidade de entradas)<ul>
+<li>um sistema com 2 entradas possui 2² = 4 linhas</li>
+<li>um sistema com 3 entradas possui 2³ = 8 linhas ...</li>
+</ul>
+</li>
+<li>Preencher as entradas (com '1's e '0's ) de forma a cobrir todas as possibilidades.</li>
+<li>Para cada linha, analisar se a combinação de '1's e '0' torna a saída '1' e '0'</li>
+</ol>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-tv.png" /></p>
+<div class="admonition example">
+<p class="admonition-title">Check-Point</p>
+<p><div class="riddle_target" data-rid-id="227867" data-fg="#1486CD" data-bg="rgb(255, 255, 255)" style="margin:0 auto;max-width:100%;width:640px;" data-auto-scroll="false" data-auto-scroll-offset="0">
+<script src="https://www.riddle.com/files/js/embed.js"></script>
+<link href="https://www.riddle.com/files/css/embed.css" rel="stylesheet">
+<iframe style="width:100%;height:300px;border:1px solid #cfcfcf;" src="https://www.riddle.com/a/227867?" title="Pop Quiz - Lógica booleana - Tabela Verdade"><section><h2><p>Lógica booleana - Tabela Verdade</p></h2><p><p>Responda sobre tabela verdade</p></p></section><section><h2><h2>É correto afirmar sobre a tabela verdade:</h2></h2><p><p>(pode existir mais de um item correto)</p></p></section><section><h3><p>Considerando um circuito de <strong>4 entradas</strong> (A,B, C, D) quantas são as linhas da tabela verdade?</p></h3></section><section><h3><h2><strong>﻿Qual tabela verdade a seguir foi montada correta?</strong></h2></h3></section><section><h3><p>Considerando a equação:<strong> X = not(B) + A</strong>, e a tabela verdade da imagem, qual resposta está correta (na sequência da tabela)? </p><p><br></p><p>Resposta na sequência: X0; X1; X2; X3</p></h3></section><section><h2></h2></section><section><h3></h3></section></iframe>
+</div></p>
+</div>
+<h2 id="funcoes-geradas-a-partir-de-tabelas-verdade">Funções geradas a partir de Tabelas Verdade<a class="headerlink" href="#funcoes-geradas-a-partir-de-tabelas-verdade" title="Permanent link">&para;</a></h2>
+<iframe width="710" height="520" src="https://www.youtube.com/embed/Xgy6p12ZcTI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>É possível a partir de uma tabela verdade obter uma equação lógica que a represente (caminho inverso), podemos fazer isso por duas técnicas diferentes (chamadas de forma canônicas): </p>
+<ul>
+<li>Soma dos Produtos (SoP) </li>
+<li>Produto das Somas (PoS)</li>
+</ul>
+<h3 id="soma-dos-produtos">Soma Dos Produtos<a class="headerlink" href="#soma-dos-produtos" title="Permanent link">&para;</a></h3>
+<p>Na soma dos produtos iremos encontrar uma equação booleana que possui a seguinte forma:</p>
+<div class="highlight"><pre><span></span><code> X = ( . . . ) + ( . . . ) + ... + ( . . . )
+       ----- 
+         |
+         | = &#39;1&#39;
+</code></pre></div>
+
+<p>Nesse método, precisamos encontrar as linhas da tabela verdade que resultam em uma saída <strong>'1'</strong> (Verdadeira) e invertendo (ou não) as entras fazendo com que o termo <code>( . . . .)</code> resulte em <strong>'1'</strong> para a linha em questão.</p>
+<h3 id="produto-das-somas">Produto das somas<a class="headerlink" href="#produto-das-somas" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code> X = ( + + + ) . ( + + + ) . ... . ( + + + )
+       -----
+         |
+         | = &#39;0&#39;
+</code></pre></div>
+
+<p>Nesse método, precisamos encontrar as linhas da tabela verdade que resultam em uma saída <strong>'0'</strong> e invertendo (ou não) as entras gazer com que o termo <code>( . . . .)</code> resulte em <strong>'0'</strong> para a linha em questão.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-tv-exe1.png" /></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Check-Point</p>
+<p><div class="riddle_target" data-rid-id="228672" data-fg="#1486cd" data-bg="#ffffff" style="margin:0 auto;max-width:100%;width:640px;" data-auto-scroll="true" data-auto-scroll-offset="5">
+<script src="https://www.riddle.com/files/js/embed.js"></script>
+<link href="https://www.riddle.com/files/css/embed.css" rel="stylesheet">
+<iframe style="width:100%;height:300px;border:1px solid #cfcfcf;" src="https://www.riddle.com/a/228672?" title="Tap And Find - ﻿Lógica Booleana - Equações Canônicas "><section><h2><h2><strong>﻿Lógica Booleana - Equações Canônicas </strong></h2></h2><p><p>Encontre a equação correta dada a tabela verdade ou vice versa</p></p></section><section><h2><h2><strong>﻿Qual forma é a mais adequada?</strong></h2></h2></section><section><h3><h2><strong>﻿Qual forma é a mais adequada?</strong></h2></h3></section><section><h3><p>Qual equação representa a tabela verdade?</p></h3></section><section><h3><p>Qual equação representa a tabela verdade?</p></h3></section><section><h2></h2></section><section><h3></h3></section></iframe>
+</div><p class="link-riddle" style="width: 640px; margin: 0px auto; padding-top: 10px;"><a href="https://www.riddle.com"  rel="nofollow" target="blank">Quiz Maker</a> - powered by Riddle</p></p>
+</div>
+<h2 id="simplificacao">Simplificação<a class="headerlink" href="#simplificacao" title="Permanent link">&para;</a></h2>
+<p>Existem duas formas bastante populares de simplificar uma equação booleana: algébrica ou via mapa de Karnaugh. Veremos as duas com mais detalhes.</p>
+<h3 id="simplificacao-algebrica">Simplificação algébrica<a class="headerlink" href="#simplificacao-algebrica" title="Permanent link">&para;</a></h3>
+<p>Na simplificação algébrica iremos utilizar as seguintes propriedades de lógica booleana para nos ajudar a simplificar uma equação:</p>
+<table>
+<thead>
+<tr>
+<th>Propriedade</th>
+<th>Operação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lei da Identidade</td>
+<td>A = A</td>
+</tr>
+<tr>
+<td></td>
+<td><span><span class="MathJax_Preview">\bar{A} = \bar{A}</span><script type="math/tex">\bar{A} = \bar{A}</script></span></td>
+</tr>
+<tr>
+<td>Lei da Comutatividade</td>
+<td>A . B = B . A</td>
+</tr>
+<tr>
+<td></td>
+<td>A + B = B + A</td>
+</tr>
+<tr>
+<td>Lei da Associatividade</td>
+<td>A . (B . C) = A  B  C</td>
+</tr>
+<tr>
+<td></td>
+<td>A + (B + C) = A + B + C</td>
+</tr>
+<tr>
+<td>Lei da Idempotência</td>
+<td>A . A = A</td>
+</tr>
+<tr>
+<td></td>
+<td>A + A = A</td>
+</tr>
+<tr>
+<td>Lei do Complemento Duplo</td>
+<td><span><span class="MathJax_Preview">\overline{\overline{A}} = A</span><script type="math/tex">\overline{\overline{A}} = A</script></span></td>
+</tr>
+<tr>
+<td>Lei da Complementariedade</td>
+<td><span><span class="MathJax_Preview">A \, \overline{A} = 0</span><script type="math/tex">A \, \overline{A} = 0</script></span></td>
+</tr>
+<tr>
+<td></td>
+<td><span><span class="MathJax_Preview">A + \overline{A} = 1</span><script type="math/tex">A + \overline{A} = 1</script></span></td>
+</tr>
+<tr>
+<td>Lei da Intersecção</td>
+<td>A . 1 = A</td>
+</tr>
+<tr>
+<td></td>
+<td>A . 0 = 0</td>
+</tr>
+<tr>
+<td>Lei da União</td>
+<td>A + 1 = 1</td>
+</tr>
+<tr>
+<td></td>
+<td>A + 0 = A</td>
+</tr>
+<tr>
+<td>Lei da Distributividade</td>
+<td>A . (B + C) = (A . B) + (A . C)</td>
+</tr>
+<tr>
+<td></td>
+<td>A + (B . C) = (A + B) (A + C)</td>
+</tr>
+<tr>
+<td>Teorema de DeMorgan</td>
+<td><span><span class="MathJax_Preview">\overline{A \, B} = \bar{A} + \bar{B}</span><script type="math/tex">\overline{A \, B} = \bar{A} + \bar{B}</script></span></td>
+</tr>
+<tr>
+<td></td>
+<td><span><span class="MathJax_Preview">\overline{A + B} = \bar{A} \, \bar{B}</span><script type="math/tex">\overline{A + B} = \bar{A} \, \bar{B}</script></span></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Explicação da tabela</p>
+<p>Para essas simplificações nós usaremos as propriedades das operações básicas de álgebra booleana, representada na tabela anterior. As leis da identidade, comutatividade, associatividade e distributividade são bem similares ao que já fazemos normalmente em expressões matemáticas. A idempotência mostra que um AND ou OR com duas variáveis é exatamente a mesma variável. A lei do complemento duplo mostra que se negarmos duas vezes uma variável, teremos a mesma variável. A lei da complementariedade já mostra que fazermos um AND com a negação da mesma variável acabaremos com zero, ou seja, 0 vezes 1 ou 1 vezes 0 sempre dará zero. Já com o OR é o oposto e sempre teremos 1 como resposta. Na lei da interseção temos que uma variável vezes 1 é sempre ela mesma, e se for vezes 0, acabara zerando o resultado. Já a lei da união diz que uma variável mais um é sempre um, e uma variável mais zero é a própria variável. O teorema de DeMorgam é bem interessante, pois mostra uma propriedade bem peculiar da álgebra booleana, no caso o conjunto de A vezes B negado, é o mesmo que A negado, mais B negado, e da mesma forma A negado mais B negado é igual ao A vezes B, e esse resultado negado.</p>
+</div>
+<p>Para simplificarmos uma equação, aplicamos as propriedades da tabela anterior a fim de encontrarmos uma equação que:</p>
+<ol>
+<li>Tenha uma forma mais explicita de sua propriedade<ul>
+<li>exe: <span><span class="MathJax_Preview">A . B  + A . C</span><script type="math/tex">A . B  + A . C</script></span> -&gt; <span><span class="MathJax_Preview">A (B + C)</span><script type="math/tex">A (B + C)</script></span></li>
+</ul>
+</li>
+<li>Minimize o uso de 'portas lógicas'<ul>
+<li>exe: <span><span class="MathJax_Preview">(A . B) . C  + A . B . D</span><script type="math/tex">(A . B) . C  + A . B . D</script></span> -&gt; <span><span class="MathJax_Preview">(A . B)(C + D)</span><script type="math/tex">(A . B)(C + D)</script></span></li>
+</ul>
+</li>
+<li>Elimine minimize as entradas necessárias<ul>
+<li>exe: <span><span class="MathJax_Preview">(A \overline{A}.B)</span><script type="math/tex">(A \overline{A}.B)</script></span> -&gt;  <span><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span></li>
+</ul>
+</li>
+</ol>
+<h4 id="exemplos">Exemplos<a class="headerlink" href="#exemplos" title="Permanent link">&para;</a></h4>
+<div class="admonition example">
+<p class="admonition-title">Exemplo 1</p>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-simplificacao1.png" /></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemplo 2</p>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-simplificacao2.png" /></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemplo 3</p>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-simplificacao3.png" /></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>O vídeo a seguir possui as resoluções de forma detalhada:</p>
+<p><iframe width="710" height="520" src="https://www.youtube.com/embed/0as464WmfCo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+</div>
+<h3 id="mapa-de-karnaugh-mk">Mapa de Karnaugh (MK)<a class="headerlink" href="#mapa-de-karnaugh-mk" title="Permanent link">&para;</a></h3>
+<p>A simplificação por mapa de Karnaugh é uma técnica visual de encontrarmos uma equação reduzida, porém para isso precisamos primeiro:</p>
+<ol>
+<li>Gerar a tabela verdade</li>
+<li>Gerar o mapa de Karnaugh</li>
+<li>Criar os grupos </li>
+<li>Gerar as equações</li>
+</ol>
+<iframe width="710" height="520" src="https://www.youtube.com/embed/ghHYBAwHrho" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h4 id="2-criando-o-mapa">2. Criando o Mapa<a class="headerlink" href="#2-criando-o-mapa" title="Permanent link">&para;</a></h4>
+<p>O mapa pode ser criado para N entradas, mas só iremos tratar nesse curso sistemas de <strong>2</strong>, <strong>3</strong> ou <strong>4</strong> variáveis (entradas). A seguir exemplos do mapa para 2, 3 e 4 entradas:</p>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-mk-construindo1.png" /></p>
+<p>Para criar o mapa basta seguir a receitinha anterior, note que a sequência das entras: <code>AB</code> e <code>CD</code> é da forma:</p>
+<div class="highlight"><pre><span></span><code>     __ _      _
+     AB AB AB AB
+     -----------
+AB \ 00 01 11 10
+</code></pre></div>
+
+<p>e não:</p>
+<div class="highlight"><pre><span></span><code>AB \ 00 01 10 11
+</code></pre></div>
+
+<p>Como seria mais lógico (já que em binário: <code>00 = 0; 01 = 1; 10 = 2; 11 = 3</code>). Porém o mapa de Karnaugh assume que as variáveis estão ordenadas na forma de <a href="https://pt.wikipedia.org/wiki/C%C3%B3digo_de_Gray">código gray</a>, onde um bit é alterado por vez!</p>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-mk-construindo2.png" width="450" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Colocar qualquer sequência na criação do mapa é um dos erros mais comuns dos anos anteriores!</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Podemos começar a sequência com qualquer combinação, se seguirmos a ordem de só mudar um bit por vez, exemplo:</p>
+<div class="highlight"><pre><span></span><code>AB \ 11 10 00 01
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>AB \ 01 11 10 00
+</code></pre></div>
+
+</div>
+<div class="admonition example">
+<p class="admonition-title">Check-Point</p>
+<p><div class="riddle_target" data-rid-id="228677" data-fg="#1486cd" data-bg="#ffffff" style="margin:0 auto;max-width:100%;width:640px;" data-auto-scroll="true" data-auto-scroll-offset="5">
+<script src="https://www.riddle.com/files/js/embed.js"></script>
+<link href="https://www.riddle.com/files/css/embed.css" rel="stylesheet">
+<iframe style="width:100%;height:300px;border:1px solid #cfcfcf;" src="https://www.riddle.com/a/228677?" title="Tap And Find - Lógica Booleana - Karnaugh 1"><section><h2><p>Lógica Booleana - Karnaugh 1</p></h2><p><p>Encontre a montagem do mapa de Karnaugh correta.</p></p></section><section><h2><p>Qual mapa de K. foi montado certo?</p></h2></section><section><h3><p>Qual mapa de K. foi montado certo?</p></h3></section><section><h2></h2></section><section><h3></h3></section></iframe>
+</div><p class="link-riddle" style="width: 640px; margin: 0px auto; padding-top: 10px;"><a href="https://www.riddle.com"  rel="nofollow" target="blank">Quiz Maker</a> - powered by Riddle</p></p>
+</div>
+<h4 id="3-grupos">3. Grupos<a class="headerlink" href="#3-grupos" title="Permanent link">&para;</a></h4>
+<p>No MK podemos agrupar '1's na quantidade de: <span><span class="MathJax_Preview">2^n</span><script type="math/tex">2^n</script></span>, onde <code>n=0,1,2,3,</code> ou seja, grupos de: <strong>1, 2, 4, 8, ...</strong>, o agrupamento só pode ser feito na vertical ou horizontal, nunca na diagonal.</p>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-mk-grupos1.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>Os grupos podem se sobrepor!</li>
+<li>Agrupar sempre na maior quantidade possível (2, 4, 8, ...)</li>
+</ul>
+</div>
+<p>Devemos agrupar sempre na maior quantidade possível! A seguir exemplos do que <strong>não deve ser feito!</strong></p>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-mk-grupos2.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Não agrupar na maior quantidade de uns possível impacta em não obter a equação reduzida.</p>
+</div>
+<p>Podemos pensar no MK <strong>não como sendo uma tabela plana</strong>, mas sim uma superfície mapeada em uma esfera, logo as pontas estão conectadas. Com isso podemos criar grupos nas situações a seguir:</p>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-mk-grupos3.png" width="600" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>O agrupamento no mapa de Karnaugh só pode ser realizado quando juntamos uns que estão a um bit de distância. Essa é a razão de não podermos juntar na diagonal.</p>
+<div class="highlight"><pre><span></span><code>  AB  00   01   11   10
+CD \---------------------
+00 | 0000 0100 1100 1000
+10 | 0010 0110 1110 1010 
+11 | 0011 0111 1111 1011
+10 | 0010 0110 1110 1010
+</code></pre></div>
+
+<p>Note que no exemplo anterior se juntarmos duas possibilidades na horizontal (as duas primeira):</p>
+<div class="highlight"><pre><span></span><code> ---------
+[0000 0100]
+ ---------
+</code></pre></div>
+
+<p>Apenas o bit referente a entrada <strong>B</strong> muda. Mas se considerarmos a diagonal:</p>
+<div class="highlight"><pre><span></span><code> ----
+[0000 
+     0110]
+     ----
+</code></pre></div>
+
+<p>Temos duas mudanças de bit, a da entrada <strong>B</strong> e a da entrada <strong>C</strong>, isso não pode!</p>
+<p>O ultimo caso são os cantos, por exemplo:</p>
+<div class="highlight"><pre><span></span><code>----              ----
+0000]            [1000
+----              ----
+</code></pre></div>
+
+<p>Nesse caso apenas o bit <strong>A</strong> muda, logo podemos juntar!</p>
+<p>Um caso que não pode juntar são as extremidades:</p>
+<div class="highlight"><pre><span></span><code>----
+0000]
+----
+                   ----
+                  [1010
+                   ----
+</code></pre></div>
+
+<p>Nesse caso <strong>A</strong> e <strong>C</strong> mudam!</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Check-Point</p>
+<p><div class="riddle_target" data-rid-id="228679" data-fg="#1486CD" data-bg="rgb(255, 255, 255)" style="margin:0 auto;max-width:100%;width:640px;" data-auto-scroll="true" data-auto-scroll-offset="5">
+<script src="https://www.riddle.com/files/js/embed.js"></script>
+<link href="https://www.riddle.com/files/css/embed.css" rel="stylesheet">
+<iframe style="width:100%;height:300px;border:1px solid #cfcfcf;" src="https://www.riddle.com/a/228679?" title="Tap And Find - [COPY] Lógica Booleana - Karnaugh 1"><section><h2>[COPY] Lógica Booleana - Karnaugh 1</h2><p><p>Encontre a montagem do mapa de Karnaugh correta.</p></p></section><section><h2><p>Qual mapa de K. foi montado certo?</p></h2></section><section><h3><p>Qual mapa de K. foi montado certo?</p></h3></section><section><h2></h2></section><section><h3></h3></section></iframe>
+</div><button id="riddleFullScreenButton-228679" class="btn-fullscreen" onclick="window.riddleAPI.toggleFullScreen(228679);"><img src="https://cdn.riddle.com/website/assets/icons/spot/screenfull.svg" /></button></p>
+</div>
+<h4 id="4-gerando-as-equacoes">4. Gerando as equações<a class="headerlink" href="#4-gerando-as-equacoes" title="Permanent link">&para;</a></h4>
+<p>Gera-se uma equação por agrupamento, cada grupo irá fornecer um componente na forma da equação da Soma Dos Produtos:  (. . . ) + (. . . ). O truque é identificar no grupo quais são as variáveis que assumem todas as possibilidades. </p>
+<div class="admonition example">
+<p class="admonition-title">Exemplo 1</p>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-mk-exemplo1a.png" width="400" /></p>
+<p>Nesse caso, a variável <strong>B</strong> pode assumir tanto <code>0</code> quanto <code>1</code> para <strong>A</strong> fixo em <code>0</code>, para o grupo em questão as entradas <strong>A</strong> e <strong>B</strong> são:</p>
+<p><div class="highlight"><pre><span></span><code>AB: 00
+AB: 01
+</code></pre></div>
+A equação feita via a tabela verdade seria:</p>
+<p><span><span class="MathJax_Preview">\bar{A}.B + \bar{A} . \bar{B}</span><script type="math/tex">\bar{A}.B + \bar{A} . \bar{B}</script></span> que pode ser reduzida para <span><span class="MathJax_Preview">\bar{A} (\bar{B}. B)</span><script type="math/tex">\bar{A} (\bar{B}. B)</script></span> e então para: <span><span class="MathJax_Preview">\bar{A}</span><script type="math/tex">\bar{A}</script></span></p>
+<p>O mapa de Karnaugh já nos fornece o resultado de forma direta!</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemplo 2</p>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-mk-exemplo1c.png" width="400" /></p>
+<p>Nesse caso, a variável <strong>A</strong> pode assumir tanto <code>0</code> quanto <code>1</code> para <strong>B</strong> fixo em <code>0</code>, ou seja, <strong>A</strong> não impacta nesse grupo.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemplo 3</p>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-mk-exemplo1b.png" width="400" /></p>
+<p>Aqui temos um caso particular, para todas as combinações de entrada <strong>A</strong> e <strong>B</strong> a saída é sempre <code>1</code>, logo essa equação é sempre verdadeira: <span><span class="MathJax_Preview">F = 1</span><script type="math/tex">F = 1</script></span>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemplo 4</p>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-mk-exemplo1d.png" width="600" /></p>
+<p>Nesse exemplo não foi possível agrupar uns em maior quantidade, logo, não iremos conseguir obter um resultado melhor que a tabela verdade. Nenhuma variável é descartável.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemplo 5</p>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-mk-exemplo1e.png" width="600" /></p>
+<p>Nesse caso criamos dois grupos um na horizontal outro na vertical. Cada grupo irá gerar um termo da equação na forma da SoP.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Casos extras</p>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-mk-exemplo2.png" /></p>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../VMtranslator-Lab-1/" title="Lab 18: Vm Translator" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Lab 18: Vm Translator
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../Teoria-Dados/" title="Dados Digitais" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Dados Digitais
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; Rafael Corsi @ insper
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.df0def68.min.js"></script>
+      <script src="../assets/javascripts/bundle.ba57d267.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ["tabs"],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="../translate_admonitions.js"></script>
+      
+        <script src="../js/progress.js"></script>
+      
+    
+  </body>
+</html>
